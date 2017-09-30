@@ -1,3 +1,28 @@
+
+###########
+##Eclipse
+###########
+.plugins/
+.lock
+.log
+.ini
+.metadata/
+.project
+.settings/
+.pydevproject
+org.*
+com.*
+.classpath
+*.ini
+*.log
+/Debug
+/Release
+.cproject
+
+#############
+## Windows detritus
+#############
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
@@ -5,43 +30,45 @@ ehthumbs.db
 # Folder config file
 Desktop.ini
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
+# Mac crap
 .DS_Store
-.AppleDouble
-.LSOverride
 
-# Thumbnails
-._*
 
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
+#############
+## Python
+#############
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+*.pyx
+*.pyc
+
+# Packages
+*.egg
+*.egg-info
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+
+############
+## TI-GCC
+############
+*.tpr
+*.89z
+*.9xz
+*.v2z
+*.o
+*.s
+
+###########
+## gcc
+###########
+*.exe
+
+###########
+## Jython
+###########
+*.class
