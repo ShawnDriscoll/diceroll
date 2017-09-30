@@ -1,17 +1,18 @@
-.. diceroll documentation master file, created by sphinx-quickstart on Sat Sep 30 08:31:05 2017.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. image:: diceroll_cover.png
 
-Welcome to diceroll's documentation!
-======================================
+diceroll 2.2 Manual
+===================
 
-This is my introduction to this project.
+A dice rolling module.
 
 Requirements:
 
-My project depends on Python 2.5.4.
+* Microsoft Windows
+* CPython 2.5
 
-Contents:
+
+Contents
+--------
 
 .. toctree::
    :maxdepth: 2
@@ -21,7 +22,7 @@ Contents:
    diceroll
 
 Indices and tables
-==================
+------------------
 
 * :ref:`genindex`
 * :ref:`modindex`
