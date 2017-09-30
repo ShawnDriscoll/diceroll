@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>diceroll module &mdash; diceroll v2.2.1b documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+          URL_ROOT:    '',
+          VERSION:     '2.2.1b',
+          COLLAPSE_MODINDEX: false,
+          FILE_SUFFIX: '.html'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/diceroll_icon_16x16.ico"/>
+    <link rel="contents" title="Global table of contents" href="contents.html" />
+    <link rel="index" title="Global index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="top" title="diceroll v2.2.1b documentation" href="index.html" />
+    <link rel="prev" title="Project Summary" href="project.html" />
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="modindex.html" title="Global Module Index"
+             accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="project.html" title="Project Summary"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">diceroll v2.2.1b documentation</a> &raquo;</li>
+      </ul>
+    </div>
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  
+  <div class="section" id="module-diceroll">
+<h1>diceroll module<a class="headerlink" href="#module-diceroll" title="Permalink to this headline">¶</a></h1>
+<dl class="docutils">
+<dt>Usage:</dt>
+<dd><p class="first">from diceroll import roll</p>
+<p class="last">print roll(&#8216;2D6&#8217;) - roll two 6-sided dice</p>
+</dd>
+</dl>
+<dl class="function">
+<dt id="diceroll.die_rolls">
+<!--[diceroll.die_rolls]--><tt class="descclassname">diceroll.</tt><tt class="descname">die_rolls</tt><big>(</big><em>dtype</em>, <em>dcount</em><big>)</big><a class="headerlink" href="#diceroll.die_rolls" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>Two arguments:</dt>
+<dd><p class="first">dtype: the number of sides for the dice (int)</p>
+<p class="last">dcount: the number of dice to roll (int)</p>
+</dd>
+<dt>Value returned:</dt>
+<dd>dtotal: the value returned from die_rolls (int)</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="diceroll.roll">
+<!--[diceroll.roll]--><tt class="descclassname">diceroll.</tt><tt class="descname">roll</tt><big>(</big><em>dice</em><big>)</big><a class="headerlink" href="#diceroll.roll" title="Permalink to this definition">¶</a></dt>
+<dd><p>The dice types to roll are: D3, D4, D6, D8, D9, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, BADFLUX</p>
+<p>Some examples are:</p>
+<p>roll(&#8216;D6&#8217;) or roll(&#8216;1D6&#8217;) &#8211; roll one 6-sided die</p>
+<p>roll(&#8216;2D6&#8217;) &#8211; roll two 6-sided dice</p>
+<p>roll(&#8216;D10&#8217;) &#8211; roll a 10-sided die (1 - 10)</p>
+<p>roll(&#8216;D100&#8217;) &#8211; roll a 100-sided die (1 - 100)</p>
+<p>roll(&#8216;D66&#8217;) &#8211; roll for a D66 chart</p>
+<p>roll(&#8216;FLUX&#8217;) &#8211; a FLUX roll (-5 to 5)</p>
+<p>roll(&#8216;3D6+6&#8217;) &#8211; add +6 DM to roll</p>
+<p>roll(&#8216;4D4-4&#8217;) &#8211; add -4 DM to roll</p>
+<p>roll(&#8216;2DD+3&#8217;) &#8211; roll (2D6+3) x 10</p>
+<p>roll(&#8216;info&#8217;) &#8211; release version of program</p>
+<p>An invalid roll will return a 0 (int).</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><img class="logo" src="_static/diceroll.png" alt="Logo"/></p>
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="project.html" title="previous chapter">Project Summary</a></p>
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="_sources/diceroll.txt">Show Source</a></li>
+            </ul>
+            <h3>Quick search</h3>
+            <form class="search" action="search.html" method="get">
+              <input type="text" name="q" size="18" /> <input type="submit" value="Go" />
+              <input type="hidden" name="check_keywords" value="yes" />
+              <input type="hidden" name="area" value="default" />
+            </form>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="modindex.html" title="Global Module Index"
+             accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="project.html" title="Project Summary"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">diceroll v2.2.1b documentation</a> &raquo;</li>
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2017, Shawn Driscoll.
+      Last updated on Sep 30, 2017.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+    </div>
+  </body>
+</html>
