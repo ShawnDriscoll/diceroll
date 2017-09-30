@@ -20,7 +20,7 @@ com.*
 .cproject
 
 #############
-## Windows detritus
+## Windows
 #############
 
 # Windows image file caches
@@ -30,7 +30,7 @@ ehthumbs.db
 # Folder config file
 Desktop.ini
 
-# Mac crap
+# Mac
 .DS_Store
 
 
@@ -45,7 +45,6 @@ Desktop.ini
 *.egg
 *.egg-info
 dist/
-build/
 eggs/
 parts/
 var/
