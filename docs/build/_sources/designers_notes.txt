@@ -9,12 +9,12 @@ from the '70s had their own built-in random number generators. Technically,
 they were pseudo-random number generators. But technically, I wanted to
 program my Star Trek games anyway no matter what they were called.
 
-In the '80s, I would discover that not all comptuer languages came
+In the '80s, I would discover that not all computer languages came
 with random number generators built in. Many didn't have such a thing
 unless some external software library was installed. Both FORTRAN and C
 couldn't do random anything out of the box. A math library had to be picked from
 the many that were out there. And if none were available, a computer class on campus
-was available to teach you how to propgram your own random number generator from scratch.
+was available to teach you how to program your own random number generator from scratch.
 
 By the '90s, random number generators were pretty much standardized as
 for as how accurately random they were. And they were included in standard
@@ -80,7 +80,7 @@ For my dice rolls, I wanted something more readable. Something like: ::
    
    print roll('2D6') # roll two 6-sided dice
 
-It was almost less typing. And it was easier to spot what kind of roll was being made in my
+It was almost less typing. And it was easier to spot what kind of rolls were being made in my
 code. And the simple addition or subtraction of DMs to such a roll was making the function more appealing: ::
 
    print roll('2D6+3') # roll two 6-sided dice and add a DM of +3 to it
