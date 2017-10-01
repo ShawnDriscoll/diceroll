@@ -9,12 +9,12 @@ from the '70s had their own built-in random number generators. Technically,
 they were pseudo-random number generators. But technically, I wanted to
 program my Star Trek games anyway no matter what they were called.
 
-In the '80s, I would discover that not all comptuer languages came
+In the '80s, I would discover that not all computer languages came
 with random number generators built in. Many didn't have such a thing
 unless some external software library was installed. Both FORTRAN and C
 couldn't do random anything out of the box. A math library had to be picked from
 the many that were out there. And if none were available, a computer class on campus
-was available to teach you how to propgram your own random number generator from scratch.
+was available to teach you how to program your own random number generator from scratch.
 
 By the '90s, random number generators were pretty much standardized as
 for as how accurately random they were. And they were included in standard
@@ -80,12 +80,57 @@ For my dice rolls, I wanted something more readable. Something like: ::
    
    print roll('2D6') # roll two 6-sided dice
 
-It was almost less typing. And it was easier to spot what kind of roll was being made in my
+It was almost less typing, which I thought was great because I was going to be typing this function a lot
+for a Python project I had in mind. And it would be a lot easier to spot what kind of rolls were being made in my
 code. And the simple addition or subtraction of DMs to such a roll was making the function more appealing: ::
 
    print roll('2D6+3') # roll two 6-sided dice and add a DM of +3 to it
 
+The Channel 1
+-------------
+*diceroll* was written years ago. It gets looked at by GitHub visitors who Google by now and again. But not
+many will use this module because of the simple fact that Python is now version 3.6+ something. So *diceroll*, along
+with a slew of other pre-Python 2.6 era modules, are the Channel 1 stations in the room that no TV can possibly watch.
 
+It really comes down to a philosophy. I waited on learning Python until a version was released where I could say,
+   *"This is Python."*
+or say,
+   *"This is what Python should be."*
+   
+Something like that.
 
+And for me, it was Python 2.5.4 when I said such things. Python 2.6 books were showing up in stores. And
+there were already differences being found between it and the Python that I was using. Python had become this
+huge thing. And non-programmers were being attracted to it for their own reasons. And that was all fine.
+Python 2.7, 2.8, 3.0, etc. were seeing lots of new talent joining their mix. They were taking Python to places it
+hadn't been to. And more and more people were doing Python because of it.
 
-.. versionadded:: 2.2
+Python is trying to be all things to all programmers these days. And it has become less of Python in doing so.
+I am not a functional programmer. Never have been. But a lot of people are. And Python now serves them very well.
+I'm often told, *"Python now does things this way."* But it is ways that I don't see myself using.
+
+People are altering *diceroll* so that it works in their Python, just as I am altering their uploaded code so that it
+works in my Python. If I wanted my code to reach more people, of course I would have to program using
+the latest greatest Python. But there is a certain individuality lost in doing that.
+
+I believe the next great computer programming language will be the one that remains true to its nature/design as
+it grows. And doesn't split the party as it grows.
+
+Getting Sphinxed
+----------------
+With the release of *diceroll 2.2*, I wanted to learn something new in regards to Python. Even though I use 2.5.4,
+there is still a lot about it that I have never delved into. Sphinx was something I had not really paid any mind to
+in the past. It was yet another one of those *need to know only* things about Python. Some things I'd get around to
+learning only when I had to, but only if it was part of something else that I have taken an interest in doing.
+
+So somewhere in my discovering of PyMongo, I had been pointed at Sphinx and Jinja. It was something about document
+generation. And since I had just learned about Pandas and CSV, I was in a data retrieval mood still.
+
+In a nutshell,
+Sphinx is an EXE (generated during its install from an egg of .py files, which is still magic to me, and which took a
+great deal of time for me tracking down all the proper versions of requirements for it to even compile/run
+in Python 2.5.4) that generates documents. Nothing too fancy. Just simple documents that could be read easily/quickly
+through any device using any viewer. And when I learned that Sphinx could read Python modules and produce documents
+from their ``.__doc__`` strings, I knew I just had to spend a couple days learning how all that stuff happens. 
+
+Some rabbits holes are worth their going into.

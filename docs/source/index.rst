@@ -3,22 +3,22 @@
 **diceroll 2.2 Manual**
 =======================
 
-**A dice rolling module**
+**A Python Dice Rolling Module**
 
 Requirements
 ------------
 
 * **Microsoft Windows**
-       This code has been tested on Windows versions: XP, 7, 8, and 10.
+       *diceroll* has been tested on Windows versions: XP, 7, 8, and 10.
        It has not been tested on MacOS or Linux.
 * **Python 2.5**
-       This module was written using the C implementation of Python
+       *diceroll* was written using the C implementation of Python
        version 2.5.4. Also known as CPython. With some doing, this
        module could of course be re-written for Jython, PyPy, or
        IronPython.
 
-       Eclypse/PyDev, PyCharm, NetBeans, and IDLE all work fine for
-       running this module in.
+       Eclipse/PyDev, PyCharm, NetBeans, and IDLE all work fine for
+       running this module.
         
 .. Warning::
    *diceroll* will not work with **Python 2.6+**.

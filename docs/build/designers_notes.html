@@ -117,12 +117,53 @@ doing its own error-checking.</p>
 
 <span class="k">print</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;2D6&#39;</span><span class="p">)</span> <span class="c"># roll two 6-sided dice</span>
 </pre></div>
-<p>It was almost less typing. And it was easier to spot what kind of rolls were being made in my
+<p>It was almost less typing, which I thought was great because I was going to be typing this function a lot
+for a Python project I had in mind. And it would be a lot easier to spot what kind of rolls were being made in my
 code. And the simple addition or subtraction of DMs to such a roll was making the function more appealing:</p>
 <div class="highlight"><pre><span class="k">print</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;2D6+3&#39;</span><span class="p">)</span> <span class="c"># roll two 6-sided dice and add a DM of +3 to it</span>
 </pre></div>
-<p>
-<span class="versionmodified">New in version 2.2.</span></p>
+</div>
+<div class="section" id="the-channel-1">
+<h2>The Channel 1<a class="headerlink" href="#the-channel-1" title="Permalink to this headline">¶</a></h2>
+<p><em>diceroll</em> was written years ago. It gets looked at by GitHub visitors who Google by now and again. But not
+many will use this module because of the simple fact that Python is now version 3.6+ something. So <em>diceroll</em>, along
+with a slew of other pre-Python 2.6 era modules, are the Channel 1 stations in the room that no TV can possibly watch.</p>
+<dl class="docutils">
+<dt>It really comes down to a philosophy. I waited on learning Python until a version was released where I could say,</dt>
+<dd><em>&#8220;This is Python.&#8221;</em></dd>
+<dt>or say,</dt>
+<dd><em>&#8220;This is what Python should be.&#8221;</em></dd>
+</dl>
+<p>Something like that.</p>
+<p>And for me, it was Python 2.5.4 when I said such things. Python 2.6 books were showing up in stores. And
+there were already differences being found between it and the Python that I was using. Python had become this
+huge thing. And non-programmers were being attracted to it for their own reasons. And that was all fine.
+Python 2.7, 2.8, 3.0, etc. were seeing lots of new talent joining their mix. They were taking Python to places it
+hadn&#8217;t been to. And more and more people were doing Python because of it.</p>
+<p>Python is trying to be all things to all programmers these days. And it has become less of Python in doing so.
+I am not a functional programmer. Never have been. But a lot of people are. And Python now serves them very well.
+I&#8217;m often told, <em>&#8220;Python now does things this way.&#8221;</em> But it is ways that I don&#8217;t see myself using.</p>
+<p>People are altering <em>diceroll</em> so that it works in their Python, just as I am altering their uploaded code so that it
+works in my Python. If I wanted my code to reach more people, of course I would have to program using
+the latest greatest Python. But there is a certain individuality lost in doing that.</p>
+<p>I believe the next great computer programming language will be the one that remains true to its nature/design as
+it grows. And doesn&#8217;t split the party as it grows.</p>
+</div>
+<div class="section" id="getting-sphinxed">
+<h2>Getting Sphinxed<a class="headerlink" href="#getting-sphinxed" title="Permalink to this headline">¶</a></h2>
+<p>With the release of <em>diceroll 2.2</em>, I wanted to learn something new in regards to Python. Even though I use 2.5.4,
+there is still a lot about it that I have never delved into. Sphinx was something I had not really paid any mind to
+in the past. It was yet another one of those <em>need to know only</em> things about Python. Some things I&#8217;d get around to
+learning only when I had to, but only if it was part of something else that I have taken an interest in doing.</p>
+<p>So somewhere in my discovering of PyMongo, I had been pointed at Sphinx and Jinja. It was something about document
+generation. And since I had just learned about Pandas and CSV, I was in a data retrieval mood still.</p>
+<p>In a nutshell,
+Sphinx is an EXE (generated during its install from an egg of .py files, which is still magic to me, and which took a
+great deal of time for me tracking down all the proper versions of requirements for it to even compile/run
+in Python 2.5.4) that generates documents. Nothing too fancy. Just simple documents that could be read easily/quickly
+through any device using any viewer. And when I learned that Sphinx could read Python modules and produce documents
+from their <tt class="docutils literal"><span class="pre">.__doc__</span></tt> strings, I knew I just had to spend a couple days learning how all that stuff happens.</p>
+<p>Some rabbits holes are worth their going into.</p>
 </div>
 </div>
 
@@ -137,6 +178,8 @@ code. And the simple addition or subtraction of DMs to such a roll was making th
 <li><a class="reference external" href=""><strong>Designer&#8217;s Notes</strong></a><ul>
 <li><a class="reference external" href="#in-the-beginning">In the Beginning</a></li>
 <li><a class="reference external" href="#lessons-learned">Lessons Learned</a></li>
+<li><a class="reference external" href="#the-channel-1">The Channel 1</a></li>
+<li><a class="reference external" href="#getting-sphinxed">Getting Sphinxed</a></li>
 </ul>
 </li>
 </ul>

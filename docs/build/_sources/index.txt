@@ -3,7 +3,7 @@
 **diceroll 2.2 Manual**
 =======================
 
-**A dice rolling module**
+**A Python Dice Rolling Module**
 
 Requirements
 ------------
@@ -17,7 +17,7 @@ Requirements
        module could of course be re-written for Jython, PyPy, or
        IronPython.
 
-       Eclypse/PyDev, PyCharm, NetBeans, and IDLE all work fine for
+       Eclipse/PyDev, PyCharm, NetBeans, and IDLE all work fine for
        running this module.
         
 .. Warning::
