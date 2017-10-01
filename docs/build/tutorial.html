@@ -21,7 +21,7 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="diceroll 2.2 Manual" href="index.html" />
     <link rel="next" title="diceroll Module" href="diceroll.html" />
-    <link rel="prev" title="Designer&#8217;s Notes" href="designers_notes.html" />
+    <link rel="prev" title="Installing diceroll" href="installing.html" />
   </head>
   <body>
     <div class="related">
@@ -37,7 +37,7 @@
           <a href="diceroll.html" title="diceroll Module"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="designers_notes.html" title="Designer&#8217;s Notes"
+          <a href="installing.html" title="Installing diceroll"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">diceroll 2.2 Manual</a> &raquo;</li>
       </ul>
@@ -50,10 +50,63 @@
   
   <div class="section" id="diceroll-tutorial">
 <h1><strong>diceroll Tutorial</strong><a class="headerlink" href="#diceroll-tutorial" title="Permalink to this headline">¶</a></h1>
+<p>Once <tt class="docutils literal"><span class="pre">diceroll.py</span></tt> is installed and recognized by your code, its <tt class="docutils literal"><span class="pre">roll()</span></tt> function can be used right away. This
+function returns an integer, by the way. So it can be used as any other integer would be used. But first,
+we must give this function a value to work from.</p>
+<p>Those of you that have used dice rolling programs before will notice that something is different. And that is,
+<tt class="docutils literal"><span class="pre">roll()</span></tt> uses a string for its input:</p>
+<div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">die1</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;1D6&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">die2</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;1d6&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">dice</span> <span class="o">=</span> <span class="s">&#39;3D4+1&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">die1</span><span class="p">,</span> <span class="n">die2</span><span class="p">,</span> <span class="n">roll</span><span class="p">(</span><span class="n">dice</span><span class="p">)</span>
+<span class="go">3, 2, 9</span>
+</pre></div>
+<p>Not that the inputted string values can be upper or lower case. And note that the return values are integer.</p>
+<dl class="docutils">
+<dt>The dice types to roll are:</dt>
+<dd>D3, D4, D6, D8, D9, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, BADFLUX</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>You may recognize some of these dice types from various tabletop role-playing games. There is probably a
+standard notation for dice rolls used in games. But each game typically uses its own notation.</p>
+<div class="last line-block">
+<div class="line"><br /></div>
+<div class="line"><em>diceroll</em> uses a simple standard when it comes to the more plainer dice types.</div>
+<div class="line"><br /></div>
+<div class="line">Some examples are:</div>
+<div class="line"><br /></div>
+<div class="line">roll(&#8216;D6&#8217;) or roll(&#8216;1D6&#8217;) &#8211; roll one 6-sided die</div>
+<div class="line">roll(&#8216;2D6&#8217;) &#8211; roll two 6-sided dice</div>
+<div class="line">roll(&#8216;D10&#8217;) &#8211; roll a 10-sided die (1 - 10)</div>
+<div class="line">roll(&#8216;D100&#8217;) &#8211; roll a 100-sided die (1 - 100)</div>
+<div class="line">roll(&#8216;D66&#8217;) &#8211; roll for a D66 chart</div>
+<div class="line">roll(&#8216;FLUX&#8217;) &#8211; a FLUX roll (-5 to 5)</div>
+<div class="line">roll(&#8216;3D6+6&#8217;) &#8211; add +6 DM to roll</div>
+<div class="line">roll(&#8216;4D4-4&#8217;) &#8211; add -4 DM to roll</div>
+<div class="line">roll(&#8216;2DD+3&#8217;) &#8211; roll (2D6+3) x 10</div>
+<div class="line">roll(&#8216;info&#8217;) &#8211; release version of program</div>
+</div>
+</div>
+<p>Entering an invalid string for <tt class="docutils literal"><span class="pre">roll()</span></tt> will return an error message, as well as a value of 0 from the function.</p>
+<div class="highlight"><pre><span class="k">print</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;3d&#39;</span><span class="p">)</span>
+</pre></div>
+<div class="admonition error">
+<p class="first admonition-title">Error</p>
+<p>** DICE ERROR! &#8216;3D&#8217; is unknown **</p>
+<div class="last line-block">
+<div class="line"><br /></div>
+<div class="line">0</div>
+</div>
+</div>
+<p>One exception to the &#8220;integer&#8221; rule for <tt class="docutils literal"><span class="pre">roll()</span></tt> is when using <tt class="docutils literal"><span class="pre">roll('info')</span></tt>, which will return two strings.</p>
 <p>
 <span class="versionmodified">New in version 2.2.</span></p>
-<p>This is a short description about how to use diceroll:</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">dicerull</span> <span class="kn">import</span> <span class="n">roll</span>
+<div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">version</span><span class="p">,</span> <span class="n">release</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;info&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">version</span>
+<span class="go">2.2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">release</span>
+<span class="go">roll(), release version 2.2.1 (Beta) for Python 2.5.4</span>
 </pre></div>
 </div>
 
@@ -64,7 +117,7 @@
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
             <h4>Previous topic</h4>
-            <p class="topless"><a href="designers_notes.html" title="previous chapter"><strong>Designer&#8217;s Notes</strong></a></p>
+            <p class="topless"><a href="installing.html" title="previous chapter"><strong>Installing diceroll</strong></a></p>
             <h4>Next topic</h4>
             <p class="topless"><a href="diceroll.html" title="next chapter"><strong>diceroll Module</strong></a></p>
             <h3>This Page</h3>
@@ -94,7 +147,7 @@
           <a href="diceroll.html" title="diceroll Module"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="designers_notes.html" title="Designer&#8217;s Notes"
+          <a href="installing.html" title="Installing diceroll"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">diceroll 2.2 Manual</a> &raquo;</li>
       </ul>

@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>diceroll Module &mdash; diceroll 2.2 Manual</title>
+    <title>Installing diceroll &mdash; diceroll 2.2 Manual</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -20,7 +20,8 @@
     <link rel="index" title="Global index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="diceroll 2.2 Manual" href="index.html" />
-    <link rel="prev" title="diceroll Tutorial" href="tutorial.html" />
+    <link rel="next" title="diceroll Tutorial" href="tutorial.html" />
+    <link rel="prev" title="Designer&#8217;s Notes" href="designers_notes.html" />
   </head>
   <body>
     <div class="related">
@@ -34,6 +35,9 @@
              accesskey="M">modules</a> |</li>
         <li class="right" >
           <a href="tutorial.html" title="diceroll Tutorial"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="designers_notes.html" title="Designer&#8217;s Notes"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">diceroll 2.2 Manual</a> &raquo;</li>
       </ul>
@@ -44,45 +48,19 @@
           <div class="body">
             
   
-  <div class="section" id="module-diceroll">
-<h1><strong>diceroll Module</strong><a class="headerlink" href="#module-diceroll" title="Permalink to this headline">¶</a></h1>
-<dl class="docutils">
-<dt>Usage:</dt>
-<dd><p class="first">from diceroll import roll</p>
-<p class="last">print roll(&#8216;2D6&#8217;) - roll two 6-sided dice</p>
-</dd>
-</dl>
-<dl class="function">
-<dt id="diceroll.die_rolls">
-<!--[diceroll.die_rolls]--><tt class="descclassname">diceroll.</tt><tt class="descname">die_rolls</tt><big>(</big><em>dtype</em>, <em>dcount</em><big>)</big><a class="headerlink" href="#diceroll.die_rolls" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="docutils">
-<dt>Two arguments:</dt>
-<dd><p class="first">dtype: the number of sides for the dice (int)</p>
-<p class="last">dcount: the number of dice to roll (int)</p>
-</dd>
-<dt>Value returned:</dt>
-<dd>dtotal: the value returned from die_rolls (int)</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="diceroll.roll">
-<!--[diceroll.roll]--><tt class="descclassname">diceroll.</tt><tt class="descname">roll</tt><big>(</big><em>dice</em><big>)</big><a class="headerlink" href="#diceroll.roll" title="Permalink to this definition">¶</a></dt>
-<dd><p>The dice types to roll are: D3, D4, D6, D8, D9, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, BADFLUX</p>
-<p>Some examples are:</p>
-<p>roll(&#8216;D6&#8217;) or roll(&#8216;1D6&#8217;) &#8211; roll one 6-sided die</p>
-<p>roll(&#8216;2D6&#8217;) &#8211; roll two 6-sided dice</p>
-<p>roll(&#8216;D10&#8217;) &#8211; roll a 10-sided die (1 - 10)</p>
-<p>roll(&#8216;D100&#8217;) &#8211; roll a 100-sided die (1 - 100)</p>
-<p>roll(&#8216;D66&#8217;) &#8211; roll for a D66 chart</p>
-<p>roll(&#8216;FLUX&#8217;) &#8211; a FLUX roll (-5 to 5)</p>
-<p>roll(&#8216;3D6+6&#8217;) &#8211; add +6 DM to roll</p>
-<p>roll(&#8216;4D4-4&#8217;) &#8211; add -4 DM to roll</p>
-<p>roll(&#8216;2DD+3&#8217;) &#8211; roll (2D6+3) x 10</p>
-<p>roll(&#8216;info&#8217;) &#8211; release version of program</p>
-<p>An invalid roll will return a 0 (int).</p>
-</dd></dl>
-
+  <div class="section" id="installing-diceroll">
+<h1><strong>Installing diceroll</strong><a class="headerlink" href="#installing-diceroll" title="Permalink to this headline">¶</a></h1>
+<p>Installing <em>diceroll 2.2</em> is as easy as always. Just copy <tt class="docutils literal"><span class="pre">diceroll.py</span></tt> into the same folder
+your code happens to be in.</p>
+<p>Then add this line at (or near) the top of your code:</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">diceroll</span> <span class="kn">import</span> <span class="n">roll</span>
+</pre></div>
+<p>If your code setup is different, in that you like to keep your function modules in a folder separate
+from your main code, you could copy <tt class="docutils literal"><span class="pre">diceroll.py</span></tt> into that folder.</p>
+<p>Say you have a folder called <tt class="docutils literal"><span class="pre">library</span></tt>, and assuming you have an <tt class="docutils literal"><span class="pre">__init__.py</span></tt> inside it, just copy <tt class="docutils literal"><span class="pre">diceroll.py</span></tt>
+into your <tt class="docutils literal"><span class="pre">library</span></tt> folder and add this line near the top of your code</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">library.diceroll</span> <span class="kn">import</span> <span class="n">roll</span>
+</pre></div>
 </div>
 
 
@@ -92,10 +70,12 @@
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
             <h4>Previous topic</h4>
-            <p class="topless"><a href="tutorial.html" title="previous chapter"><strong>diceroll Tutorial</strong></a></p>
+            <p class="topless"><a href="designers_notes.html" title="previous chapter"><strong>Designer&#8217;s Notes</strong></a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="tutorial.html" title="next chapter"><strong>diceroll Tutorial</strong></a></p>
             <h3>This Page</h3>
             <ul class="this-page-menu">
-              <li><a href="_sources/diceroll.txt">Show Source</a></li>
+              <li><a href="_sources/installing.txt">Show Source</a></li>
             </ul>
             <h3>Quick search</h3>
             <form class="search" action="search.html" method="get">
@@ -118,6 +98,9 @@
              accesskey="M">modules</a> |</li>
         <li class="right" >
           <a href="tutorial.html" title="diceroll Tutorial"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="designers_notes.html" title="Designer&#8217;s Notes"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">diceroll 2.2 Manual</a> &raquo;</li>
       </ul>

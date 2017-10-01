@@ -3,7 +3,9 @@
 **diceroll 2.2 Manual**
 =======================
 
-**A Python Dice Rolling Module** https://github.com/ShawnDriscoll/diceroll
+**A Python Dice Rolling Module**
+
+https://github.com/ShawnDriscoll/diceroll
 
 Requirements
 ------------
@@ -32,6 +34,7 @@ Contents
    :maxdepth: 2
    
    designers_notes
+   installing
    tutorial
    diceroll
 
