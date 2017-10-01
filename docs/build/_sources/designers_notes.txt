@@ -93,11 +93,7 @@ many will use this module because of the simple fact that Python is now version 
 with a slew of other pre-Python 2.6 era modules, are the Channel 1 stations in the room that no TV can possibly watch.
 
 It really comes down to a philosophy. I waited on learning Python until a version was released where I could say,
-   *"This is Python."*
-or say,
-   *"This is what Python should be."*
-   
-Something like that.
+*"This is Python."* or say, *"This is what Python should be."* Something like that.
 
 And for me, it was Python 2.5.4 when I said such things. Python 2.6 books were showing up in stores. And
 there were already differences being found between it and the Python that I was using. Python had become this
