@@ -3,7 +3,7 @@
 **diceroll 2.2 Manual**
 =======================
 
-**A Python Dice Rolling Module**
+**A Python Dice Rolling Module** https://github.com/ShawnDriscoll/diceroll
 
 Requirements
 ------------

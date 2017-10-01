@@ -119,7 +119,7 @@ there is still a lot about it that I have never delved into. Sphinx was somethin
 in the past. It was yet another one of those *need to know only* things about Python. Some things I'd get around to
 learning only when I had to, but only if it was part of something else that I have taken an interest in doing.
 
-So somewhere in my discovering of PyMongo, I had been pointed at Sphinx and Jinja. It was something about document
+So somewhere in my discovering of PyMongo, I had been pointed at Sphinx and Jinja. They were both something about document
 generation. And since I had just learned about Pandas and CSV, I was in a data retrieval mood still.
 
 In a nutshell,
