@@ -5,7 +5,9 @@ folder it creates if one isn't there already. In the file you will see mentions 
 a default logging mode of ``INFO`` which isn't that verbose. ::
 
    module_log.setLevel(logging.INFO)
-   
+
+::
+
    Sun, 01 Oct 2017 16:08:03 INFO diceroll - Logging started.
    Sun, 01 Oct 2017 16:08:03 INFO diceroll - roll() v2.2 started, and running...
    Sun, 01 Oct 2017 16:08:03 INFO diceroll - 3D4 = 3D4+0 = 10
@@ -13,7 +15,9 @@ a default logging mode of ``INFO`` which isn't that verbose. ::
 Changing **diceroll's** logging mode to ``DEBUG`` will record debugging messages in the ``Logs\diceroll.log`` file. ::
    
    module_log.setLevel(logging.DEBUG)
-   
+
+::
+
    Sun, 01 Oct 2017 16:27:21 INFO diceroll - Logging started.
    Sun, 01 Oct 2017 16:27:21 INFO diceroll - roll() v2.2 started, and running...
    Sun, 01 Oct 2017 16:27:21 DEBUG diceroll - Asked to roll 3D4:
