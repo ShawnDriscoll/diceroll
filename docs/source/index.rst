@@ -7,7 +7,7 @@ https://github.com/ShawnDriscoll/diceroll
 
 .. toctree::
    :maxdepth: 2
-   
+
    preface
    requirements
    installing
