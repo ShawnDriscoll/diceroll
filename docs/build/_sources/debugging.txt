@@ -24,7 +24,7 @@ Changing **diceroll's** logging mode to ``DEBUG`` will record debugging messages
    Sun, 01 Oct 2017 16:27:21 INFO diceroll - 3D4 = 3D4+0 = 8
    
 .. note::
-   Running **diceroll** in ``DEBUG`` mode may create a log while that will be too huge to open. A program of yours
+   Running **diceroll** in ``DEBUG`` mode may create a log file that will be too huge to open. A program of yours
    left running for a long period of time could create millions of lines of recorded log entries. Fortunately, ``diceroll.log`` is
    reset each time your program is run. Also, any errors encountered will be recorded as ``ERROR`` in the log file, no
    matter which logging mode you've chosen to use.
