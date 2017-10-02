@@ -73,7 +73,7 @@ I was trying to avoid using: ::
    from diceroll import die_rolls
    
    print die_rolls(6, 2) # roll two 6-sided dice
-   
+
 For my dice rolls, I wanted something more readable. Something like: ::
 
    from diceroll import roll
