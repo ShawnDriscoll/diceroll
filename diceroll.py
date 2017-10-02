@@ -3,18 +3,23 @@
 #
 #   To use this module: from diceroll import roll
 #
-#   Make a dice roll for calling module
+#   Make a dice roll
 #
 ##########################################################
 
-'''Usage: from diceroll import roll'''
+'''
+Usage:
+    from diceroll import roll
+    
+    print roll('2D6') - roll two 6-sided dice
+'''
 
 from random import randint
 import os
 import logging
 
 __version__ = '2.2'
-__release__ = '2.2.1'
+__release__ = '2.2.1 (Beta)'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
 module_log = logging.getLogger('diceroll')
@@ -38,11 +43,14 @@ number_of_dice = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven',
 def die_rolls(dtype, dcount):
     '''
     Two arguments:
-        dtype: the number of sides for the dice
+        dtype: the number of sides for the dice (int)
         
-        dcount: the number of dice to roll
-    '''
+        dcount: the number of dice to roll (int)
     
+    Value returned:
+        dtotal: the value returned from die_rolls (int)
+    '''
+
     dtotal = 0
     if dcount == 1:
         module_log.debug('Using %s %d-sided die...' % (number_of_dice[dcount], dtype))
@@ -62,7 +70,7 @@ def die_rolls(dtype, dcount):
     return dtotal
 
 def roll(dice):
-    """
+    '''
     The dice types to roll are: D3, D4, D6, D8, D9, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, BADFLUX
 
     Some examples are:
@@ -87,22 +95,23 @@ def roll(dice):
     
     roll('info') -- release version of program
     
-    """
-    
-    log = logging.getLogger('Imperial_Chargen_085b.diceroll')
+    An invalid roll will return a 0 (int).
+    '''
+
+    log = logging.getLogger('your_code_name_here.diceroll')
 
     if dice == 'info':
         ver = 'roll(), release version ' + __release__ + ' for Python 2.5.4'
         module_log.info('roll() release version: %s' % __release__)
         return __version__, ver
-    
+
     dice = str(dice).upper().strip()
-    
+
     log.debug(dice)
     module_log.debug('Asked to roll %s:' % dice)
-    
+
     dice_mod = 0
-    
+
     if dice == 'FLUX':
         flux1 = randint(1, 6)
         flux2 = randint(1, 6)
