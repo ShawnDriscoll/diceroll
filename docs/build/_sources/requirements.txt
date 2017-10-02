@@ -12,6 +12,6 @@
 
        Eclipse/PyDev, PyCharm, NetBeans, and IDLE all work fine for
        running this module.
-        
+
 .. Warning::
    **diceroll** will not work with **Python 2.6+**.
