@@ -1,5 +1,3 @@
-.. image:: diceroll_cover.png
-
 **diceroll 2.2 Operations Manual**
 ==================================
 
