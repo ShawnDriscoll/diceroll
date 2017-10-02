@@ -3,12 +3,11 @@
 
 .. image:: diceroll_manual_cover_art.png
 
-**diceroll 2.2** is a Python 2.5 function module that your game code
-can make calls to when various dice rolls are needed.
+**diceroll 2.2** is a Python 2.5 module that your game code calls to make dice rolls.
 
 The free-to-use source is available at https://github.com/ShawnDriscoll/diceroll
 
-This manual explains how to install and use the **diceroll module** for your gaming projects.
+This documentation explains how to install and use the **diceroll module** for your gaming projects.
 
 
 .. toctree::
