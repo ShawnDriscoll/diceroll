@@ -45,7 +45,7 @@ The dice types to roll are:
 
 Encountering Errors
 -------------------
-Entering an invalid string for ``roll()`` will return an error message, as well as a value of 0 from the function. ::
+Entering an invalid string for ``roll()`` will return an error message, as well as a value of 0 from the function: ::
 
    print roll('3d')
 
@@ -59,7 +59,7 @@ What's New
 ----------
 .. versionadded:: 2.2
 
-One exception to the "integer" rule for ``roll()`` is when using ``roll('info')``, which will return two strings.
+One exception to the "integer" rule for ``roll()`` is when using ``roll('info')``, which will return two strings:
 
 >>> version, release = roll('info')
 >>> print version
