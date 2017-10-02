@@ -8,9 +8,7 @@ can make calls to when dice rolls are needed.
 
 The free-to-use source is available at https://github.com/ShawnDriscoll/diceroll
 
-at `https://www.yeastrc.org/proxl_public/ <https://www.yeastrc.org/proxl_public/>`_ 
-
-This manual explains how to install and use **diceroll** for your gaming projects.
+This manual explains how to install and use the **diceroll module** for your gaming projects.
 
 
 .. toctree::
