@@ -1,7 +1,7 @@
 .. image:: diceroll_cover.png
 
-**diceroll 2.2 Manual**
-=======================
+**diceroll 2.2 Operations Manual**
+==================================
 
 **A Python Dice Rolling Module**
 
