@@ -64,7 +64,7 @@ exclude_trees = []
 #default_role = None
 
 # If true, '()' will be appended to :func: etc. cross-reference text.
-add_function_parentheses = True
+add_function_parentheses = False
 
 # If true, the current module name will be prepended to all description
 # unit titles (such as .. function::).
@@ -72,7 +72,7 @@ add_module_names = True
 
 # If true, sectionauthor and moduleauthor directives will be shown in the
 # output. They are ignored by default.
-show_authors = False
+show_authors = True
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'sphinx'
@@ -178,4 +178,4 @@ latex_use_parts = False
 #latex_appendices = []
 
 # If false, no module index is generated.
-latex_use_modindex = False
+latex_use_modindex = True
