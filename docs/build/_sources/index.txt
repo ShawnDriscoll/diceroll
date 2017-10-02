@@ -7,9 +7,6 @@
 
 https://github.com/ShawnDriscoll/diceroll
 
-Requirements
-------------
-
 * **Microsoft Windows**
        **diceroll** has been tested on Windows versions: XP, 7, 8, and 10.
        It has not been tested on MacOS or Linux.
@@ -28,16 +25,10 @@ Requirements
 .. toctree::
    :maxdepth: 2
    
+   requirements
    designers_notes
    installing
    tutorial
    diceroll
    debugging
-
-Indices and Tables
-------------------
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+   back_index
