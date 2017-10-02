@@ -19,4 +19,4 @@
        Otherwise, no dice.
 
 .. Warning::
-   **diceroll** will not work with **Python 2.6+**.
+   **diceroll 2.2** will not work with **Python 2.6+**.
