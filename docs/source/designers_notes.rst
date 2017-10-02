@@ -129,4 +129,4 @@ in Python 2.5.4) that generates documents. Nothing too fancy. Just simple docume
 through any device using any viewer. And when I learned that Sphinx could read Python modules and produce documents
 from their ``.__doc__`` strings, I knew I just had to spend a couple days learning how all that stuff happens. 
 
-Some rabbits holes are worth their going into.
+Some rabbit holes are worth their going into.

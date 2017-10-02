@@ -98,7 +98,7 @@ def roll(dice):
     An invalid roll will return a 0 (int).
     '''
 
-    log = logging.getLogger('Imperial_Chargen_085b.diceroll')
+    log = logging.getLogger('your_code_name_here.diceroll')
 
     if dice == 'info':
         ver = 'roll(), release version ' + __release__ + ' for Python 2.5.4'
