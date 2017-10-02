@@ -49,15 +49,15 @@
 <p><strong>diceroll 2.2</strong> keeps a log file of any dice rolls made during its last run. You will find <tt class="docutils literal"><span class="pre">diceroll.log</span></tt> in the <tt class="docutils literal"><span class="pre">Logs</span></tt>
 folder it creates if one isn&#8217;t there already. In the file you will see mentions of dice being rolled. <strong>diceroll</strong> uses
 a default logging mode of <tt class="docutils literal"><span class="pre">INFO</span></tt> which isn&#8217;t that verbose.</p>
-<pre>module_log.setLevel(logging.INFO)
-
-Sun, 01 Oct 2017 16:08:03 INFO diceroll - Logging started.
+<div class="highlight"><pre><span class="n">module_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+</pre></div>
+<pre>Sun, 01 Oct 2017 16:08:03 INFO diceroll - Logging started.
 Sun, 01 Oct 2017 16:08:03 INFO diceroll - roll() v2.2 started, and running...
 Sun, 01 Oct 2017 16:08:03 INFO diceroll - 3D4 = 3D4+0 = 10</pre>
 <p>Changing <strong>diceroll&#8217;s</strong> logging mode to <tt class="docutils literal"><span class="pre">DEBUG</span></tt> will record debugging messages in the <tt class="docutils literal"><span class="pre">Logs\diceroll.log</span></tt> file.</p>
-<pre>module_log.setLevel(logging.DEBUG)
-
-Sun, 01 Oct 2017 16:27:21 INFO diceroll - Logging started.
+<div class="highlight"><pre><span class="n">module_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+</pre></div>
+<pre>Sun, 01 Oct 2017 16:27:21 INFO diceroll - Logging started.
 Sun, 01 Oct 2017 16:27:21 INFO diceroll - roll() v2.2 started, and running...
 Sun, 01 Oct 2017 16:27:21 DEBUG diceroll - Asked to roll 3D4:
 Sun, 01 Oct 2017 16:27:21 DEBUG diceroll - Using three 4-sided dice...
