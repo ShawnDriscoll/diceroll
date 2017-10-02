@@ -1,6 +1,6 @@
 **diceroll 2.2 Operations Manual**
 ==================================
-
+   
 .. toctree::
    :maxdepth: 2
 
@@ -12,7 +12,3 @@
    diceroll
    debugging
    designers_notes
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
