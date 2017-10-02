@@ -24,11 +24,6 @@ Requirements
         
 .. Warning::
    **diceroll** will not work with **Python 2.6+**.
-   
-
-
-Contents
---------
 
 .. toctree::
    :maxdepth: 2
