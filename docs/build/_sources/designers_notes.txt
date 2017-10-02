@@ -93,7 +93,7 @@ many will use this module because of the simple fact that Python is now version 
 with a slew of other pre-Python 2.6 era modules, are the Channel 1 stations in the room that no TV can possibly watch.
 
 It really comes down to a philosophy. I waited on learning Python until a version was released where I could say,
-*"This is Python."* or say, *"This is what Python should be."* Something like that.
+*"This is Python."* Or say, *"This is what Python should be."* Something like that.
 
 And for me, it was Python 2.5.4 when I said such things. Python 2.6 books were showing up in stores. And
 there were already differences being found between it and the Python that I was using. Python had become this
@@ -117,9 +117,9 @@ Getting Sphinxed
 With the release of **diceroll 2.2**, I wanted to learn something new in regards to Python. Even though I use 2.5.4,
 there is still a lot about it that I have never delved into. Sphinx was something I had not really paid any mind to
 in the past. It was yet another one of those *need to know only* things about Python. Some things I'd get around to
-learning only when I had to, but only if it was part of something else that I have taken an interest in doing.
+learning only when I had to, but only if it was part of something else that I had taken an interest in doing.
 
-So somewhere in my discovering of PyMongo, I had been pointed at Sphinx and Jinja. They were both something about document
+So somewhere in my discovering of PyMongo, I had been pointed to Sphinx and Jinja. They were both something about document
 generation. And since I had just learned about Pandas and CSV, I was in a data retrieval mood still.
 
 In a nutshell,

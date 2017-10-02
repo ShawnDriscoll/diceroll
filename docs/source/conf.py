@@ -123,13 +123,13 @@ html_last_updated_fmt = '%b %d, %Y'
 #html_additional_pages = {}
 
 # If false, no module index is generated.
-#html_use_modindex = True
+html_use_modindex = True
 
 # If false, no index is generated.
-#html_use_index = True
+html_use_index = True
 
 # If true, the index is split into individual pages for each letter.
-#html_split_index = False
+html_split_index = False
 
 # If true, the reST sources are included in the HTML build as _sources/<name>.
 #html_copy_source = True
@@ -158,13 +158,14 @@ htmlhelp_basename = 'dicerolldoc'
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, document class [howto/manual]).
 latex_documents = [
-  ('index', 'diceroll.tex', u'diceroll Documentation',
+  ('index', 'diceroll.tex', u'diceroll Operations Manual',
    u'Shawn Driscoll', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
 #latex_logo = None
+latex_logo = 'diceroll_cover.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
