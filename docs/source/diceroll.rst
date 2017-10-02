@@ -1,4 +1,4 @@
-**The diceroll 2.2 Module Reference**
+**diceroll 2.2 Module Reference**
 =================================
    
 .. automodule:: diceroll

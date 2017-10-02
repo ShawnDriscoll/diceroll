@@ -12,6 +12,11 @@
 
        Eclipse/PyDev, PyCharm, NetBeans, and IDLE all work fine for
        running this module.
+* **Your Game**
+       **diceroll** is not a standalone program. It requires your game to make calls
+       to it.
+       
+       Otherwise, no dice.
 
 .. Warning::
    **diceroll** will not work with **Python 2.6+**.
