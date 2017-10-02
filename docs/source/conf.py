@@ -123,7 +123,7 @@ html_use_smartypants = False
 #html_additional_pages = {}
 
 # If false, no module index is generated.
-html_use_modindex = False
+html_use_modindex = True
 
 # If false, no index is generated.
 html_use_index = True
@@ -178,4 +178,4 @@ latex_use_parts = False
 #latex_appendices = []
 
 # If false, no module index is generated.
-latex_use_modindex = False
+latex_use_modindex = True
