@@ -16,7 +16,9 @@ Those of you that have used dice rolling programs before will notice that someth
 >>> print die1, die2, roll(dice)
 3, 2, 9
 
-Not that the inputted string values can be upper or lower case. And note that the return values are integer.
+.. versionadded:: 2.2
+
+Note that the inputted string values can be upper or lower case. And note that the return values are integer.
 
 The dice types to roll are:
    D3, D4, D6, D8, D9, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, BADFLUX
