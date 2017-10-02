@@ -26,7 +26,7 @@ The dice types to roll are:
 .. note::
    You may recognize some of these dice types from various tabletop role-playing games. There is probably a
    standard notation for dice rolls used in games. But each game typically uses its own notation.
-   
+
    |
    | **diceroll** uses a simple standard when it comes to the more plainer dice types.
    |
