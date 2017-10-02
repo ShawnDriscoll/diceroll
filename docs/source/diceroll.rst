@@ -1,5 +1,5 @@
-**The diceroll Module**
-=======================
+**The diceroll 2.2 Module Reference**
+=================================
    
 .. automodule:: diceroll
    :members:
