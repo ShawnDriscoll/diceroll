@@ -1,4 +1,4 @@
-<img src="docs/source/diceroll_cover.png"><br><br>
+<img src="docs/source/diceroll_github_cover.png"><br><br>
 <b>diceroll 2.2 for Python 2.5</b><br>
 =================<br>
 Read the <b>diceroll Operations Manual</b> at <a href="http://diceroll.readthedocs.io/">Read the Docs</a>.<br>

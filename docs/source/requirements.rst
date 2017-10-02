@@ -15,7 +15,7 @@
 * **Your Game**
        **diceroll** is not a standalone program. It requires your game to make calls
        to it.
-       
+
        Otherwise, no dice.
 
 .. Warning::
