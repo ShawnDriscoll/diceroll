@@ -23,9 +23,9 @@ C language used to write Python had very robust random number generators.
 And because Python was written in C, it just made sense for it to make
 use of C libraries.
 
-For those that are curious, *diceroll* uses the ``random.randint()`` module that comes
+For those that are curious, **diceroll** uses the ``random.randint()`` module that comes
 with CPython. There are stronger random generators out there now, with NumPy being one
-of them. But at the time of designing *diceroll*, I didn't quite understand how-all
+of them. But at the time of designing **diceroll**, I didn't quite understand how-all
 NumPy worked, or what version of it to install. And for rolling dice, the built-in
 random number generator would be just fine.
 
@@ -33,7 +33,7 @@ Lessons Learned
 ---------------
 In the past, when I needed a random number from 1 to say 6 (see 6-sided dice), I would use ``INT(RND(1)*6) + 1``.
 And I would be used to doing it that way for probably 15 years or so, because that is
-how most BASIC languages did things. Other languages like C required me to wip out the
+how most BASIC languages did things. Other languages like C required me to whip out the
 80286 System Developer's 3-ring binder to find out how ``srand()`` and ``rand()`` worked,
 and under what circumstances.
 
@@ -64,7 +64,7 @@ Which looked a bit cleaner. But I was debating if I wanted to use ``randint()`` 
 my normal coding.
 
 So while I was learning how to write my own functions, as well as how to go about importing them, I came up with
-an idea for *diceroll*. It would included a ``roll()`` function, and a ``die_rolls()`` function as
+an idea for **diceroll**. It would included a ``roll()`` function, and a ``die_rolls()`` function as
 a "side effect." Even though ``die_rolls()`` had no error-checking, ``roll()`` would call it after
 doing its own error-checking.
 
@@ -88,8 +88,8 @@ code. And the simple addition or subtraction of DMs to such a roll was making th
 
 The Channel 1
 -------------
-*diceroll* was written years ago. It gets looked at by GitHub visitors who Google by now and again. But not
-many will use this module because of the simple fact that Python is now version 3.6+ something. So *diceroll*, along
+**diceroll** was written years ago. It gets looked at by GitHub visitors who Google by now and again. But not
+many will use this module because of the simple fact that Python is now version 3.6+ something. So **diceroll**, along
 with a slew of other pre-Python 2.6 era modules, are the Channel 1 stations in the room that no TV can possibly watch.
 
 It really comes down to a philosophy. I waited on learning Python until a version was released where I could say,
@@ -105,7 +105,7 @@ Python is trying to be all things to all programmers these days. And it has beco
 I am not a functional programmer. Never have been. But a lot of people are. And Python now serves them very well.
 I'm often told, *"Python now does things this way."* But it is ways that I don't see myself using.
 
-People are altering *diceroll* so that it works in their Python, just as I am altering their uploaded code so that it
+People are altering **diceroll** so that it works in their Python, just as I am altering their uploaded code so that it
 works in my Python. If I wanted my code to reach more people, of course I would have to program using
 the latest greatest Python. But there is a certain individuality lost in doing that.
 
@@ -114,7 +114,7 @@ it grows. And doesn't split the party as it grows.
 
 Getting Sphinxed
 ----------------
-With the release of *diceroll 2.2*, I wanted to learn something new in regards to Python. Even though I use 2.5.4,
+With the release of **diceroll 2.2**, I wanted to learn something new in regards to Python. Even though I use 2.5.4,
 there is still a lot about it that I have never delved into. Sphinx was something I had not really paid any mind to
 in the past. It was yet another one of those *need to know only* things about Python. Some things I'd get around to
 learning only when I had to, but only if it was part of something else that I have taken an interest in doing.

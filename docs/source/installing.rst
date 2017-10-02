@@ -1,6 +1,6 @@
 **Installing diceroll**
 =======================
-Installing *diceroll 2.2* is as easy as always. Just copy ``diceroll.py`` into the same folder
+Installing **diceroll 2.2** is as easy as always. Just copy ``diceroll.py`` into the same folder
 your code happens to be in.
 
 Then add this line at (or near) the top of your code: ::

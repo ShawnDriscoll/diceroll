@@ -20,7 +20,7 @@
     <link rel="index" title="Global index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="diceroll 2.2 Manual" href="index.html" />
-    <link rel="next" title="diceroll Tutorial" href="tutorial.html" />
+    <link rel="next" title="Installing diceroll" href="installing.html" />
     <link rel="prev" title="diceroll 2.2 Manual" href="index.html" />
   </head>
   <body>
@@ -34,7 +34,7 @@
           <a href="modindex.html" title="Global Module Index"
              accesskey="M">modules</a> |</li>
         <li class="right" >
-          <a href="tutorial.html" title="diceroll Tutorial"
+          <a href="installing.html" title="Installing diceroll"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="index.html" title="diceroll 2.2 Manual"
@@ -69,9 +69,9 @@ libraries for various languages. By the time Python was being developed, the
 C language used to write Python had very robust random number generators.
 And because Python was written in C, it just made sense for it to make
 use of C libraries.</p>
-<p>For those that are curious, <em>diceroll</em> uses the <tt class="docutils literal"><span class="pre">random.randint()</span></tt> module that comes
+<p>For those that are curious, <strong>diceroll</strong> uses the <tt class="docutils literal"><span class="pre">random.randint()</span></tt> module that comes
 with CPython. There are stronger random generators out there now, with NumPy being one
-of them. But at the time of designing <em>diceroll</em>, I didn&#8217;t quite understand how-all
+of them. But at the time of designing <strong>diceroll</strong>, I didn&#8217;t quite understand how-all
 NumPy worked, or what version of it to install. And for rolling dice, the built-in
 random number generator would be just fine.</p>
 </div>
@@ -79,7 +79,7 @@ random number generator would be just fine.</p>
 <h2>Lessons Learned<a class="headerlink" href="#lessons-learned" title="Permalink to this headline">¶</a></h2>
 <p>In the past, when I needed a random number from 1 to say 6 (see 6-sided dice), I would use <tt class="docutils literal"><span class="pre">INT(RND(1)*6)</span> <span class="pre">+</span> <span class="pre">1</span></tt>.
 And I would be used to doing it that way for probably 15 years or so, because that is
-how most BASIC languages did things. Other languages like C required me to wip out the
+how most BASIC languages did things. Other languages like C required me to whip out the
 80286 System Developer&#8217;s 3-ring binder to find out how <tt class="docutils literal"><span class="pre">srand()</span></tt> and <tt class="docutils literal"><span class="pre">rand()</span></tt> worked,
 and under what circumstances.</p>
 <p>Fast-forward 20 years, and I&#8217;m learning CPython without knowing the difference between a CPython
@@ -104,7 +104,7 @@ ways of importing modules the more I read about them, and the more code I poured
 <p>Which looked a bit cleaner. But I was debating if I wanted to use <tt class="docutils literal"><span class="pre">randint()</span></tt> at all in
 my normal coding.</p>
 <p>So while I was learning how to write my own functions, as well as how to go about importing them, I came up with
-an idea for <em>diceroll</em>. It would included a <tt class="docutils literal"><span class="pre">roll()</span></tt> function, and a <tt class="docutils literal"><span class="pre">die_rolls()</span></tt> function as
+an idea for <strong>diceroll</strong>. It would included a <tt class="docutils literal"><span class="pre">roll()</span></tt> function, and a <tt class="docutils literal"><span class="pre">die_rolls()</span></tt> function as
 a &#8220;side effect.&#8221; Even though <tt class="docutils literal"><span class="pre">die_rolls()</span></tt> had no error-checking, <tt class="docutils literal"><span class="pre">roll()</span></tt> would call it after
 doing its own error-checking.</p>
 <p>I was trying to avoid using:</p>
@@ -125,8 +125,8 @@ code. And the simple addition or subtraction of DMs to such a roll was making th
 </div>
 <div class="section" id="the-channel-1">
 <h2>The Channel 1<a class="headerlink" href="#the-channel-1" title="Permalink to this headline">¶</a></h2>
-<p><em>diceroll</em> was written years ago. It gets looked at by GitHub visitors who Google by now and again. But not
-many will use this module because of the simple fact that Python is now version 3.6+ something. So <em>diceroll</em>, along
+<p><strong>diceroll</strong> was written years ago. It gets looked at by GitHub visitors who Google by now and again. But not
+many will use this module because of the simple fact that Python is now version 3.6+ something. So <strong>diceroll</strong>, along
 with a slew of other pre-Python 2.6 era modules, are the Channel 1 stations in the room that no TV can possibly watch.</p>
 <p>It really comes down to a philosophy. I waited on learning Python until a version was released where I could say,
 <em>&#8220;This is Python.&#8221;</em> or say, <em>&#8220;This is what Python should be.&#8221;</em> Something like that.</p>
@@ -138,7 +138,7 @@ hadn&#8217;t been to. And more and more people were doing Python because of it.<
 <p>Python is trying to be all things to all programmers these days. And it has become less of Python in doing so.
 I am not a functional programmer. Never have been. But a lot of people are. And Python now serves them very well.
 I&#8217;m often told, <em>&#8220;Python now does things this way.&#8221;</em> But it is ways that I don&#8217;t see myself using.</p>
-<p>People are altering <em>diceroll</em> so that it works in their Python, just as I am altering their uploaded code so that it
+<p>People are altering <strong>diceroll</strong> so that it works in their Python, just as I am altering their uploaded code so that it
 works in my Python. If I wanted my code to reach more people, of course I would have to program using
 the latest greatest Python. But there is a certain individuality lost in doing that.</p>
 <p>I believe the next great computer programming language will be the one that remains true to its nature/design as
@@ -146,7 +146,7 @@ it grows. And doesn&#8217;t split the party as it grows.</p>
 </div>
 <div class="section" id="getting-sphinxed">
 <h2>Getting Sphinxed<a class="headerlink" href="#getting-sphinxed" title="Permalink to this headline">¶</a></h2>
-<p>With the release of <em>diceroll 2.2</em>, I wanted to learn something new in regards to Python. Even though I use 2.5.4,
+<p>With the release of <strong>diceroll 2.2</strong>, I wanted to learn something new in regards to Python. Even though I use 2.5.4,
 there is still a lot about it that I have never delved into. Sphinx was something I had not really paid any mind to
 in the past. It was yet another one of those <em>need to know only</em> things about Python. Some things I&#8217;d get around to
 learning only when I had to, but only if it was part of something else that I have taken an interest in doing.</p>
@@ -182,7 +182,7 @@ from their <tt class="docutils literal"><span class="pre">.__doc__</span></tt> s
             <h4>Previous topic</h4>
             <p class="topless"><a href="index.html" title="previous chapter"><strong>diceroll 2.2 Manual</strong></a></p>
             <h4>Next topic</h4>
-            <p class="topless"><a href="tutorial.html" title="next chapter"><strong>diceroll Tutorial</strong></a></p>
+            <p class="topless"><a href="installing.html" title="next chapter"><strong>Installing diceroll</strong></a></p>
             <h3>This Page</h3>
             <ul class="this-page-menu">
               <li><a href="_sources/designers_notes.txt">Show Source</a></li>
@@ -207,7 +207,7 @@ from their <tt class="docutils literal"><span class="pre">.__doc__</span></tt> s
           <a href="modindex.html" title="Global Module Index"
              accesskey="M">modules</a> |</li>
         <li class="right" >
-          <a href="tutorial.html" title="diceroll Tutorial"
+          <a href="installing.html" title="Installing diceroll"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="index.html" title="diceroll 2.2 Manual"

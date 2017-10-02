@@ -1,5 +1,8 @@
 **diceroll Tutorial**
 =====================
+
+Rolling the Dice
+----------------
 Once ``diceroll.py`` is installed and recognized by your code, its ``roll()`` function can be used right away. This
 function returns an integer, by the way. So it can be used as any other integer would be used. But first,
 we must give this function a value to work from.
@@ -23,7 +26,7 @@ The dice types to roll are:
    standard notation for dice rolls used in games. But each game typically uses its own notation.
    
    |
-   | *diceroll* uses a simple standard when it comes to the more plainer dice types.
+   | **diceroll** uses a simple standard when it comes to the more plainer dice types.
    |
    | Some examples are:
    |
@@ -37,7 +40,9 @@ The dice types to roll are:
    | roll('4D4-4') -- add -4 DM to roll
    | roll('2DD+3') -- roll (2D6+3) x 10
    | roll('info') -- release version of program
-   
+
+Encountering Errors
+-------------------
 Entering an invalid string for ``roll()`` will return an error message, as well as a value of 0 from the function. ::
 
    print roll('3d')
@@ -48,9 +53,11 @@ Entering an invalid string for ``roll()`` will return an error message, as well 
    |
    | 0
 
-One exception to the "integer" rule for ``roll()`` is when using ``roll('info')``, which will return two strings.
-
+What's New
+----------
 .. versionadded:: 2.2
+
+One exception to the "integer" rule for ``roll()`` is when using ``roll('info')``, which will return two strings.
 
 >>> version, release = roll('info')
 >>> print version

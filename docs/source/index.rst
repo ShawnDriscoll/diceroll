@@ -11,10 +11,10 @@ Requirements
 ------------
 
 * **Microsoft Windows**
-       *diceroll* has been tested on Windows versions: XP, 7, 8, and 10.
+       **diceroll** has been tested on Windows versions: XP, 7, 8, and 10.
        It has not been tested on MacOS or Linux.
 * **Python 2.5**
-       *diceroll* was written using the C implementation of Python
+       **diceroll** was written using the C implementation of Python
        version 2.5.4. Also known as CPython. With some doing, this
        module could of course be re-written for Jython, PyPy, or
        IronPython.
@@ -23,7 +23,7 @@ Requirements
        running this module.
         
 .. Warning::
-   *diceroll* will not work with **Python 2.6+**.
+   **diceroll** will not work with **Python 2.6+**.
    
 
 
@@ -37,6 +37,7 @@ Contents
    installing
    tutorial
    diceroll
+   debugging
 
 Indices and Tables
 ------------------
