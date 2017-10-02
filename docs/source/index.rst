@@ -4,8 +4,8 @@
 .. toctree::
    :maxdepth: 2
 
-   preface
    github
+   preface
    requirements
    installing
    tutorial
