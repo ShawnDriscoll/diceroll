@@ -1,12 +1,12 @@
 **Requirements**
 ================
 
-* Microsoft Windows
+* **Microsoft Windows**
    
    diceroll has been tested on Windows versions: XP, 7, 8, and 10.
    It has not been tested on MacOS or Linux.
    
-* Python 2.5
+* **Python 2.5**
    
    diceroll was written using the C implementation of Python
    version 2.5.4. Also known as CPython. With some doing, this
@@ -16,7 +16,7 @@
    Eclipse/PyDev, PyCharm, NetBeans, and IDLE all work fine for
    running this module.
    
-* Your Game
+* **Your Game**
    
    diceroll is not a standalone program. It requires your game to make calls
    to it.
