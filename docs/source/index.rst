@@ -9,6 +9,6 @@
    requirements
    installing
    tutorial
-   diceroll
    debugging
    designers_notes
+   diceroll
