@@ -10,10 +10,11 @@ https://github.com/ShawnDriscoll/diceroll
 .. toctree::
    :maxdepth: 2
    
+   preface
    requirements
-   designers_notes
    installing
    tutorial
    diceroll
    debugging
+   designers_notes
    back_index

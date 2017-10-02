@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>diceroll 2.2 Operations Manual &mdash; diceroll 2.2 Operations Manual</title>
+    <title>Preface &mdash; diceroll 2.2 Operations Manual</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -19,8 +19,9 @@
     <link rel="contents" title="Global table of contents" href="contents.html" />
     <link rel="index" title="Global index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="diceroll 2.2 Operations Manual" href="" />
-    <link rel="next" title="Preface" href="preface.html" />
+    <link rel="top" title="diceroll 2.2 Operations Manual" href="index.html" />
+    <link rel="next" title="Requirements" href="requirements.html" />
+    <link rel="prev" title="diceroll 2.2 Operations Manual" href="index.html" />
   </head>
   <body>
     <div class="related">
@@ -33,9 +34,12 @@
           <a href="modindex.html" title="Global Module Index"
              accesskey="M">modules</a> |</li>
         <li class="right" >
-          <a href="preface.html" title="Preface"
+          <a href="requirements.html" title="Requirements"
              accesskey="N">next</a> |</li>
-        <li><a href="">diceroll 2.2 Operations Manual</a> &raquo;</li>
+        <li class="right" >
+          <a href="index.html" title="diceroll 2.2 Operations Manual"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">diceroll 2.2 Operations Manual</a> &raquo;</li>
       </ul>
     </div>
     <div class="document">
@@ -44,45 +48,21 @@
           <div class="body">
             
   
-  <img alt="_images/diceroll_cover.png" src="_images/diceroll_cover.png" />
-<div class="section" id="diceroll-2-2-operations-manual">
-<h1><strong>diceroll 2.2 Operations Manual</strong><a class="headerlink" href="#diceroll-2-2-operations-manual" title="Permalink to this headline">¶</a></h1>
-<p><strong>A Python Dice Rolling Module</strong></p>
-<p><a class="reference external" href="https://github.com/ShawnDriscoll/diceroll">https://github.com/ShawnDriscoll/diceroll</a></p>
-<ul>
-<li><a class="reference external" href="preface.html"><strong>Preface</strong></a></li>
-</ul>
-<ul>
-<li><a class="reference external" href="requirements.html"><strong>Requirements</strong></a></li>
-</ul>
-<ul>
-<li><a class="reference external" href="installing.html"><strong>Installing diceroll</strong></a></li>
-</ul>
-<ul>
-<li><a class="reference external" href="tutorial.html"><strong>diceroll Tutorial</strong></a><ul>
-<li><a class="reference external" href="tutorial.html#rolling-the-dice">Rolling the Dice</a></li>
-<li><a class="reference external" href="tutorial.html#encountering-errors">Encountering Errors</a></li>
-<li><a class="reference external" href="tutorial.html#what-s-new">What&#8217;s New</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><a class="reference external" href="diceroll.html"><strong>The diceroll Module</strong></a></li>
-</ul>
-<ul>
-<li><a class="reference external" href="debugging.html"><strong>Debugging diceroll</strong></a></li>
-</ul>
-<ul>
-<li><a class="reference external" href="designers_notes.html"><strong>Designer&#8217;s Notes</strong></a><ul>
-<li><a class="reference external" href="designers_notes.html#in-the-beginning">In the Beginning</a></li>
-<li><a class="reference external" href="designers_notes.html#lessons-learned">Lessons Learned</a></li>
-<li><a class="reference external" href="designers_notes.html#the-channel-1">The Channel 1</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><a class="reference external" href="back_index.html"><strong>Indices and Tables</strong></a></li>
-</ul>
+  <div class="section" id="preface">
+<h1><strong>Preface</strong><a class="headerlink" href="#preface" title="Permalink to this headline">¶</a></h1>
+<p>With the release of <strong>diceroll 2.2</strong>, I wanted to learn something new in regards to Python. Even though I use 2.5.4,
+there is still a lot about it that I have never delved into. Sphinx was something I had not really paid any mind to
+in the past. It was yet another one of those <em>need to know only</em> things about Python. Some things I&#8217;d get around to
+learning only when I had to, but only if it was part of something else that I had taken an interest in doing.</p>
+<p>So somewhere in my discovering of PyMongo, I had been pointed to Sphinx and Jinja. They were both something about document
+generation. And since I had just learned about Pandas and CSV, I was in a data retrieval mood still.</p>
+<p>In a nutshell,
+Sphinx is an EXE (generated during its install from an egg of .py files, which is still magic to me, and which took a
+great deal of time for me tracking down all the proper versions of requirements for it to even compile/run
+in Python 2.5.4) that generates documents. Nothing too fancy. Just simple documents that could be read easily/quickly
+through any device using any viewer. And when I learned that Sphinx could read Python modules and produce documents
+from their <tt class="docutils literal"><span class="pre">.__doc__</span></tt> strings, I knew I just had to spend a couple days learning how all that stuff happens.</p>
+<p>Some rabbit holes are worth their going into.</p>
 </div>
 
 
@@ -91,11 +71,13 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="index.html" title="previous chapter"><strong>diceroll 2.2 Operations Manual</strong></a></p>
             <h4>Next topic</h4>
-            <p class="topless"><a href="preface.html" title="next chapter"><strong>Preface</strong></a></p>
+            <p class="topless"><a href="requirements.html" title="next chapter"><strong>Requirements</strong></a></p>
             <h3>This Page</h3>
             <ul class="this-page-menu">
-              <li><a href="_sources/index.txt">Show Source</a></li>
+              <li><a href="_sources/preface.txt">Show Source</a></li>
             </ul>
             <h3>Quick search</h3>
             <form class="search" action="search.html" method="get">
@@ -117,9 +99,12 @@
           <a href="modindex.html" title="Global Module Index"
              accesskey="M">modules</a> |</li>
         <li class="right" >
-          <a href="preface.html" title="Preface"
+          <a href="requirements.html" title="Requirements"
              accesskey="N">next</a> |</li>
-        <li><a href="">diceroll 2.2 Operations Manual</a> &raquo;</li>
+        <li class="right" >
+          <a href="index.html" title="diceroll 2.2 Operations Manual"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">diceroll 2.2 Operations Manual</a> &raquo;</li>
       </ul>
     </div>
     <div class="footer">
