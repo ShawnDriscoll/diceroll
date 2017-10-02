@@ -12,4 +12,7 @@
    diceroll
    debugging
    designers_notes
-   back_index
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
