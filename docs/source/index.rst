@@ -1,7 +1,7 @@
 **diceroll 2.2 Operations Manual**
 ==================================
 
-.. image:: diceroll_manual_cover_art.png
+.. figure:: diceroll_manual_cover_art.png
 
 **diceroll 2.2** is a Python 2.5 module that your game code calls to make dice rolls.
 
