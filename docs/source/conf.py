@@ -169,7 +169,7 @@ latex_logo = 'diceroll_cover.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
-#latex_use_parts = False
+latex_use_parts = False
 
 # Additional stuff for the LaTeX preamble.
 #latex_preamble = ''
