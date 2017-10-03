@@ -1,11 +1,11 @@
-**What's New**
-==============
+**What's New?**
+===============
 
 New in version 2.3
 ------------------
 
-BOON and BANE rolls have been added. Both rolls use three 6-sided dice. A BOON keeps the two
-highest rolls, while a BANE keeps the two lowest rolls.
+BOON and BANE rolls have been added. Both rolls use three 6-sided dice. A BOON roll keeps the two
+highest dice, while a BANE roll keeps the two lowest dice.
 
 New in version 2.2
 ------------------
