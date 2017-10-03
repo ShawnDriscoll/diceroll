@@ -1,11 +1,14 @@
 **What's New**
 ==============
 
-.. versionadded:: 2.3
+New in version 2.3
+------------------
 
-BOON and BANE rolls have been added.
+BOON and BANE rolls have been added. Both rolls use three 6-sided dice. A BOON keeps the two
+highest rolls, while a BANE keeps the two lowest rolls.
 
-.. versionadded:: 2.2
+New in version 2.2
+------------------
 
 One exception to the "integer" rule for ``roll()`` is when using ``roll('info')``, which will return two strings:
 
