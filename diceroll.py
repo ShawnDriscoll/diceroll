@@ -45,6 +45,7 @@ def die_rolls(dtype, dcount):
     Two arguments:
     
       dtype: the number of sides for the dice (int)
+      
       dcount: the number of dice to roll (int)
     
     Value returned:
