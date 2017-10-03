@@ -1,5 +1,6 @@
-What's New
-----------
+**What's New**
+==============
+
 .. versionadded:: 2.3
 
 BOON and BANE rolls have been added.
