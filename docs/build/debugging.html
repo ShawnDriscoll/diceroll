@@ -2,13 +2,13 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Debugging diceroll &mdash; diceroll 2.2 Operations Manual</title>
+    <title>Debugging diceroll &mdash; diceroll 2.3 Operations Manual</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
           URL_ROOT:    '',
-          VERSION:     '2.2.1b',
+          VERSION:     '2.3.0b',
           COLLAPSE_MODINDEX: false,
           FILE_SUFFIX: '.html'
       };
@@ -19,7 +19,7 @@
     <link rel="contents" title="Global table of contents" href="contents.html" />
     <link rel="index" title="Global index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="diceroll 2.2 Operations Manual" href="index.html" />
+    <link rel="top" title="diceroll 2.3 Operations Manual" href="index.html" />
     <link rel="next" title="Designer's Notes" href="designers_notes.html" />
     <link rel="prev" title="diceroll Tutorial" href="tutorial.html" />
   </head>
@@ -39,7 +39,7 @@
         <li class="right" >
           <a href="tutorial.html" title="diceroll Tutorial"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">diceroll 2.2 Operations Manual</a> &raquo;</li>
+        <li><a href="index.html">diceroll 2.3 Operations Manual</a> &raquo;</li>
       </ul>
     </div>
     <div class="document">
@@ -50,19 +50,19 @@
   
   <div class="section" id="debugging-diceroll">
 <h1><strong>Debugging diceroll</strong><a class="headerlink" href="#debugging-diceroll" title="Permalink to this headline">¶</a></h1>
-<p><strong>diceroll 2.2</strong> keeps a log file of any dice rolls made during its last run. You will find <tt class="docutils literal"><span class="pre">diceroll.log</span></tt> in the <tt class="docutils literal"><span class="pre">Logs</span></tt>
+<p><strong>diceroll 2.3</strong> keeps a log file of any dice rolls made during its last run. You will find <tt class="docutils literal"><span class="pre">diceroll.log</span></tt> in the <tt class="docutils literal"><span class="pre">Logs</span></tt>
 folder it creates if one isn't there already. In the file you will see mentions of dice being rolled. <strong>diceroll</strong> uses
 a default logging mode of <tt class="docutils literal"><span class="pre">INFO</span></tt> which isn't that verbose.</p>
 <div class="highlight"><pre><span class="n">module_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
 </pre></div>
 <pre>Sun, 01 Oct 2017 16:08:03 INFO diceroll - Logging started.
-Sun, 01 Oct 2017 16:08:03 INFO diceroll - roll() v2.2 started, and running...
+Sun, 01 Oct 2017 16:08:03 INFO diceroll - roll() v2.3 started, and running...
 Sun, 01 Oct 2017 16:08:03 INFO diceroll - 3D4 = 3D4+0 = 10</pre>
 <p>Changing <strong>diceroll's</strong> logging mode to <tt class="docutils literal"><span class="pre">DEBUG</span></tt> will record debugging messages in the <tt class="docutils literal"><span class="pre">Logs\diceroll.log</span></tt> file.</p>
 <div class="highlight"><pre><span class="n">module_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
 </pre></div>
 <pre>Sun, 01 Oct 2017 16:27:21 INFO diceroll - Logging started.
-Sun, 01 Oct 2017 16:27:21 INFO diceroll - roll() v2.2 started, and running...
+Sun, 01 Oct 2017 16:27:21 INFO diceroll - roll() v2.3 started, and running...
 Sun, 01 Oct 2017 16:27:21 DEBUG diceroll - Asked to roll 3D4:
 Sun, 01 Oct 2017 16:27:21 DEBUG diceroll - Using three 4-sided dice...
 Sun, 01 Oct 2017 16:27:21 DEBUG diceroll - Rolled a 4
@@ -117,7 +117,7 @@ the name of the program you're calling <tt class="docutils literal"><span class=
         <li class="right" >
           <a href="tutorial.html" title="diceroll Tutorial"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">diceroll 2.2 Operations Manual</a> &raquo;</li>
+        <li><a href="index.html">diceroll 2.3 Operations Manual</a> &raquo;</li>
       </ul>
     </div>
     <div class="footer">

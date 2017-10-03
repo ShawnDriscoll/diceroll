@@ -2,13 +2,13 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>diceroll Tutorial &mdash; diceroll 2.2 Operations Manual</title>
+    <title>diceroll Tutorial &mdash; diceroll 2.3 Operations Manual</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
           URL_ROOT:    '',
-          VERSION:     '2.2.1b',
+          VERSION:     '2.3.0b',
           COLLAPSE_MODINDEX: false,
           FILE_SUFFIX: '.html'
       };
@@ -19,7 +19,7 @@
     <link rel="contents" title="Global table of contents" href="contents.html" />
     <link rel="index" title="Global index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="diceroll 2.2 Operations Manual" href="index.html" />
+    <link rel="top" title="diceroll 2.3 Operations Manual" href="index.html" />
     <link rel="next" title="Debugging diceroll" href="debugging.html" />
     <link rel="prev" title="Installing diceroll" href="installing.html" />
   </head>
@@ -39,7 +39,7 @@
         <li class="right" >
           <a href="installing.html" title="Installing diceroll"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">diceroll 2.2 Operations Manual</a> &raquo;</li>
+        <li><a href="index.html">diceroll 2.3 Operations Manual</a> &raquo;</li>
       </ul>
     </div>
     <div class="document">
@@ -52,9 +52,9 @@
 <h1><strong>diceroll Tutorial</strong><a class="headerlink" href="#diceroll-tutorial" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="rolling-the-dice">
 <h2>Rolling the Dice<a class="headerlink" href="#rolling-the-dice" title="Permalink to this headline">¶</a></h2>
-<p>Once <tt class="docutils literal"><span class="pre">diceroll.py</span></tt> is installed and recognized by your code, its <tt class="docutils literal"><span class="pre">roll()</span></tt> function can be used right away. This
-function returns an integer, by the way. So it can be used as any other integer would be used. But first,
-we must give this function a value to work from.</p>
+<p>Once <tt class="docutils literal"><span class="pre">diceroll.py</span></tt> is installed and your code is able to import the module, its <tt class="docutils literal"><span class="pre">roll()</span></tt> function can be
+used right away. This function returns an integer, by the way. So it can be used as any other integer would
+be used. But first, we must give this function a value to work from.</p>
 <p>Those of you that have used dice rolling programs before will notice that something is different. And that is,
 <tt class="docutils literal"><span class="pre">roll()</span></tt> uses a string for its input:</p>
 <div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">die1</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;1D6&#39;</span><span class="p">)</span>
@@ -68,7 +68,13 @@ we must give this function a value to work from.</p>
 <p>Notice that the inputted string values can be upper or lower case. And note that the return values are integer.</p>
 <dl class="docutils">
 <dt>The dice types to roll are:</dt>
-<dd>D3, D4, D6, D8, D9, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, BADFLUX</dd>
+<dd>D3, D4, D6, D8, D9, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, and BADFLUX</dd>
+</dl>
+<p>
+<span class="versionmodified">New in version 2.3.</span></p>
+<dl class="docutils">
+<dt>Two additional dice types are now available:</dt>
+<dd>BOON and BANE</dd>
 </dl>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -76,7 +82,7 @@ we must give this function a value to work from.</p>
 standard notation for dice rolls used in games. But each game typically uses its own notation.</p>
 <div class="last line-block">
 <div class="line"><br /></div>
-<div class="line"><strong>diceroll</strong> uses a simple standard when it comes to the more plainer dice types.</div>
+<div class="line"><strong>diceroll</strong> uses a simple standard when it comes to rolling various dice types.</div>
 <div class="line"><br /></div>
 <div class="line">Some examples are:</div>
 <div class="line"><br /></div>
@@ -89,7 +95,7 @@ standard notation for dice rolls used in games. But each game typically uses its
 <div class="line">roll('3D6+6') -- add +6 DM to roll</div>
 <div class="line">roll('4D4-4') -- add -4 DM to roll</div>
 <div class="line">roll('2DD+3') -- roll (2D6+3) x 10</div>
-<div class="line">roll('info') -- release version of program</div>
+<div class="line">roll('BOON') -- roll 3D6 and keep the higher two dice</div>
 </div>
 </div>
 </div>
@@ -107,18 +113,6 @@ standard notation for dice rolls used in games. But each game typically uses its
 </div>
 </div>
 </div>
-<div class="section" id="what-s-new">
-<h2>What's New<a class="headerlink" href="#what-s-new" title="Permalink to this headline">¶</a></h2>
-<p>
-<span class="versionmodified">New in version 2.2.</span></p>
-<p>One exception to the &quot;integer&quot; rule for <tt class="docutils literal"><span class="pre">roll()</span></tt> is when using <tt class="docutils literal"><span class="pre">roll('info')</span></tt>, which will return two strings:</p>
-<div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">version</span><span class="p">,</span> <span class="n">release</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;info&#39;</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">version</span>
-<span class="go">2.2</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">release</span>
-<span class="go">roll(), release version 2.2.1 (Beta) for Python 2.5.4</span>
-</pre></div>
-</div>
 </div>
 
 
@@ -132,7 +126,6 @@ standard notation for dice rolls used in games. But each game typically uses its
 <li><a class="reference external" href=""><strong>diceroll Tutorial</strong></a><ul>
 <li><a class="reference external" href="#rolling-the-dice">Rolling the Dice</a></li>
 <li><a class="reference external" href="#encountering-errors">Encountering Errors</a></li>
-<li><a class="reference external" href="#what-s-new">What's New</a></li>
 </ul>
 </li>
 </ul>
@@ -166,7 +159,7 @@ standard notation for dice rolls used in games. But each game typically uses its
         <li class="right" >
           <a href="installing.html" title="Installing diceroll"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">diceroll 2.2 Operations Manual</a> &raquo;</li>
+        <li><a href="index.html">diceroll 2.3 Operations Manual</a> &raquo;</li>
       </ul>
     </div>
     <div class="footer">

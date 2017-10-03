@@ -1,7 +1,7 @@
 **Preface**
 ===========
 
-With the release of **diceroll 2.2**, I wanted to learn something new in regards to Python. Even though I use 2.5.4,
+With the release of **diceroll 2.3**, I wanted to learn something new in regards to Python. Even though I use 2.5.4,
 there is still a lot about it that I have never delved into. Sphinx was something I had not really paid any mind to
 in the past. It was yet another one of those *need to know only* things about Python. Some things I'd get around to
 learning only when I had to, but only if it was part of something else that I had taken an interest in doing.

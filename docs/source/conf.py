@@ -43,9 +43,9 @@ copyright = u'2017, Shawn Driscoll'
 # other places throughout the built documents.
 #
 # The short X.Y version.
-version = '2.2'
+version = '2.3'
 # The full version, including alpha/beta/rc tags.
-release = '2.2.1b'
+release = '2.3.0b'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -88,7 +88,7 @@ html_style = 'default.css'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'diceroll 2.2 Operations Manual'
+html_title = 'diceroll 2.3 Operations Manual'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -154,7 +154,7 @@ latex_paper_size = 'letter'
 
 # The font size ('10pt', '11pt' or '12pt').
 #latex_font_size = '10pt'
-latex_font_size = '12pt'
+latex_font_size = '10pt'
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, document class [howto/manual]).

@@ -3,9 +3,9 @@
 
 Rolling the Dice
 ----------------
-Once ``diceroll.py`` is installed and recognized by your code, its ``roll()`` function can be used right away. This
-function returns an integer, by the way. So it can be used as any other integer would be used. But first,
-we must give this function a value to work from.
+Once ``diceroll.py`` is installed and your code is able to import the module, its ``roll()`` function can be
+used right away. This function returns an integer, by the way. So it can be used as any other integer would
+be used. But first, we must give this function a value to work from.
 
 Those of you that have used dice rolling programs before will notice that something is different. And that is,
 ``roll()`` uses a string for its input:
@@ -21,14 +21,19 @@ Those of you that have used dice rolling programs before will notice that someth
 Notice that the inputted string values can be upper or lower case. And note that the return values are integer.
 
 The dice types to roll are:
-   D3, D4, D6, D8, D9, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, BADFLUX
+   D3, D4, D6, D8, D9, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, and BADFLUX
 
+.. versionadded:: 2.3
+
+Two additional dice types are now available:
+   BOON and BANE
+   
 .. note::
    You may recognize some of these dice types from various tabletop role-playing games. There is probably a
    standard notation for dice rolls used in games. But each game typically uses its own notation.
 
    |
-   | **diceroll** uses a simple standard when it comes to the more plainer dice types.
+   | **diceroll** uses a simple standard when it comes to rolling various dice types.
    |
    | Some examples are:
    |
@@ -41,7 +46,7 @@ The dice types to roll are:
    | roll('3D6+6') -- add +6 DM to roll
    | roll('4D4-4') -- add -4 DM to roll
    | roll('2DD+3') -- roll (2D6+3) x 10
-   | roll('info') -- release version of program
+   | roll('BOON') -- roll 3D6 and keep the higher two dice
 
 Encountering Errors
 -------------------
@@ -54,16 +59,3 @@ Entering an invalid string for ``roll()`` will return an error message, as well 
    
    |
    | 0
-
-What's New
-----------
-.. versionadded:: 2.2
-
-One exception to the "integer" rule for ``roll()`` is when using ``roll('info')``, which will return two strings:
-
->>> version, release = roll('info')
->>> print version
-2.2
->>> print release
-roll(), release version 2.2.1 (Beta) for Python 2.5.4
-
