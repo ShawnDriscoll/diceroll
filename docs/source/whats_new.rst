@@ -23,5 +23,5 @@ New in version 2.1
 
 FLUX rolls (including GOODFLUX and BADFLUX) have been added. These rolls use two 6-sided dice.
 FLUX rolls subtract one die from the other.
-BOODFLUX rolls subtract the higher die from the lower die.
+BADFLUX rolls subtract the higher die from the lower die.
 GOODFLUX rolls subtract the lower die from the higher die.
