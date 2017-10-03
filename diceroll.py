@@ -18,8 +18,8 @@ from random import randint
 import os
 import logging
 
-__version__ = '2.2'
-__release__ = '2.2.1 (Beta)'
+__version__ = '2.3'
+__release__ = '2.3.0 (Beta)'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
 module_log = logging.getLogger('diceroll')
@@ -43,12 +43,13 @@ number_of_dice = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven',
 def die_rolls(dtype, dcount):
     '''
     Two arguments:
-        dtype: the number of sides for the dice (int)
-        
-        dcount: the number of dice to roll (int)
+    
+      dtype: the number of sides for the dice (int)
+      dcount: the number of dice to roll (int)
     
     Value returned:
-        dtotal: the value returned from die_rolls (int)
+    
+      dtotal: the value returned from die_rolls (int)
     '''
 
     dtotal = 0
@@ -93,6 +94,8 @@ def roll(dice):
     
     roll('2DD+3') -- roll (2D6+3) x 10
     
+    roll('BOON') -- roll 3D6 and keep the higher two dice
+    
     roll('info') -- release version of program
     
     An invalid roll will return a 0 (int).
@@ -102,7 +105,7 @@ def roll(dice):
 
     if dice == 'info':
         ver = 'roll(), release version ' + __release__ + ' for Python 2.5.4'
-        module_log.info('roll() release version: %s' % __release__)
+        module_log.info('Reporting: roll() release version: %s' % __release__)
         return __version__, ver
 
     dice = str(dice).upper().strip()
@@ -118,29 +121,63 @@ def roll(dice):
         rolled = flux1 - flux2
         module_log.info('%s = %d - %d = %d' % (dice, flux1, flux2, rolled))
         return rolled
-    else:
-        if dice == 'GOODFLUX':
-            flux1 = randint(1, 6)
-            flux2 = randint(1, 6)
-            if flux1 < flux2:
-                rolled = flux2 - flux1
-                module_log.info('%s = %d - %d = %d' % (dice, flux2, flux1, rolled))
-            else:
-                rolled = flux1 - flux2
-                module_log.info('%s = %d - %d = %d' % (dice, flux1, flux2, rolled))
-            return rolled
+    elif dice == 'GOODFLUX':
+        flux1 = randint(1, 6)
+        flux2 = randint(1, 6)
+        if flux1 < flux2:
+            rolled = flux2 - flux1
+            module_log.info('%s = %d - %d = %d' % (dice, flux2, flux1, rolled))
         else:
-            if dice == 'BADFLUX':
-                flux1 = randint(1, 6)
-                flux2 = randint(1, 6)
-                if flux1 > flux2:
-                    rolled = flux2 - flux1
-                    module_log.info('%s = %d - %d = %d' % (dice, flux2, flux1, rolled))
-                else:
-                    rolled = flux1 - flux2
-                    module_log.info('%s = %d - %d = %d' % (dice, flux1, flux2, rolled))
-                return rolled
-    
+            rolled = flux1 - flux2
+            module_log.info('%s = %d - %d = %d' % (dice, flux1, flux2, rolled))
+        return rolled
+    elif dice == 'BADFLUX':
+        flux1 = randint(1, 6)
+        flux2 = randint(1, 6)
+        if flux1 > flux2:
+            rolled = flux2 - flux1
+            module_log.info('%s = %d - %d = %d' % (dice, flux2, flux1, rolled))
+        else:
+            rolled = flux1 - flux2
+            module_log.info('%s = %d - %d = %d' % (dice, flux1, flux2, rolled))
+        return rolled
+    elif dice == 'BOON':
+        die = [0, 0, 0]
+        die[0] = randint(1, 6)
+        die[1] = randint(1, 6)
+        die[2] = randint(1, 6)
+        module_log.info('Start Boon roll: %d %d %d' % (die[0], die[1], die[2]))
+        die_swap = True
+        while die_swap == True:
+            die_swap = False
+            for j in range(2):
+                if die[j] < die[j+1]:
+                    temp_die = die[j]
+                    die[j] = die[j+1]
+                    die[j+1] = temp_die
+                    die_swap = True
+        rolled = die[0] + die[1]
+        module_log.info('Sorted Boon roll: %d %d %d = %d' % (die[0], die[1], die[2], rolled))
+        return rolled
+    elif dice == 'BANE':
+        die = [0, 0, 0]
+        die[0] = randint(1, 6)
+        die[1] = randint(1, 6)
+        die[2] = randint(1, 6)
+        module_log.info('Start Bane roll: %d %d %d' % (die[0], die[1], die[2]))
+        die_swap = True
+        while die_swap == True:
+            die_swap = False
+            for j in range(2):
+                if die[j] > die[j+1]:
+                    temp_die = die[j]
+                    die[j] = die[j+1]
+                    die[j+1] = temp_die
+                    die_swap = True
+        rolled = die[0] + die[1]
+        module_log.info('Sorted Bane roll: %d %d %d = %d' % (die[0], die[1], die[2], rolled))
+        return rolled
+
     ichar1 = dice.find('DD')
     if ichar1 == -1:
         ichar1 = dice.find('D')
@@ -240,6 +277,7 @@ def roll(dice):
     print "roll('D66') -- roll for a D66 chart"
     print "roll('FLUX') -- a FLUX roll (-5 to 5)"
     print "roll('2DD+3') -- roll (2D6+3) x 10"
+    print "roll('BOON') -- roll 3D6 and keep the higher two dice"
     print
     print "-/+ DMs can be added to rolls:"
     print "roll('3D6+6') -- add +6 DM to roll"

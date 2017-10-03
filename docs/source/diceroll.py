@@ -43,12 +43,13 @@ number_of_dice = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven',
 def die_rolls(dtype, dcount):
     '''
     Two arguments:
-        dtype: the number of sides for the dice (int)
-        
-        dcount: the number of dice to roll (int)
+    
+      dtype: the number of sides for the dice (int)
+      dcount: the number of dice to roll (int)
     
     Value returned:
-        dtotal: the value returned from die_rolls (int)
+    
+      dtotal: the value returned from die_rolls (int)
     '''
 
     dtotal = 0
