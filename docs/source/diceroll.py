@@ -9,9 +9,10 @@
 
 '''
 Usage:
-    from diceroll import roll
+
+  from diceroll import roll
     
-    print roll('2D6') - roll two 6-sided dice
+  print roll('2D6') - roll two 6-sided dice
 '''
 
 from random import randint
