@@ -8,9 +8,9 @@ a default logging mode of ``INFO`` which isn't that verbose. ::
 
 ::
 
-   Sun, 01 Oct 2017 16:08:03 INFO diceroll - Logging started.
-   Sun, 01 Oct 2017 16:08:03 INFO diceroll - roll() v2.3 started, and running...
-   Sun, 01 Oct 2017 16:08:03 INFO diceroll - 3D4 = 3D4+0 = 10
+   INFO diceroll - Logging started.
+   INFO diceroll - roll() v2.3 started, and running...
+   INFO diceroll - 3D4 = 3D4+0 = 10
 
 Changing **diceroll's** logging mode to ``DEBUG`` will record debugging messages in the ``Logs\diceroll.log`` file. ::
    
@@ -18,14 +18,14 @@ Changing **diceroll's** logging mode to ``DEBUG`` will record debugging messages
 
 ::
 
-   Sun, 01 Oct 2017 16:27:21 INFO diceroll - Logging started.
-   Sun, 01 Oct 2017 16:27:21 INFO diceroll - roll() v2.3 started, and running...
-   Sun, 01 Oct 2017 16:27:21 DEBUG diceroll - Asked to roll 3D4:
-   Sun, 01 Oct 2017 16:27:21 DEBUG diceroll - Using three 4-sided dice...
-   Sun, 01 Oct 2017 16:27:21 DEBUG diceroll - Rolled a 4
-   Sun, 01 Oct 2017 16:27:21 DEBUG diceroll - Rolled a 2
-   Sun, 01 Oct 2017 16:27:21 DEBUG diceroll - Rolled a 2
-   Sun, 01 Oct 2017 16:27:21 INFO diceroll - 3D4 = 3D4+0 = 8
+   INFO diceroll - Logging started.
+   INFO diceroll - roll() v2.3 started, and running...
+   DEBUG diceroll - Asked to roll 3D4:
+   DEBUG diceroll - Using three 4-sided dice...
+   DEBUG diceroll - Rolled a 4
+   DEBUG diceroll - Rolled a 2
+   DEBUG diceroll - Rolled a 2
+   INFO diceroll - 3D4 = 3D4+0 = 8
    
 .. note::
    Running **diceroll** in ``DEBUG`` mode may create a log file that will be too huge to open. A program of yours

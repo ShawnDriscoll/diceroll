@@ -55,20 +55,20 @@ folder it creates if one isn't there already. In the file you will see mentions 
 a default logging mode of <tt class="docutils literal"><span class="pre">INFO</span></tt> which isn't that verbose.</p>
 <div class="highlight"><pre><span class="n">module_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
 </pre></div>
-<pre>Sun, 01 Oct 2017 16:08:03 INFO diceroll - Logging started.
-Sun, 01 Oct 2017 16:08:03 INFO diceroll - roll() v2.3 started, and running...
-Sun, 01 Oct 2017 16:08:03 INFO diceroll - 3D4 = 3D4+0 = 10</pre>
+<pre>INFO diceroll - Logging started.
+INFO diceroll - roll() v2.3 started, and running...
+INFO diceroll - 3D4 = 3D4+0 = 10</pre>
 <p>Changing <strong>diceroll's</strong> logging mode to <tt class="docutils literal"><span class="pre">DEBUG</span></tt> will record debugging messages in the <tt class="docutils literal"><span class="pre">Logs\diceroll.log</span></tt> file.</p>
 <div class="highlight"><pre><span class="n">module_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
 </pre></div>
-<pre>Sun, 01 Oct 2017 16:27:21 INFO diceroll - Logging started.
-Sun, 01 Oct 2017 16:27:21 INFO diceroll - roll() v2.3 started, and running...
-Sun, 01 Oct 2017 16:27:21 DEBUG diceroll - Asked to roll 3D4:
-Sun, 01 Oct 2017 16:27:21 DEBUG diceroll - Using three 4-sided dice...
-Sun, 01 Oct 2017 16:27:21 DEBUG diceroll - Rolled a 4
-Sun, 01 Oct 2017 16:27:21 DEBUG diceroll - Rolled a 2
-Sun, 01 Oct 2017 16:27:21 DEBUG diceroll - Rolled a 2
-Sun, 01 Oct 2017 16:27:21 INFO diceroll - 3D4 = 3D4+0 = 8</pre>
+<pre>INFO diceroll - Logging started.
+INFO diceroll - roll() v2.3 started, and running...
+DEBUG diceroll - Asked to roll 3D4:
+DEBUG diceroll - Using three 4-sided dice...
+DEBUG diceroll - Rolled a 4
+DEBUG diceroll - Rolled a 2
+DEBUG diceroll - Rolled a 2
+INFO diceroll - 3D4 = 3D4+0 = 8</pre>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Running <strong>diceroll</strong> in <tt class="docutils literal"><span class="pre">DEBUG</span></tt> mode may create a log file that will be too huge to open. A program of yours
@@ -122,7 +122,7 @@ the name of the program you're calling <tt class="docutils literal"><span class=
     </div>
     <div class="footer">
       &copy; Copyright 2017, Shawn Driscoll.
-      Last updated on Oct 02, 2017.
+      Last updated on Oct 03, 2017.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
     </div>
   </body>
