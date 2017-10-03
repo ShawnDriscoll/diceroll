@@ -1,7 +1,7 @@
 **Preface**
 ===========
 
-With the release of **diceroll 2.3**, I wanted to learn something new in regards to Python. Even though I use 2.5.4,
+Back during the release of **diceroll 2.2**, I wanted to learn something new in regards to Python. Even though I use 2.5.4,
 there is still a lot about it that I have never delved into. Sphinx was something I had not really paid any mind to
 in the past. It was yet another one of those *need to know only* things about Python. Some things I'd get around to
 learning only when I had to, but only if it was part of something else that I had taken an interest in doing.
@@ -16,4 +16,5 @@ in Python 2.5.4) that generates documents. Nothing too fancy. Just simple docume
 through any device using any viewer. And when I learned that Sphinx could read Python modules and produce documents
 from their ``.__doc__`` strings, I knew I just had to spend a couple days learning how all that stuff happens. 
 
-Some rabbit holes are worth their going into.
+So basically, my Python dice rolling module has its own operations manual now. And some rabbit holes are
+worth their going into.
