@@ -35,7 +35,6 @@ Two additional dice types are now available:
    You may recognize some of these dice types from various tabletop role-playing games. There is probably a
    standard notation for dice rolls used in games. But each game typically uses its own notation.
 
-   |
    | **diceroll** uses a simple standard when it comes to rolling various dice types.
    |
    | Some examples are:
