@@ -9,10 +9,9 @@
 
 '''
 Usage:
-
-  from diceroll import roll
+    from diceroll import roll
     
-  print roll('2D6') - roll two 6-sided dice
+    print roll('2D6') - roll two 6-sided dice
 '''
 
 from random import randint
@@ -42,17 +41,6 @@ module_log.info('roll() v' + __version__ + ' started, and running...')
 number_of_dice = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
 
 def die_rolls(dtype, dcount):
-    '''
-    Two arguments:
-    
-      dtype: the number of sides for the dice (int)
-      
-      dcount: the number of dice to roll (int)
-    
-    Value returned:
-    
-      dtotal: the value returned from die_rolls (int)
-    '''
 
     dtotal = 0
     if dcount == 1:
@@ -103,7 +91,7 @@ def roll(dice):
     An invalid roll will return a 0 (int).
     '''
 
-    log = logging.getLogger('your_code_name_here.diceroll')
+    log = logging.getLogger('Imperial_Chargen_085b.diceroll')
 
     if dice == 'info':
         ver = 'roll(), release version ' + __release__ + ' for Python 2.5.4'
