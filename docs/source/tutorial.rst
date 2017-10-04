@@ -61,5 +61,4 @@ Entering an invalid string for ``roll()`` will return an error message, as well 
 
    ** DICE ERROR! '3D' is unknown **
    
-   |
    | 0
