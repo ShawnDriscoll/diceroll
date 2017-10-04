@@ -21,14 +21,17 @@ Those of you that have used dice rolling programs before will notice that someth
 Notice that the inputted string values can be upper or lower case. And note that the return values are integer.
 
 The dice types to roll are:
+
    D3, D4, D6, D8, D9, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, and BADFLUX
 
 .. versionadded:: 2.3
 
 Two additional dice types are now available:
+
    BOON and BANE
    
 .. note::
+
    You may recognize some of these dice types from various tabletop role-playing games. There is probably a
    standard notation for dice rolls used in games. But each game typically uses its own notation.
 
@@ -55,6 +58,7 @@ Entering an invalid string for ``roll()`` will return an error message, as well 
    print roll('3d')
 
 .. error::
+
    ** DICE ERROR! '3D' is unknown **
    
    |
