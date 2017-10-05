@@ -9,10 +9,10 @@
 
 '''
 Usage:
+    from diceroll import roll
+    print roll('2D6')
 
-  from diceroll import roll
-    
-  print roll('2D6') - roll two 6-sided dice
+    Will roll two 6-sided dice
 '''
 
 from random import randint
@@ -42,17 +42,6 @@ module_log.info('roll() v' + __version__ + ' started, and running...')
 number_of_dice = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
 
 def die_rolls(dtype, dcount):
-    '''
-    Two arguments:
-    
-      dtype: the number of sides for the dice (int)
-      
-      dcount: the number of dice to roll (int)
-    
-    Value returned:
-    
-      dtotal: the value returned from die_rolls (int)
-    '''
 
     dtotal = 0
     if dcount == 1:
@@ -77,33 +66,22 @@ def roll(dice):
     The dice types to roll are: D3, D4, D6, D8, D9, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, BADFLUX
 
     Some examples are:
-    
     roll('D6') or roll('1D6') -- roll one 6-sided die
-    
     roll('2D6') -- roll two 6-sided dice
-    
     roll('D10') -- roll a 10-sided die (1 - 10)
-    
     roll('D100') -- roll a 100-sided die (1 - 100)
-    
     roll('D66') -- roll for a D66 chart
-    
     roll('FLUX') -- a FLUX roll (-5 to 5)
-
     roll('3D6+6') -- add +6 DM to roll
-    
     roll('4D4-4') -- add -4 DM to roll
-    
     roll('2DD+3') -- roll (2D6+3) x 10
-    
     roll('BOON') -- roll 3D6 and keep the higher two dice
-    
     roll('info') -- release version of program
     
     An invalid roll will return a 0 (int).
     '''
 
-    log = logging.getLogger('your_code_name_here.diceroll')
+    log = logging.getLogger('Imperial_Chargen_085b.diceroll')
 
     if dice == 'info':
         ver = 'roll(), release version ' + __release__ + ' for Python 2.5.4'

@@ -17,7 +17,7 @@ Packaged Installation
 If your code setup is different, in that you like to keep your function modules in a folder separate
 from your main code, you could copy ``diceroll.py`` into that folder.
 
-Say you have a folder called ``library``, and assuming you have an ``__init__.py`` inside it, just copy ``diceroll.py``
-into your ``library`` folder and add this line near the top of your code: ::
+Say you have a folder called ``game_utils``, and assuming you have an ``__init__.py`` inside it, just copy ``diceroll.py``
+into your ``game_utils`` folder and add this line near the top of your code: ::
 
-   from library.diceroll import roll
+   from game_utils.diceroll import roll

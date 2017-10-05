@@ -20,4 +20,3 @@ This documentation explains how to install and use the **diceroll module** for y
    tutorial
    debugging
    designers_notes
-   diceroll
