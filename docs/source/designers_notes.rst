@@ -98,7 +98,7 @@ It really comes down to a philosophy. I waited on learning Python until a versio
 And for me, it was Python 2.5.4 when I said such things. Python 2.6 books were showing up in stores. And
 there were already differences being found between it and the Python that I was using. Python had become this
 huge thing. And non-programmers were being attracted to it for their own reasons. And that was all fine.
-Python 2.7, 2.8, 3.0, etc. were seeing lots of new talent joining their mix. They were taking Python to places it
+Python 2.7, 3.0, etc., were seeing lots of new talent joining their mix. They were taking Python to places it
 hadn't been to. And more and more people were doing Python because of it.
 
 Python is trying to be all things to all programmers these days. And it has become less of Python in doing so.
