@@ -112,4 +112,4 @@ the latest greatest Python. But there is a certain individuality lost in doing t
 I believe the next great computer programming language will be the one that remains true to its nature/design as
 it grows. And doesn't split the party as it grows.
 
--Shawn Driscoll
+*-- Shawn Driscoll*
