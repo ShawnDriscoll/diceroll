@@ -78,7 +78,7 @@ def roll(dice):
     roll('BOON') -- roll 3D6 and keep the higher two dice
     roll('info') -- release version of program
     
-    An invalid roll will return a 0 (int).
+    An invalid roll will return a 0.
     '''
 
     log = logging.getLogger('Imperial_Chargen_085b.diceroll')
@@ -249,7 +249,7 @@ def roll(dice):
     print
     print "** DICE ERROR! '%s' is unknown **" % dice
     print
-    print "The types of dice to roll are (in string values):"
+    print "Valid dice rolls are:"
     print "roll('D6') or roll('1D6') -- roll one 6-sided die"
     print "roll('2D6') -- roll two 6-sided dice"
     print "roll('D10') -- roll a 10-sided die (1 - 10)"
