@@ -42,6 +42,15 @@ module_log.info('roll() v' + __version__ + ' started, and running...')
 number_of_dice = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
 
 def die_rolls(dtype, dcount):
+    '''
+    Takes two integer arguments:
+        dtype (the number of sides for the dice)
+        dcount (the number of dice to roll)
+    
+    and returns an integer value.
+    
+    This function is for internal use and has no error-checking!    
+    '''
 
     dtotal = 0
     if dcount == 1:
@@ -81,20 +90,24 @@ def roll(dice):
     An invalid roll will return a 0.
     '''
 
-    log = logging.getLogger('Imperial_Chargen_085b.diceroll')
+    log = logging.getLogger('you_code_name_here.diceroll')
 
+    # was information for this program asked for?
     if dice == 'info':
         ver = 'roll(), release version ' + __release__ + ' for Python 2.5.4'
         module_log.info('Reporting: roll() release version: %s' % __release__)
         return __version__, ver
 
+    # make inputted string argument upper case, and strip spaces
     dice = str(dice).upper().strip()
 
     log.debug(dice)
     module_log.debug('Asked to roll %s:' % dice)
 
+    # set dice modifier to zero.
     dice_mod = 0
 
+    # check if FLUX dice are being rolled
     if dice == 'FLUX':
         flux1 = randint(1, 6)
         flux2 = randint(1, 6)
@@ -121,6 +134,8 @@ def roll(dice):
             rolled = flux1 - flux2
             module_log.info('%s = %d - %d = %d' % (dice, flux1, flux2, rolled))
         return rolled
+    
+    # check if a BOON roll is being performed
     elif dice == 'BOON':
         die = [0, 0, 0]
         die[0] = randint(1, 6)
@@ -139,6 +154,8 @@ def roll(dice):
         rolled = die[0] + die[1]
         module_log.info('Sorted Boon roll: %d %d %d = %d' % (die[0], die[1], die[2], rolled))
         return rolled
+    
+    # check if a BANE roll is being performed
     elif dice == 'BANE':
         die = [0, 0, 0]
         die[0] = randint(1, 6)
@@ -158,37 +175,43 @@ def roll(dice):
         module_log.info('Sorted Bane roll: %d %d %d = %d' % (die[0], die[1], die[2], rolled))
         return rolled
 
+    # look for DD in the string (for destructive dice rolls)
     ichar1 = dice.find('DD')
     if ichar1 == -1:
+        
+        # if not, does the string indicate regular dice for use?
         ichar1 = dice.find('D')
     if ichar1 == 0:
+        
+        # only one die is being rolled
         num_dice = 1
 
     if ichar1 <> -1:
         if ichar1 <> 0:
+            
+            # how many dice are being rolled?
             num_dice = int(dice[0:ichar1])
-    #        print 'Number of dice =', num_dice
             if num_dice < 1:
                 log.error('Negative dice count! [ERROR]')
                 module_log.error('Number of dice = ' + str(num_dice) + ' [ERROR]')
     
         if num_dice >= 1:
+            
+            # is there a +/- dice modifier for the roll?
             ichar2 = dice.find('+')
             if ichar2 <> -1:
                 dice_mod = int(dice[ichar2:len(dice)])
-    #            print 'dice mod =', dice_mod
             else:
                 ichar2 = dice.find('-')
                 if ichar2 <> -1:
                     dice_mod = int(dice[ichar2:len(dice)])
-    #                print 'dice mod =', dice_mod
     
+            # what kind of dice are being rolled? D6? D66? etc.
             if ichar2 <> -1:
                 dice_type = dice[ichar1: ichar2]
                 dice_type = dice_type.rstrip()
             else:
                 dice_type = dice[ichar1: len(dice)]
-    #            print 'dice type =', dice_type, 'Len = ', len(dice_type)
     
             if dice_type == 'D6':
                 rolled = die_rolls(6, num_dice) + dice_mod
