@@ -20,11 +20,11 @@ import os
 import logging
 
 __version__ = '2.3'
-__release__ = '2.3.0 (Beta)'
+__release__ = '2.3.1 (Beta)'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
-module_log = logging.getLogger('diceroll')
-module_log.setLevel(logging.INFO)
+diceroll_log = logging.getLogger('diceroll')
+diceroll_log.setLevel(logging.INFO)
 
 if not os.path.exists('Logs'):
     os.mkdir('Logs')
@@ -34,10 +34,10 @@ fh = logging.FileHandler('Logs/diceroll.log', 'w')
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(name)s - %(message)s',
                               datefmt = '%a, %d %b %Y %H:%M:%S')
 fh.setFormatter(formatter)
-module_log.addHandler(fh)
+diceroll_log.addHandler(fh)
 
-module_log.info('Logging started.')
-module_log.info('roll() v' + __version__ + ' started, and running...')
+diceroll_log.info('Logging started.')
+diceroll_log.info('roll() v' + __version__ + ' started, and running...')
 
 number_of_dice = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
 
@@ -54,25 +54,27 @@ def die_rolls(dtype, dcount):
 
     dtotal = 0
     if dcount == 1:
-        module_log.debug('Using %s %d-sided die...' % (number_of_dice[dcount], dtype))
+        diceroll_log.debug('Using %s %d-sided die...' % (number_of_dice[dcount], dtype))
     else:
         if dcount < 11:
-            module_log.debug('Using %s %d-sided dice...' % (number_of_dice[dcount], dtype))
+            diceroll_log.debug('Using %s %d-sided dice...' % (number_of_dice[dcount], dtype))
         else:
-            module_log.debug('Using %d %d-sided dice...' % (dcount, dtype))
+            diceroll_log.debug('Using %d %d-sided dice...' % (dcount, dtype))
         
     for i in range(dcount):
         rolled = randint(1, dtype)
         if rolled == 8 or rolled == 18:
-            module_log.debug('Rolled an %s' % rolled)
+            diceroll_log.debug('Rolled an %s' % rolled)
         else:
-            module_log.debug('Rolled a %s' % rolled)
+            diceroll_log.debug('Rolled a %s' % rolled)
         dtotal += rolled
     return dtotal
 
 def roll(dice):
     '''
-    The dice types to roll are: D3, D4, D6, D8, D9, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, BADFLUX
+    The dice types to roll are:
+        'D3', 'D4', 'D6', 'D8', 'D9', 'D10', 'D12', 'D20', 'D30',
+        'D100', 'D66', 'DD', 'FLUX', 'GOODFLUX', 'BADFLUX'
 
     Some examples are:
     roll('D6') or roll('1D6') -- roll one 6-sided die
@@ -90,19 +92,19 @@ def roll(dice):
     An invalid roll will return a 0.
     '''
 
-    log = logging.getLogger('you_code_name_here.diceroll')
+    log = logging.getLogger('your_code_name_here.diceroll')
 
     # was information for this program asked for?
     if dice == 'info':
         ver = 'roll(), release version ' + __release__ + ' for Python 2.5.4'
-        module_log.info('Reporting: roll() release version: %s' % __release__)
+        diceroll_log.info('Reporting: roll() release version: %s' % __release__)
         return __version__, ver
 
     # make inputted string argument upper case, and strip spaces
     dice = str(dice).upper().strip()
 
     log.debug(dice)
-    module_log.debug('Asked to roll %s:' % dice)
+    diceroll_log.debug('Asked to roll %s:' % dice)
 
     # set dice modifier to zero.
     dice_mod = 0
@@ -112,27 +114,27 @@ def roll(dice):
         flux1 = randint(1, 6)
         flux2 = randint(1, 6)
         rolled = flux1 - flux2
-        module_log.info('%s = %d - %d = %d' % (dice, flux1, flux2, rolled))
+        diceroll_log.info('%s = %d - %d = %d' % (dice, flux1, flux2, rolled))
         return rolled
     elif dice == 'GOODFLUX':
         flux1 = randint(1, 6)
         flux2 = randint(1, 6)
         if flux1 < flux2:
             rolled = flux2 - flux1
-            module_log.info('%s = %d - %d = %d' % (dice, flux2, flux1, rolled))
+            diceroll_log.info('%s = %d - %d = %d' % (dice, flux2, flux1, rolled))
         else:
             rolled = flux1 - flux2
-            module_log.info('%s = %d - %d = %d' % (dice, flux1, flux2, rolled))
+            diceroll_log.info('%s = %d - %d = %d' % (dice, flux1, flux2, rolled))
         return rolled
     elif dice == 'BADFLUX':
         flux1 = randint(1, 6)
         flux2 = randint(1, 6)
         if flux1 > flux2:
             rolled = flux2 - flux1
-            module_log.info('%s = %d - %d = %d' % (dice, flux2, flux1, rolled))
+            diceroll_log.info('%s = %d - %d = %d' % (dice, flux2, flux1, rolled))
         else:
             rolled = flux1 - flux2
-            module_log.info('%s = %d - %d = %d' % (dice, flux1, flux2, rolled))
+            diceroll_log.info('%s = %d - %d = %d' % (dice, flux1, flux2, rolled))
         return rolled
     
     # check if a BOON roll is being performed
@@ -141,7 +143,7 @@ def roll(dice):
         die[0] = randint(1, 6)
         die[1] = randint(1, 6)
         die[2] = randint(1, 6)
-        module_log.info('Start Boon roll: %d %d %d' % (die[0], die[1], die[2]))
+        diceroll_log.info('Start Boon roll: %d %d %d' % (die[0], die[1], die[2]))
         die_swap = True
         while die_swap == True:
             die_swap = False
@@ -152,7 +154,7 @@ def roll(dice):
                     die[j+1] = temp_die
                     die_swap = True
         rolled = die[0] + die[1]
-        module_log.info('Sorted Boon roll: %d %d %d = %d' % (die[0], die[1], die[2], rolled))
+        diceroll_log.info('Sorted Boon roll: %d %d %d = %d' % (die[0], die[1], die[2], rolled))
         return rolled
     
     # check if a BANE roll is being performed
@@ -161,7 +163,7 @@ def roll(dice):
         die[0] = randint(1, 6)
         die[1] = randint(1, 6)
         die[2] = randint(1, 6)
-        module_log.info('Start Bane roll: %d %d %d' % (die[0], die[1], die[2]))
+        diceroll_log.info('Start Bane roll: %d %d %d' % (die[0], die[1], die[2]))
         die_swap = True
         while die_swap == True:
             die_swap = False
@@ -172,7 +174,7 @@ def roll(dice):
                     die[j+1] = temp_die
                     die_swap = True
         rolled = die[0] + die[1]
-        module_log.info('Sorted Bane roll: %d %d %d = %d' % (die[0], die[1], die[2], rolled))
+        diceroll_log.info('Sorted Bane roll: %d %d %d = %d' % (die[0], die[1], die[2], rolled))
         return rolled
 
     # look for DD in the string (for destructive dice rolls)
@@ -193,7 +195,7 @@ def roll(dice):
             num_dice = int(dice[0:ichar1])
             if num_dice < 1:
                 log.error('Negative dice count! [ERROR]')
-                module_log.error('Number of dice = ' + str(num_dice) + ' [ERROR]')
+                diceroll_log.error('Number of dice = ' + str(num_dice) + ' [ERROR]')
     
         if num_dice >= 1:
             
@@ -215,59 +217,59 @@ def roll(dice):
     
             if dice_type == 'D6':
                 rolled = die_rolls(6, num_dice) + dice_mod
-                module_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
+                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
                 return rolled
             elif dice_type == 'D66' and num_dice == 1 and dice_mod == 0:
                 roll_1 = randint(1, 6)
                 roll_2 = randint(1, 6)
                 rolled = roll_1 * 10 + roll_2
-                module_log.info('%s = %d%s+%d = %d and %d = %d' % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, rolled))
+                diceroll_log.info('%s = %d%s+%d = %d and %d = %d' % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, rolled))
                 return rolled
             elif dice_type == 'D100' and num_dice == 1:
                 roll_1 = (randint(1, 10) - 1) * 10
                 roll_2 = randint(1, 10)
                 rolled = roll_1 + roll_2 + dice_mod
-                module_log.info('%s = %d%s+%d = %d and %d + %d = %d' % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, dice_mod, rolled))
+                diceroll_log.info('%s = %d%s+%d = %d and %d + %d = %d' % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, dice_mod, rolled))
                 return rolled
             elif dice_type == 'D10':
                 rolled = die_rolls(10, num_dice) + dice_mod
-                module_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
+                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
                 return rolled                               
             elif dice_type == 'D20':
                 rolled = die_rolls(20, num_dice) + dice_mod
-                module_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
+                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
                 return rolled
             elif dice_type == 'D30':
                 rolled = die_rolls(30, num_dice) + dice_mod
-                module_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
+                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
                 return rolled
             elif dice_type == 'D12':
                 rolled = die_rolls(12, num_dice) + dice_mod
-                module_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
+                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
                 return rolled
             elif dice_type == 'D8':
                 rolled = die_rolls(8, num_dice) + dice_mod
-                module_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
+                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
                 return rolled
             elif dice_type == 'D4':
                 rolled = die_rolls(4, num_dice) + dice_mod
-                module_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
+                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
                 return rolled
             elif dice_type == 'D9':
                 rolled = die_rolls(9, num_dice) + dice_mod
-                module_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
+                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
                 return rolled
             elif dice_type == 'D3':
                 rolled = die_rolls(3, num_dice) + dice_mod
-                module_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
+                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
                 return rolled
             elif dice_type == 'DD':
                 rolled = (die_rolls(6, num_dice) + dice_mod) * 10
-                module_log.info('%s = (%d%s+%d) * 10 = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
+                diceroll_log.info('%s = (%d%s+%d) * 10 = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
                 return rolled
                                                     
     log.error('Wrong dice type entered! [ERROR]')
-    module_log.error('!!!!!!!!!!!!!!!!!!!!! DICE ERROR! ' + dice + ' is unknown !!!!!!!!!!!!!!!!!!!!!!!!!')
+    diceroll_log.error('!!!!!!!!!!!!!!!!!!!!! DICE ERROR! ' + dice + ' is unknown !!!!!!!!!!!!!!!!!!!!!!!!!')
     
     print
     print "** DICE ERROR! '%s' is unknown **" % dice

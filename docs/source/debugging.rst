@@ -4,7 +4,7 @@
 folder it creates if one isn't there already. In the file you will see mentions of dice being rolled. **diceroll** uses
 a default logging mode of ``INFO`` which isn't that verbose. ::
 
-   module_log.setLevel(logging.INFO)
+   diceroll_log.setLevel(logging.INFO)
 
 ::
 
@@ -14,7 +14,7 @@ a default logging mode of ``INFO`` which isn't that verbose. ::
 
 Changing **diceroll's** logging mode to ``DEBUG`` will record debugging messages in the ``Logs\diceroll.log`` file. ::
    
-   module_log.setLevel(logging.DEBUG)
+   diceroll_log.setLevel(logging.DEBUG)
 
 ::
 

@@ -8,7 +8,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
           URL_ROOT:    '',
-          VERSION:     '2.3.0b',
+          VERSION:     '2.3.1b',
           COLLAPSE_MODINDEX: false,
           FILE_SUFFIX: '.html'
       };
@@ -53,13 +53,13 @@
 <p><strong>diceroll 2.3</strong> keeps a log file of any dice rolls made during its last run. You will find <tt class="docutils literal"><span class="pre">diceroll.log</span></tt> in the <tt class="docutils literal"><span class="pre">Logs</span></tt>
 folder it creates if one isn't there already. In the file you will see mentions of dice being rolled. <strong>diceroll</strong> uses
 a default logging mode of <tt class="docutils literal"><span class="pre">INFO</span></tt> which isn't that verbose.</p>
-<div class="highlight"><pre><span class="n">module_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">diceroll_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">INFO</span><span class="p">)</span>
 </pre></div>
 <pre>INFO diceroll - Logging started.
 INFO diceroll - roll() v2.3 started, and running...
 INFO diceroll - 3D4 = 3D4+0 = 10</pre>
 <p>Changing <strong>diceroll's</strong> logging mode to <tt class="docutils literal"><span class="pre">DEBUG</span></tt> will record debugging messages in the <tt class="docutils literal"><span class="pre">Logs\diceroll.log</span></tt> file.</p>
-<div class="highlight"><pre><span class="n">module_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+<div class="highlight"><pre><span class="n">diceroll_log</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><span class="n">logging</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
 </pre></div>
 <pre>INFO diceroll - Logging started.
 INFO diceroll - roll() v2.3 started, and running...
@@ -122,7 +122,7 @@ the name of the program you're calling <tt class="docutils literal"><span class=
     </div>
     <div class="footer">
       &copy; Copyright 2017, Shawn Driscoll.
-      Last updated on Oct 04, 2017.
+      Last updated on Oct 08, 2017.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
     </div>
   </body>
