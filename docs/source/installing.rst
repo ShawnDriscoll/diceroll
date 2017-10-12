@@ -25,7 +25,7 @@ into your ``game_utils`` folder and add this line near the top of your code: ::
 Automated Installation
 ----------------------
 
-Unzip ``diceroll.zip`` and start a CMD window at the folder location of the setup.py file. At the
+Unzip ``diceroll.zip`` and start a CMD window at the folder location of the ``setup.py file``. At the
 CMD prompt you can type: ::
 
     setup.py install

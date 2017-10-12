@@ -6,26 +6,26 @@ a default logging mode of ``INFO`` which isn't that verbose. ::
 
    diceroll_log.setLevel(logging.INFO)
 
-::
+Will log INFO output as:
 
-   ...INFO diceroll - Logging started.
-   ...INFO diceroll - roll() v2.3 started, and running...
-   ...INFO diceroll - 3D4 = 3D4+0 = 10
+   | ...INFO diceroll - Logging started.
+   | ...INFO diceroll - roll() v2.3 started, and running...
+   | ...INFO diceroll - 3D4 = 3D4+0 = 10
 
 Changing **diceroll's** logging mode to ``DEBUG`` will record debugging messages in the ``Logs\diceroll.log`` file. ::
    
    diceroll_log.setLevel(logging.DEBUG)
 
-::
+Will log DEBUG output as:
 
-   ...INFO diceroll - Logging started.
-   ...INFO diceroll - roll() v2.3 started, and running...
-   ...DEBUG diceroll - Asked to roll 3D4:
-   ...DEBUG diceroll - Using three 4-sided dice...
-   ...DEBUG diceroll - Rolled a 4
-   ...DEBUG diceroll - Rolled a 2
-   ...DEBUG diceroll - Rolled a 2
-   ...INFO diceroll - 3D4 = 3D4+0 = 8
+   | ...INFO diceroll - Logging started.
+   | ...INFO diceroll - roll() v2.3 started, and running...
+   | ...DEBUG diceroll - Asked to roll 3D4:
+   | ...DEBUG diceroll - Using three 4-sided dice...
+   | ...DEBUG diceroll - Rolled a 4
+   | ...DEBUG diceroll - Rolled a 2
+   | ...DEBUG diceroll - Rolled a 2
+   | ...INFO diceroll - 3D4 = 3D4+0 = 8
    
 .. note::
    Running **diceroll** in ``DEBUG`` mode may create a log file that will be too huge to open. A program of yours
