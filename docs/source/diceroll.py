@@ -92,7 +92,7 @@ def roll(dice):
     An invalid roll will return a 0.
     '''
 
-    log = logging.getLogger('Imperial_Chargen_087b.diceroll')
+    log = logging.getLogger('your_code_name_here.diceroll')
 
     # was information for this program asked for?
     if dice == 'info':
