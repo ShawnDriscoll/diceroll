@@ -25,7 +25,7 @@ into your ``game_utils`` folder and add this line near the top of your code: ::
 Automated Installation
 ----------------------
 
-To automate the packaged installation, at the CMD prompt you can type: ::
+To automate a packaged installation, at the CMD prompt you can type: ::
 
     setup.py install
 
