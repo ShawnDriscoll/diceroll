@@ -67,6 +67,24 @@ into your <tt class="docutils literal"><span class="pre">game_utils</span></tt> 
 <div class="highlight"><pre><span class="kn">from</span> <span class="nn">game_utils.diceroll</span> <span class="kn">import</span> <span class="n">roll</span>
 </pre></div>
 </div>
+<div class="section" id="automated-installation">
+<h2>Automated Installation<a class="headerlink" href="#automated-installation" title="Permalink to this headline">¶</a></h2>
+<p>To automate the packaged installation, at the CMD prompt you can type:</p>
+<pre>setup.py install</pre>
+<p>or:</p>
+<pre>python setup.py install</pre>
+<p>depending on if your computer knows how to open .py files or not.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">During the installation process,
+a <tt class="docutils literal"><span class="pre">Python25\Lib\site-packages\game_utils</span></tt> folder will be created. It will contain <tt class="docutils literal"><span class="pre">__init__.py</span></tt> and <tt class="docutils literal"><span class="pre">diceroll.py</span></tt> if your Python
+doesn't have <tt class="docutils literal"><span class="pre">setuptools</span></tt> installed. Otherwise, an .egg file called <tt class="docutils literal"><span class="pre">diceroll-2.3.1b-py2.5.egg</span></tt> will be
+created and copied into the <tt class="docutils literal"><span class="pre">Python25\Lib\site-packages</span></tt> folder.</p>
+</div>
+<p>No matter the automated installation that your Python performed, importing will be the same:</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">game_utils.diceroll</span> <span class="kn">import</span> <span class="n">roll</span>
+</pre></div>
+</div>
 </div>
 
 
@@ -80,6 +98,7 @@ into your <tt class="docutils literal"><span class="pre">game_utils</span></tt> 
 <li><a class="reference external" href=""><strong>Installing diceroll</strong></a><ul>
 <li><a class="reference external" href="#local-installation">Local Installation</a></li>
 <li><a class="reference external" href="#packaged-installation">Packaged Installation</a></li>
+<li><a class="reference external" href="#automated-installation">Automated Installation</a></li>
 </ul>
 </li>
 </ul>
@@ -118,7 +137,7 @@ into your <tt class="docutils literal"><span class="pre">game_utils</span></tt> 
     </div>
     <div class="footer">
       &copy; Copyright 2017, Shawn Driscoll.
-      Last updated on Oct 08, 2017.
+      Last updated on Oct 11, 2017.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
     </div>
   </body>

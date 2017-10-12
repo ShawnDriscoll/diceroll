@@ -20,7 +20,7 @@ import os
 import logging
 
 __version__ = '2.3'
-__release__ = '2.3.1 (Beta)'
+__release__ = '2.3.1b'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
 diceroll_log = logging.getLogger('diceroll')
@@ -92,7 +92,7 @@ def roll(dice):
     An invalid roll will return a 0.
     '''
 
-    log = logging.getLogger('your_code_name_here.diceroll')
+    log = logging.getLogger('Imperial_Chargen_087b.diceroll')
 
     # was information for this program asked for?
     if dice == 'info':
