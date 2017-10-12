@@ -6,7 +6,7 @@ a default logging mode of ``INFO`` which isn't that verbose. ::
 
    diceroll_log.setLevel(logging.INFO)
 
-Will log INFO output as:
+Your INFO logging will output as:
 
    | ...INFO diceroll - Logging started.
    | ...INFO diceroll - roll() v2.3 started, and running...
@@ -16,7 +16,7 @@ Changing **diceroll's** logging mode to ``DEBUG`` will record debugging messages
    
    diceroll_log.setLevel(logging.DEBUG)
 
-Will log DEBUG output as:
+Your DEBUG logging will output as:
 
    | ...INFO diceroll - Logging started.
    | ...INFO diceroll - roll() v2.3 started, and running...
