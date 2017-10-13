@@ -27,7 +27,7 @@ Automated Installation
 
 .. versionadded:: 2.3
 
-Extract ``diceroll.zip`` and start a CMD window at the folder location of the ``setup.py`` file. At the
+Extract ``diceroll_2.3.2b.zip`` and start a CMD window at the folder location of the ``setup.py`` file. At the
 CMD prompt you can type: ::
 
     setup.py install
