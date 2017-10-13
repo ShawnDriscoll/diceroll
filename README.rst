@@ -1,3 +1,15 @@
+.. image:: https://travis-ci.org/pandalibin/diceroll.svg?branch=master
+    :target: https://travis-ci.org/pandalibin/diceroll
+    :alt: Build Status
+
+.. image:: https://codecov.io/gh/pandalibin/diceroll/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/pandalibin/diceroll
+    :alt: Coverage Status
+
+.. image:: https://readthedocs.org/projects/diceroll/badge/?version=latest
+    :target: http://diceroll.readthedocs.io/en/latest/?badge=latest
+    :alt: Doc Status
+
 **diceroll 2.3 for Python 2.5**
 ===============================
 
