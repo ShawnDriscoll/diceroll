@@ -49,3 +49,4 @@ No matter the automated installation that your Python performed, importing will 
     from game_utils.diceroll import roll
     
 
+.. command-output:: roll('info')
