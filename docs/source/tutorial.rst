@@ -33,7 +33,7 @@ Three additional dice types are now available:
 .. note::
 
    You may recognize some of these dice types from various tabletop role-playing games. Not all dice types are
-   covered by **diceroll**. But more are plannned for in future releases of this module.
+   covered by **diceroll**. But more are planned for in future releases of this module.
 
 **diceroll** uses a simple standard when it comes to rolling various dice types.
 
