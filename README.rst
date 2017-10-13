@@ -1,7 +1,3 @@
-.. image:: https://travis-ci.org/pandalibin/diceroll.svg?branch=master
-    :target: https://travis-ci.org/pandalibin/diceroll
-    :alt: Build Status
-
 .. image:: https://readthedocs.org/projects/diceroll/badge/?version=latest
     :target: http://diceroll.readthedocs.io/en/latest/?badge=latest
     :alt: Doc Status
