@@ -8,7 +8,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
           URL_ROOT:    '',
-          VERSION:     '2.3.1b',
+          VERSION:     '2.3.2b',
           COLLAPSE_MODINDEX: false,
           FILE_SUFFIX: '.html'
       };
@@ -71,30 +71,26 @@ be used. But first, we must give this function a value to work from.</p>
 D3, D4, D6, D8, D9, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, and BADFLUX</blockquote>
 <p>
 <span class="versionmodified">New in version 2.3.</span></p>
-<p>Two additional dice types are now available:</p>
+<p>Three additional dice types are now available:</p>
 <blockquote>
-BOON and BANE</blockquote>
+BOON, BANE, and D2</blockquote>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>You may recognize some of these dice types from various tabletop role-playing games. There is probably a
-standard notation for dice rolls used in games. But each game typically uses its own notation.</p>
-<div class="last line-block">
-<div class="line"><strong>diceroll</strong> uses a simple standard when it comes to rolling various dice types.</div>
-<div class="line"><br /></div>
-<div class="line">Some examples are:</div>
-<div class="line"><br /></div>
-<div class="line">roll('D6') or roll('1D6') -- roll one 6-sided die</div>
-<div class="line">roll('2D6') -- roll two 6-sided dice</div>
-<div class="line">roll('D10') -- roll a 10-sided die (1 - 10)</div>
-<div class="line">roll('D100') -- roll a 100-sided die (1 - 100)</div>
-<div class="line">roll('D66') -- roll for a D66 chart</div>
-<div class="line">roll('FLUX') -- a FLUX roll (-5 to 5)</div>
-<div class="line">roll('3D6+6') -- add +6 DM to roll</div>
-<div class="line">roll('4D4-4') -- add -4 DM to roll</div>
-<div class="line">roll('2DD+3') -- roll (2D6+3) x 10</div>
-<div class="line">roll('BOON') -- roll 3D6 and keep the higher two dice</div>
+<p class="last">You may recognize some of these dice types from various tabletop role-playing games. Not all dice types are
+covered by <strong>diceroll</strong>. But more are plannned for in future releases of this module.</p>
 </div>
-</div>
+<p><strong>diceroll</strong> uses a simple standard when it comes to rolling various dice types.</p>
+<p>Some examples are:</p>
+<pre>roll('D6') or roll('1D6') -- roll one 6-sided die
+roll('2D6') -- roll two 6-sided dice
+roll('D10') -- roll a 10-sided die (1 - 10)
+roll('D100') -- roll a 100-sided die (1 - 100)
+roll('D66') -- roll for a D66 chart
+roll('FLUX') -- a FLUX roll (-5 to 5)
+roll('3D6+6') -- add +6 DM to roll
+roll('4D4-4') -- add -4 DM to roll
+roll('2DD+3') -- roll (2D6+3) x 10
+roll('BOON') -- roll 3D6 and keep the higher two dice</pre>
 </div>
 <div class="section" id="encountering-errors">
 <h2>Encountering Errors<a class="headerlink" href="#encountering-errors" title="Permalink to this headline">¶</a></h2>

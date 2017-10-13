@@ -26,29 +26,20 @@ The dice types to roll are:
 
 .. versionadded:: 2.3
 
-Two additional dice types are now available:
+Three additional dice types are now available:
 
-   BOON and BANE
+   BOON, BANE, and D2
    
 .. note::
 
-   You may recognize some of these dice types from various tabletop role-playing games. There is probably a
-   standard notation for dice rolls used in games. But each game typically uses its own notation.
+   You may recognize some of these dice types from various tabletop role-playing games. Not all dice types are
+   covered by **diceroll**. But more are plannned for in future releases of this module.
 
-   | **diceroll** uses a simple standard when it comes to rolling various dice types.
-   |
-   | Some examples are:
-   |
-   | roll('D6') or roll('1D6') -- roll one 6-sided die
-   | roll('2D6') -- roll two 6-sided dice
-   | roll('D10') -- roll a 10-sided die (1 - 10)
-   | roll('D100') -- roll a 100-sided die (1 - 100)
-   | roll('D66') -- roll for a D66 chart
-   | roll('FLUX') -- a FLUX roll (-5 to 5)
-   | roll('3D6+6') -- add +6 DM to roll
-   | roll('4D4-4') -- add -4 DM to roll
-   | roll('2DD+3') -- roll (2D6+3) x 10
-   | roll('BOON') -- roll 3D6 and keep the higher two dice
+**diceroll** uses a simple standard when it comes to rolling various dice types.
+
+Some examples are:
+
+.. literalinclude:: databox1.dat
 
 Encountering Errors
 -------------------

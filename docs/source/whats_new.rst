@@ -7,6 +7,8 @@ New in version 2.3
 BOON and BANE rolls have been added. Both rolls use three 6-sided dice. A BOON roll keeps the two
 highest dice, while a BANE roll keeps the two lowest dice.
 
+D2 has also been added. A coin toss, basically.
+
 New in version 2.2
 ------------------
 

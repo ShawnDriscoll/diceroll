@@ -20,7 +20,7 @@ import os
 import logging
 
 __version__ = '2.3'
-__release__ = '2.3.1b'
+__release__ = '2.3.2b'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
 diceroll_log = logging.getLogger('diceroll')
@@ -73,8 +73,8 @@ def _dierolls(dtype, dcount):
 def roll(dice):
     '''
     The dice types to roll are:
-        'D3', 'D4', 'D6', 'D8', 'D9', 'D10', 'D12', 'D20', 'D30',
-        'D100', 'D66', 'DD', 'FLUX', 'GOODFLUX', 'BADFLUX'
+        'D2', 'D3', 'D4', 'D6', 'D8', 'D9', 'D10', 'D12', 'D20', 'D30',
+        'D100', 'D66', 'DD', 'FLUX', 'GOODFLUX', 'BADFLUX', 'BOON', 'BANE'
 
     Some examples are:
     roll('D6') or roll('1D6') -- roll one 6-sided die
@@ -116,6 +116,7 @@ def roll(dice):
         rolled = flux1 - flux2
         diceroll_log.info('%s = %d - %d = %d' % (dice, flux1, flux2, rolled))
         return rolled
+
     elif dice == 'GOODFLUX':
         flux1 = randint(1, 6)
         flux2 = randint(1, 6)
@@ -126,6 +127,7 @@ def roll(dice):
             rolled = flux1 - flux2
             diceroll_log.info('%s = %d - %d = %d' % (dice, flux1, flux2, rolled))
         return rolled
+
     elif dice == 'BADFLUX':
         flux1 = randint(1, 6)
         flux2 = randint(1, 6)
@@ -136,7 +138,7 @@ def roll(dice):
             rolled = flux1 - flux2
             diceroll_log.info('%s = %d - %d = %d' % (dice, flux1, flux2, rolled))
         return rolled
-    
+
     # check if a BOON roll is being performed
     elif dice == 'BOON':
         die = [0, 0, 0]
@@ -261,6 +263,10 @@ def roll(dice):
                 return rolled
             elif dice_type == 'D3':
                 rolled = _dierolls(3, num_dice) + dice_mod
+                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
+                return rolled
+            elif dice_type == 'D2':
+                rolled = _dierolls(2, num_dice) + dice_mod
                 diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
                 return rolled
             elif dice_type == 'DD':
