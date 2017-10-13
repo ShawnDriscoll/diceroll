@@ -50,3 +50,5 @@ No matter the automated installation that your Python performed, importing will 
     
 
 .. command-output:: diceroll.roll('info')
+
+.. literalinclude:: figure1.dat
