@@ -21,7 +21,7 @@ Say you have a folder called ``game_utils``, and assuming you have an ``__init__
 into your ``game_utils`` folder and add this line near the top of your code: ::
 
    from game_utils.diceroll import roll
-   
+
 Automated Installation
 ----------------------
 
