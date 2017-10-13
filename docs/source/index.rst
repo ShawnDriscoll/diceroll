@@ -3,6 +3,10 @@
 
 .. figure:: diceroll_manual_cover_art.png
 
+.. image:: https://readthedocs.org/projects/diceroll/badge/?version=latest
+    :target: http://diceroll.readthedocs.io/en/latest/?badge=latest
+    :alt: Doc Status
+
 **diceroll 2.3** is a Python 2.5 module that your game code calls to make dice rolls.
 
 The free-to-use source is available at https://github.com/ShawnDriscoll/diceroll
