@@ -4,11 +4,11 @@
 
 .. method:: roll(number_of_dice + dice_type + dice_roll_modifier)
 
-   | ``roll()`` accepts a string value made up of three concatenated values:
+   | ``roll()`` accepts a string value made up of three concatenated values, then returns an integer.
    |
-   | *number_of_dice* + *dice_type* + *dice_roll_modifier*
+   | String values comes from *number_of_dice* + *dice_type* + *dice_roll_modifier*
    |
-   | As examples:
+   | Some examples are:
    | '2' + 'D10' + '-2'
    | str(3) + 'D6' + '+2'
    | 'FLUX'
