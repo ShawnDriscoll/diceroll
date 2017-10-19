@@ -41,7 +41,7 @@
      for games like craps and are also used in tabletop games.
    
    diceroll
-     Python module available from this `GitHub <https://github.com/ShawnDriscoll/diceroll/>`__ repository.
+     A Python module available from this `GitHub <https://github.com/ShawnDriscoll/diceroll/>`__ repository.
      
    egg
      Eggs are to Pythons as Jars are to Java. Python eggs are a way of bundling
@@ -56,8 +56,7 @@
      Bugs that need to be squashed.
      
    FORTRAN
-     A computer language used to play Star Trek games in the 1970s. But you knew that
-     already if you have read every page of this operations manual.
+     A computer programming language used to play Star Trek games in the 1970s.
      
    game
      An activity engaged in for diversion or amusement. For computer games, it
@@ -85,6 +84,10 @@
    no dice
      Used to refuse a request or indicate no chance of success.
      
+   Python 3.6+
+     A newfangled version of Python that's different from what Python 2.5
+     programmers are used to.
+     
    rabbit hole
      Used to refer to a bizarre, confusing, or nonsensical situation
      or environment, typically one from which it is difficult to extricate oneself.
@@ -104,6 +107,6 @@
      a character string (a sequence of characters) or a binary
      digit string (a sequence of binary values).
      
-   Your Code
+   your code
      Your code is a Python program that you have already written to make calls
      to the ``roll()`` function.
