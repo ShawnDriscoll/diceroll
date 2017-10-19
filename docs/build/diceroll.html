@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Index &mdash; diceroll 2.3 Operations Manual</title>
+    <title>diceroll Module &mdash; diceroll 2.3 Operations Manual</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -17,20 +17,28 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="shortcut icon" href="_static/diceroll_icon_16x16.ico"/>
     <link rel="contents" title="Global table of contents" href="contents.html" />
-    <link rel="index" title="Global index" href="" />
+    <link rel="index" title="Global index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="diceroll 2.3 Operations Manual" href="index.html" />
+    <link rel="next" title="Glossary" href="glossary.html" />
+    <link rel="prev" title="Designer's Notes" href="designers_notes.html" />
   </head>
   <body>
     <div class="related">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="" title="General Index"
+          <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
           <a href="modindex.html" title="Global Module Index"
              accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="glossary.html" title="Glossary"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="designers_notes.html" title="Designer's Notes"
+             accesskey="P">previous</a> |</li>
         <li><a href="index.html">diceroll 2.3 Operations Manual</a> &raquo;</li>
       </ul>
     </div>
@@ -39,31 +47,30 @@
         <div class="bodywrapper">
           <div class="body">
             
+  
+  <div class="section" id="module-diceroll">
+<h1><strong>diceroll Module</strong><a class="headerlink" href="#module-diceroll" title="Permalink to this headline">¶</a></h1>
+<dl class="method">
+<dt id="diceroll.roll">
+<!--[diceroll.roll]--><tt class="descname">roll</tt><big>(</big><em>number_of_dice + dice_type + dice_roll_modifier</em><big>)</big><a class="headerlink" href="#diceroll.roll" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><tt class="docutils literal"><span class="pre">roll()</span></tt> accepts a string value made up of three concatenated values:</div>
+<div class="line"><br /></div>
+<div class="line"><em>number_of_dice</em> + <em>dice_type</em> + <em>dice_roll_modifier</em></div>
+<div class="line"><br /></div>
+<div class="line">As examples:</div>
+<div class="line">'2' + 'D10' + '-2'</div>
+<div class="line">str(3) + 'D6' + '+2'</div>
+<div class="line">'FLUX'</div>
+<div class="line"><br /></div>
+<div class="line"><em>dice_roll_modifier</em> must include a '+' or '-' with its value.</div>
+<div class="line"><br /></div>
+<div class="line">Note that both <em>number_dice</em> and <em>dice_roll_modifier</em> are optional, and may</div>
+<div class="line">not even be used by some <em>dice_type</em> rolls.</div>
+</div>
+</dd></dl>
 
-   <h1 id="index">Index</h1>
-
-   <a href="#D"><strong>D</strong></a> | <a href="#R"><strong>R</strong></a> 
-
-   <hr />
-
-   
-<h2 id="D">D</h2>
-<table width="100%" class="indextable"><tr><td width="33%" valign="top">
-<dl>
-
-<dt><a href="diceroll.html#module-diceroll">diceroll (module)</a></dt></dl></td><td width="33%" valign="top"><dl>
-</dl></td></tr></table>
-
-<h2 id="R">R</h2>
-<table width="100%" class="indextable"><tr><td width="33%" valign="top">
-<dl>
-
-<dt><a href="tutorial.html#roll">roll() (built-in function)</a></dt>
-  <dd><dl>
-    <dt><a href="diceroll.html#diceroll.roll">(in module diceroll)</a></dt>
-  </dl></dd></dl></td><td width="33%" valign="top"><dl>
-</dl></td></tr></table>
-
+</div>
 
 
           </div>
@@ -71,9 +78,10 @@
       </div>
       <div class="sphinxsidebar">
         <div class="sphinxsidebarwrapper">
-
-   
-
+            <h4>Previous topic</h4>
+            <p class="topless"><a href="designers_notes.html" title="previous chapter"><strong>Designer's Notes</strong></a></p>
+            <h4>Next topic</h4>
+            <p class="topless"><a href="glossary.html" title="next chapter"><strong>Glossary</strong></a></p>
             <h3>Quick search</h3>
             <form class="search" action="search.html" method="get">
               <input type="text" name="q" size="18" /> <input type="submit" value="Go" />
@@ -88,11 +96,17 @@
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="" title="General Index"
+          <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
           <a href="modindex.html" title="Global Module Index"
              accesskey="M">modules</a> |</li>
+        <li class="right" >
+          <a href="glossary.html" title="Glossary"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="designers_notes.html" title="Designer's Notes"
+             accesskey="P">previous</a> |</li>
         <li><a href="index.html">diceroll 2.3 Operations Manual</a> &raquo;</li>
       </ul>
     </div>

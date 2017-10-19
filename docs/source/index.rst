@@ -19,7 +19,8 @@ This documentation explains how to install and use the **diceroll module** for y
     :target: http://diceroll.readthedocs.io/en/latest/?badge=latest
     :alt: Doc Status
 
-Contents:
+Contents
+--------
 
 .. toctree::
    :maxdepth: 2
@@ -31,3 +32,12 @@ Contents:
    tutorial
    debugging
    designers_notes
+   diceroll
+   glossary
+   license
+   
+Indices and tables
+------------------
+
+* :ref:`genindex`
+* :ref:`search`

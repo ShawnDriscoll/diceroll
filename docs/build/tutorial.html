@@ -55,6 +55,26 @@
 <p>Once <tt class="docutils literal"><span class="pre">diceroll.py</span></tt> is installed and your code is able to import the module, its <tt class="docutils literal"><span class="pre">roll()</span></tt> function can be
 used right away. This function returns an integer, by the way. So it can be used as any other integer would
 be used. But first, we must give this function a value to work from.</p>
+<dl class="function">
+<dt id="roll">
+<!--[roll]--><tt class="descname">roll</tt><big>(</big><em>dice</em><big>)</big><a class="headerlink" href="#roll" title="Permalink to this definition">¶</a></dt>
+<dd><div class="line-block">
+<div class="line"><em>dice</em> = a string of three ordered concatenated values:</div>
+<div class="line"><br /></div>
+<div class="line"><em>number_of_dice</em> + <em>dice_type</em> + <em>dice_roll_modifier</em></div>
+<div class="line"><br /></div>
+<div class="line">As examples:</div>
+<div class="line"><em>dice</em> = '2' + 'D10' + '-2'</div>
+<div class="line"><em>dice</em> = str(3) + 'D6' + '+2'</div>
+<div class="line"><em>dice</em> = 'FLUX'</div>
+<div class="line"><br /></div>
+<div class="line"><em>dice_roll_modifier</em> must include a '+' or '-' with its value.</div>
+<div class="line"><br /></div>
+<div class="line">Note that both <em>number_dice</em> and <em>dice_roll_modifier</em> are optional, and may</div>
+<div class="line">not even be used by some <em>dice_type</em> rolls.</div>
+</div>
+</dd></dl>
+
 <p>Those of you that have used dice rolling programs before will notice that something is different. And that is,
 <tt class="docutils literal"><span class="pre">roll()</span></tt> uses a string for its input:</p>
 <div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">die1</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;1D6&#39;</span><span class="p">)</span>
@@ -81,7 +101,16 @@ covered by <strong>diceroll</strong>. But more are planned for in future release
 </div>
 <p><strong>diceroll</strong> uses a simple standard when it comes to rolling various dice types.</p>
 <p>Some examples are:</p>
-<div class="highlight"><pre><span class="n">roll</span><span class="p">(</span><span class="s">&#39;D6&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;1D6&#39;</span><span class="p">)</span> <span class="c"># roll one 6-sided die</span>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span class="n">roll</span><span class="p">(</span><span class="s">&#39;D6&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;1D6&#39;</span><span class="p">)</span> <span class="c"># roll one 6-sided die</span>
 <span class="n">roll</span><span class="p">(</span><span class="s">&#39;2D6&#39;</span><span class="p">)</span> <span class="c"># roll two 6-sided dice</span>
 <span class="n">roll</span><span class="p">(</span><span class="s">&#39;D10&#39;</span><span class="p">)</span> <span class="c"># roll a 10-sided die (1 - 10)</span>
 <span class="n">roll</span><span class="p">(</span><span class="s">&#39;D100&#39;</span><span class="p">)</span> <span class="c"># roll a 100-sided die (1 - 100)</span>
@@ -92,7 +121,56 @@ covered by <strong>diceroll</strong>. But more are planned for in future release
 <span class="n">roll</span><span class="p">(</span><span class="s">&#39;2DD+3&#39;</span><span class="p">)</span> <span class="c"># roll (2D6+3) x 10</span>
 <span class="n">roll</span><span class="p">(</span><span class="s">&#39;BOON&#39;</span><span class="p">)</span> <span class="c"># roll 3D6 and keep the higher two dice</span>
 </pre></div>
+</td></tr></table><p>
+<span class="versionmodified">Deprecated in version 1.9.</span></p>
+<p>D00 has been replaced with D100.</p>
 </div>
+<div class="section" id="using-roll-in-your-code">
+<h2>Using <tt class="docutils literal"><span class="pre">roll()</span></tt> in Your Code<a class="headerlink" href="#using-roll-in-your-code" title="Permalink to this headline">¶</a></h2>
+<p>Sample code:</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="highlight"><pre><span class="c"># import the roll() module</span>
+<span class="kn">from</span> <span class="nn">diceroll</span> <span class="kn">import</span> <span class="n">roll</span>
+
+<span class="c"># enter the roll type to be made</span>
+<span class="n">number_of_dice</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;Number of dice to roll? &#39;</span><span class="p">))</span>
+<span class="n">dice_type</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;Dice type? &#39;</span><span class="p">)</span>
+<span class="n">dice_roll_modifier</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;DM? &#39;</span><span class="p">))</span>
+
+<span class="c"># make sure that there is a plus or minus sign in the DM string</span>
+<span class="k">if</span> <span class="n">dice_roll_modifier</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&gt;</span> <span class="s">&#39;-&#39;</span> <span class="ow">and</span> <span class="n">dice_roll_modifier</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&gt;</span> <span class="s">&#39;+&#39;</span><span class="p">:</span>
+    <span class="n">dice_roll_modifier</span> <span class="o">=</span> <span class="s">&#39;+&#39;</span> <span class="o">+</span> <span class="n">dice_roll_modifier</span>
+
+<span class="c"># concatenate the values for the dice string</span>
+<span class="n">dice</span> <span class="o">=</span> <span class="n">number_of_dice</span> <span class="o">+</span> <span class="n">dice_type</span> <span class="o">+</span> <span class="n">dice_roll_modifier</span>
+
+<span class="k">print</span>
+<span class="k">print</span> <span class="s">&#39;Rolling&#39;</span><span class="p">,</span> <span class="n">dice</span>
+
+<span class="c"># do 20 rolls</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="k">print</span> <span class="s">&#39;You rolled a </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">roll</span><span class="p">(</span><span class="n">dice</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
 <div class="section" id="encountering-errors">
 <h2>Encountering Errors<a class="headerlink" href="#encountering-errors" title="Permalink to this headline">¶</a></h2>
 <p>Entering an invalid string for <tt class="docutils literal"><span class="pre">roll()</span></tt> will return an error message, as well as a value of 0 from the function:</p>
@@ -118,6 +196,7 @@ covered by <strong>diceroll</strong>. But more are planned for in future release
             <ul>
 <li><a class="reference external" href=""><strong>diceroll Tutorial</strong></a><ul>
 <li><a class="reference external" href="#rolling-the-dice">Rolling the Dice</a></li>
+<li><a class="reference external" href="#using-roll-in-your-code">Using <tt class="docutils literal"><span class="pre">roll()</span></tt> in Your Code</a></li>
 <li><a class="reference external" href="#encountering-errors">Encountering Errors</a></li>
 </ul>
 </li>
@@ -157,7 +236,7 @@ covered by <strong>diceroll</strong>. But more are planned for in future release
     </div>
     <div class="footer">
       &copy; Copyright 2017, Shawn Driscoll.
-      Last updated on Oct 18, 2017.
+      Last updated on Oct 19, 2017.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
     </div>
   </body>

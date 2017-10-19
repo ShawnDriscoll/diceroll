@@ -7,6 +7,22 @@ Once ``diceroll.py`` is installed and your code is able to import the module, it
 used right away. This function returns an integer, by the way. So it can be used as any other integer would
 be used. But first, we must give this function a value to work from.
 
+.. function:: roll(dice)
+
+   | *dice* = a string of three ordered concatenated values:
+   |
+   | *number_of_dice* + *dice_type* + *dice_roll_modifier*
+   |
+   | As examples:
+   | *dice* = '2' + 'D10' + '-2'
+   | *dice* = str(3) + 'D6' + '+2'
+   | *dice* = 'FLUX'
+   |
+   | *dice_roll_modifier* must include a '+' or '-' with its value.
+   |
+   | Note that both *number_dice* and *dice_roll_modifier* are optional, and may
+   | not even be used by some *dice_type* rolls.
+
 Those of you that have used dice rolling programs before will notice that something is different. And that is,
 ``roll()`` uses a string for its input:
 
@@ -37,9 +53,46 @@ Three additional dice types are now available:
 
 **diceroll** uses a simple standard when it comes to rolling various dice types.
 
+.. highlight:: python
+   :linenothreshold: 5
+
 Some examples are:
 
 .. literalinclude:: databox1.dat
+   :language: python
+   :linenos:
+
+.. deprecated:: 1.9
+
+D00 has been replaced with D100.
+
+Using ``roll()`` in Your Code
+-----------------------------
+
+Sample code::
+
+    # import the roll() module
+    from diceroll import roll
+
+    # enter the roll type to be made
+    number_of_dice = str(raw_input('Number of dice to roll? '))
+    dice_type = raw_input('Dice type? ')
+    dice_roll_modifier = str(raw_input('DM? '))
+
+    # make sure that there is a plus or minus sign in the DM string
+    if dice_roll_modifier[0] <> '-' and dice_roll_modifier[0] <> '+':
+        dice_roll_modifier = '+' + dice_roll_modifier
+
+    # concatenate the values for the dice string
+    dice = number_of_dice + dice_type + dice_roll_modifier
+
+    print
+    print 'Rolling', dice
+
+    # do 20 rolls
+    for i in range(20):
+        print 'You rolled a %d' % roll(dice)
+
 
 Encountering Errors
 -------------------
