@@ -20,7 +20,7 @@
     <link rel="index" title="Global index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="diceroll 2.3 Operations Manual" href="index.html" />
-    <link rel="next" title="Debugging diceroll" href="debugging.html" />
+    <link rel="next" title="Using roll() in Your Code" href="samples.html" />
     <link rel="prev" title="Installing diceroll" href="installing.html" />
   </head>
   <body>
@@ -34,7 +34,7 @@
           <a href="modindex.html" title="Global Module Index"
              accesskey="M">modules</a> |</li>
         <li class="right" >
-          <a href="debugging.html" title="Debugging diceroll"
+          <a href="samples.html" title="Using roll() in Your Code"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="installing.html" title="Installing diceroll"
@@ -125,65 +125,6 @@ covered by <strong>diceroll</strong>. But more are planned for in future release
 <span class="versionmodified">Deprecated in version 1.9.</span></p>
 <p>D00 has been replaced with D100.</p>
 </div>
-<div class="section" id="using-roll-in-your-code">
-<h2>Using <tt class="docutils literal"><span class="pre">roll()</span></tt> in Your Code<a class="headerlink" href="#using-roll-in-your-code" title="Permalink to this headline">¶</a></h2>
-<p>Sample code:</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21</pre></div></td><td class="code"><div class="highlight"><pre><span class="c"># import the roll() module</span>
-<span class="kn">from</span> <span class="nn">diceroll</span> <span class="kn">import</span> <span class="n">roll</span>
-
-<span class="c"># enter the roll type to be made</span>
-<span class="n">number_of_dice</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;Number of dice to roll? &#39;</span><span class="p">))</span>
-<span class="n">dice_type</span> <span class="o">=</span> <span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;Dice type? &#39;</span><span class="p">)</span>
-<span class="n">dice_roll_modifier</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;DM? &#39;</span><span class="p">))</span>
-
-<span class="c"># make sure that there is a plus or minus sign in the DM string</span>
-<span class="k">if</span> <span class="n">dice_roll_modifier</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&gt;</span> <span class="s">&#39;-&#39;</span> <span class="ow">and</span> <span class="n">dice_roll_modifier</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;&gt;</span> <span class="s">&#39;+&#39;</span><span class="p">:</span>
-    <span class="n">dice_roll_modifier</span> <span class="o">=</span> <span class="s">&#39;+&#39;</span> <span class="o">+</span> <span class="n">dice_roll_modifier</span>
-
-<span class="c"># concatenate the values for the dice string</span>
-<span class="n">dice</span> <span class="o">=</span> <span class="n">number_of_dice</span> <span class="o">+</span> <span class="n">dice_type</span> <span class="o">+</span> <span class="n">dice_roll_modifier</span>
-
-<span class="k">print</span>
-<span class="k">print</span> <span class="s">&#39;Rolling&#39;</span><span class="p">,</span> <span class="n">dice</span>
-
-<span class="c"># do 20 rolls</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
-    <span class="k">print</span> <span class="s">&#39;You rolled a </span><span class="si">%d</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">roll</span><span class="p">(</span><span class="n">dice</span><span class="p">)</span>
-</pre></div>
-</td></tr></table></div>
-<div class="section" id="encountering-errors">
-<h2>Encountering Errors<a class="headerlink" href="#encountering-errors" title="Permalink to this headline">¶</a></h2>
-<p>Entering an invalid string for <tt class="docutils literal"><span class="pre">roll()</span></tt> will return an error message, as well as a value of 0 from the function:</p>
-<div class="highlight"><pre><span class="k">print</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;3d&#39;</span><span class="p">)</span>
-</pre></div>
-<div class="admonition error">
-<p class="first admonition-title">Error</p>
-<p>** DICE ERROR! '3D' is unknown **</p>
-<div class="last line-block">
-<div class="line">0</div>
-</div>
-</div>
-</div>
 </div>
 
 
@@ -196,8 +137,6 @@ covered by <strong>diceroll</strong>. But more are planned for in future release
             <ul>
 <li><a class="reference external" href=""><strong>diceroll Tutorial</strong></a><ul>
 <li><a class="reference external" href="#rolling-the-dice">Rolling the Dice</a></li>
-<li><a class="reference external" href="#using-roll-in-your-code">Using <tt class="docutils literal"><span class="pre">roll()</span></tt> in Your Code</a></li>
-<li><a class="reference external" href="#encountering-errors">Encountering Errors</a></li>
 </ul>
 </li>
 </ul>
@@ -205,7 +144,7 @@ covered by <strong>diceroll</strong>. But more are planned for in future release
             <h4>Previous topic</h4>
             <p class="topless"><a href="installing.html" title="previous chapter"><strong>Installing diceroll</strong></a></p>
             <h4>Next topic</h4>
-            <p class="topless"><a href="debugging.html" title="next chapter"><strong>Debugging diceroll</strong></a></p>
+            <p class="topless"><a href="samples.html" title="next chapter">Using <tt class="docutils literal docutils literal"><span class="pre">roll()</span></tt> in Your Code</a></p>
             <h3>Quick search</h3>
             <form class="search" action="search.html" method="get">
               <input type="text" name="q" size="18" /> <input type="submit" value="Go" />
@@ -226,7 +165,7 @@ covered by <strong>diceroll</strong>. But more are planned for in future release
           <a href="modindex.html" title="Global Module Index"
              accesskey="M">modules</a> |</li>
         <li class="right" >
-          <a href="debugging.html" title="Debugging diceroll"
+          <a href="samples.html" title="Using roll() in Your Code"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="installing.html" title="Installing diceroll"
@@ -236,7 +175,7 @@ covered by <strong>diceroll</strong>. But more are planned for in future release
     </div>
     <div class="footer">
       &copy; Copyright 2017, Shawn Driscoll.
-      Last updated on Oct 19, 2017.
+      Last updated on Oct 21, 2017.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
     </div>
   </body>

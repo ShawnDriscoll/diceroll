@@ -107,6 +107,6 @@
      a character string (a sequence of characters) or a binary
      digit string (a sequence of binary values).
      
-   your code
-     Your code is a Python program that you have already written to make calls
+   your own code
+     Your own code is a Python program that you have already written to make calls
      to the ``roll()`` function.

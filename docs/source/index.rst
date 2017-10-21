@@ -30,6 +30,7 @@ Contents
    whats_new
    installing
    tutorial
+   samples
    debugging
    designers_notes
    diceroll
