@@ -25,10 +25,7 @@ Contents
 .. toctree::
    :maxdepth: 2
    
-   preface
-   requirements
-   whats_new
-   installing
+   overview
    tutorial
    samples
    debugging

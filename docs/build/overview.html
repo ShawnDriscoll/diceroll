@@ -2,7 +2,7 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Installing diceroll &mdash; diceroll 2.3 Operations Manual</title>
+    <title>Overview &mdash; diceroll 2.3 Operations Manual</title>
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -21,7 +21,7 @@
     <link rel="search" title="Search" href="search.html" />
     <link rel="top" title="diceroll 2.3 Operations Manual" href="index.html" />
     <link rel="next" title="diceroll Tutorial" href="tutorial.html" />
-    <link rel="prev" title="What's New?" href="whats_new.html" />
+    <link rel="prev" title="diceroll 2.3 Operations Manual" href="index.html" />
   </head>
   <body>
     <div class="related">
@@ -37,7 +37,7 @@
           <a href="tutorial.html" title="diceroll Tutorial"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="whats_new.html" title="What's New?"
+          <a href="index.html" title="diceroll 2.3 Operations Manual"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">diceroll 2.3 Operations Manual</a> &raquo;</li>
       </ul>
@@ -48,18 +48,67 @@
           <div class="body">
             
   
-  <div class="section" id="installing-diceroll">
-<h1><strong>Installing diceroll</strong><a class="headerlink" href="#installing-diceroll" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="local-installation">
-<h2>Local Installation<a class="headerlink" href="#local-installation" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="overview">
+<h1><strong>Overview</strong><a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="preface">
+<h2>Preface<a class="headerlink" href="#preface" title="Permalink to this headline">¶</a></h2>
+<p>Back during the release of <strong>diceroll 2.2</strong>, I wanted to learn something new in regards to Python. Even though I use 2.5.4,
+there is still a lot about it that I have never delved into. Sphinx was something I had not really paid any mind to
+in the past. It was yet another one of those <em>need to know only</em> things about Python. Some things I'd get around to
+learning only when I had to, but only if it was part of something else that I had taken an interest in doing.</p>
+<p>So somewhere in my discovering of PyMongo, I had been pointed to Sphinx and Jinja. They were both something about document
+generation. And since I had just learned about Pandas and CSV, I was in a data retrieval mood still.</p>
+<p>In a nutshell,
+Sphinx is an EXE (generated during its install from an egg of .py files, which is still magic to me, and which took a
+great deal of time for me tracking down all the proper versions of requirements for it to even compile/run
+in Python 2.5.4) that generates documents. Nothing too fancy. Just simple documents that could be read easily/quickly
+through any device using any viewer. And when I learned that Sphinx could read Python modules and produce documents
+from their <tt class="docutils literal"><span class="pre">.__doc__</span></tt> strings, I knew I just had to spend a couple days learning how all that stuff happens.</p>
+<p>So basically, my Python dice rolling module has its own operations manual now. And some rabbit holes are
+worth their going into.</p>
+</div>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first"><strong>Microsoft Windows</strong></p>
+<blockquote>
+<p><strong>diceroll</strong> has been tested on Windows versions: XP, 7, 8, and 10.
+It has not been tested on MacOS or Linux.</p>
+</blockquote>
+</li>
+<li><p class="first"><strong>Python 2.5</strong></p>
+<blockquote>
+<p><strong>diceroll</strong> was written using the C implementation of Python
+version 2.5.4. Also known as CPython. With some doing, this
+module could of course be re-written for Jython, PyPy, or
+IronPython.</p>
+<p>Eclipse/PyDev, PyCharm, NetBeans, and IDLE all work fine for
+running this module.</p>
+</blockquote>
+</li>
+<li><p class="first"><strong>Your Game</strong></p>
+<blockquote>
+<p><strong>diceroll</strong> is not a standalone program. It requires your game to make calls
+to it.</p>
+<p>Otherwise, no dice.</p>
+</blockquote>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last"><strong>diceroll 2.3</strong> will not work with <strong>Python 2.6+</strong>.</p>
+</div>
+</div>
+<div class="section" id="installing-locally-to-your-folder">
+<h2>Installing Locally to your Folder<a class="headerlink" href="#installing-locally-to-your-folder" title="Permalink to this headline">¶</a></h2>
 <p>Installing <strong>diceroll 2.3</strong> is as easy as always. Just copy <tt class="docutils literal"><span class="pre">diceroll.py</span></tt> into the same folder
 your code happens to be in.</p>
 <p>Then add this line at (or near) the top of your code:</p>
 <div class="highlight"><pre><span class="kn">from</span> <span class="nn">diceroll</span> <span class="kn">import</span> <span class="n">roll</span>
 </pre></div>
 </div>
-<div class="section" id="packaged-installation">
-<h2>Packaged Installation<a class="headerlink" href="#packaged-installation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installing-as-a-package">
+<h2>Installing as a Package<a class="headerlink" href="#installing-as-a-package" title="Permalink to this headline">¶</a></h2>
 <p>If your code setup is different, in that you like to keep your function modules in a folder separate
 from your main code, you could copy <tt class="docutils literal"><span class="pre">diceroll.py</span></tt> into that folder.</p>
 <p>Say you have a folder called <tt class="docutils literal"><span class="pre">game_utils</span></tt>, and assuming you have an <tt class="docutils literal"><span class="pre">__init__.py</span></tt> inside it, just copy <tt class="docutils literal"><span class="pre">diceroll.py</span></tt>
@@ -67,8 +116,8 @@ into your <tt class="docutils literal"><span class="pre">game_utils</span></tt> 
 <div class="highlight"><pre><span class="kn">from</span> <span class="nn">game_utils.diceroll</span> <span class="kn">import</span> <span class="n">roll</span>
 </pre></div>
 </div>
-<div class="section" id="automated-installation">
-<h2>Automated Installation<a class="headerlink" href="#automated-installation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installing-automatically">
+<h2>Installing Automatically<a class="headerlink" href="#installing-automatically" title="Permalink to this headline">¶</a></h2>
 <p>
 <span class="versionmodified">New in version 2.3.</span></p>
 <p>Extract <tt class="docutils literal"><span class="pre">diceroll_2.3.2b.zip</span></tt> and start a CMD window at the folder location of the <tt class="docutils literal"><span class="pre">setup.py</span></tt> file. At the
@@ -119,16 +168,18 @@ created and copied into the <tt class="docutils literal"><span class="pre">Pytho
         <div class="sphinxsidebarwrapper">
             <h3>Table Of Contents</h3>
             <ul>
-<li><a class="reference external" href=""><strong>Installing diceroll</strong></a><ul>
-<li><a class="reference external" href="#local-installation">Local Installation</a></li>
-<li><a class="reference external" href="#packaged-installation">Packaged Installation</a></li>
-<li><a class="reference external" href="#automated-installation">Automated Installation</a></li>
+<li><a class="reference external" href=""><strong>Overview</strong></a><ul>
+<li><a class="reference external" href="#preface">Preface</a></li>
+<li><a class="reference external" href="#requirements">Requirements</a></li>
+<li><a class="reference external" href="#installing-locally-to-your-folder">Installing Locally to your Folder</a></li>
+<li><a class="reference external" href="#installing-as-a-package">Installing as a Package</a></li>
+<li><a class="reference external" href="#installing-automatically">Installing Automatically</a></li>
 </ul>
 </li>
 </ul>
 
             <h4>Previous topic</h4>
-            <p class="topless"><a href="whats_new.html" title="previous chapter"><strong>What's New?</strong></a></p>
+            <p class="topless"><a href="index.html" title="previous chapter"><strong>diceroll 2.3 Operations Manual</strong></a></p>
             <h4>Next topic</h4>
             <p class="topless"><a href="tutorial.html" title="next chapter"><strong>diceroll Tutorial</strong></a></p>
             <h3>Quick search</h3>
@@ -154,14 +205,14 @@ created and copied into the <tt class="docutils literal"><span class="pre">Pytho
           <a href="tutorial.html" title="diceroll Tutorial"
              accesskey="N">next</a> |</li>
         <li class="right" >
-          <a href="whats_new.html" title="What's New?"
+          <a href="index.html" title="diceroll 2.3 Operations Manual"
              accesskey="P">previous</a> |</li>
         <li><a href="index.html">diceroll 2.3 Operations Manual</a> &raquo;</li>
       </ul>
     </div>
     <div class="footer">
       &copy; Copyright 2017, Shawn Driscoll.
-      Last updated on Oct 19, 2017.
+      Last updated on Oct 22, 2017.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
     </div>
   </body>

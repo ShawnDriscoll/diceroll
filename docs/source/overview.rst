@@ -1,8 +1,59 @@
-**Installing diceroll**
-=======================
+**Overview**
+============
 
-Local Installation
-------------------
+Preface
+-------
+
+Back during the release of **diceroll 2.2**, I wanted to learn something new in regards to Python. Even though I use 2.5.4,
+there is still a lot about it that I have never delved into. Sphinx was something I had not really paid any mind to
+in the past. It was yet another one of those *need to know only* things about Python. Some things I'd get around to
+learning only when I had to, but only if it was part of something else that I had taken an interest in doing.
+
+So somewhere in my discovering of PyMongo, I had been pointed to Sphinx and Jinja. They were both something about document
+generation. And since I had just learned about Pandas and CSV, I was in a data retrieval mood still.
+
+In a nutshell,
+Sphinx is an EXE (generated during its install from an egg of .py files, which is still magic to me, and which took a
+great deal of time for me tracking down all the proper versions of requirements for it to even compile/run
+in Python 2.5.4) that generates documents. Nothing too fancy. Just simple documents that could be read easily/quickly
+through any device using any viewer. And when I learned that Sphinx could read Python modules and produce documents
+from their ``.__doc__`` strings, I knew I just had to spend a couple days learning how all that stuff happens. 
+
+So basically, my Python dice rolling module has its own operations manual now. And some rabbit holes are
+worth their going into.
+
+
+Requirements
+------------
+
+* **Microsoft Windows**
+   
+   **diceroll** has been tested on Windows versions: XP, 7, 8, and 10.
+   It has not been tested on MacOS or Linux.
+   
+* **Python 2.5**
+   
+   **diceroll** was written using the C implementation of Python
+   version 2.5.4. Also known as CPython. With some doing, this
+   module could of course be re-written for Jython, PyPy, or
+   IronPython.
+   
+   Eclipse/PyDev, PyCharm, NetBeans, and IDLE all work fine for
+   running this module.
+   
+* **Your Game**
+   
+   **diceroll** is not a standalone program. It requires your game to make calls
+   to it.
+   
+   Otherwise, no dice.
+
+.. Warning::
+   **diceroll 2.3** will not work with **Python 2.6+**.
+
+
+Installing Locally to your Folder
+---------------------------------
 
 Installing **diceroll 2.3** is as easy as always. Just copy ``diceroll.py`` into the same folder
 your code happens to be in.
@@ -11,8 +62,8 @@ Then add this line at (or near) the top of your code: ::
 
    from diceroll import roll
 
-Packaged Installation
----------------------
+Installing as a Package
+-----------------------
 
 If your code setup is different, in that you like to keep your function modules in a folder separate
 from your main code, you could copy ``diceroll.py`` into that folder.
@@ -22,8 +73,8 @@ into your ``game_utils`` folder and add this line near the top of your code: ::
 
    from game_utils.diceroll import roll
 
-Automated Installation
-----------------------
+Installing Automatically
+------------------------
 
 .. versionadded:: 2.3
 
