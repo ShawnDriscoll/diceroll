@@ -68,6 +68,6 @@ D00 has been replaced with D100.
 
 .. versionadded:: 2.4
 
-diceroll can now be used directly at a CMD prompt:
+**diceroll** can now be used directly at a CMD prompt:
 
 .. literalinclude:: databox2.dat
