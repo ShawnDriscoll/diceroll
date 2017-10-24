@@ -40,6 +40,11 @@ Requirements
    
    Eclipse/PyDev, PyCharm, NetBeans, and IDLE all work fine for
    running this module.
+
+* **colorama 0.2.7**
+
+   Because CMD may have some colored text messages for debugging. The colorama
+   code can be removed if it is not needed, however.
    
 * **Your Game**
    
@@ -49,13 +54,13 @@ Requirements
    Otherwise, no dice.
 
 .. Warning::
-   **diceroll 2.3** will not work with **Python 2.6+**.
+   **diceroll 2.4** will not work with **Python 2.6+**.
 
 
 Installing Locally to your Folder
 ---------------------------------
 
-Installing **diceroll 2.3** is as easy as always. Just copy ``diceroll.py`` into the same folder
+Installing **diceroll 2.4** is as easy as always. Just copy ``diceroll.py`` into the same folder
 your code happens to be in.
 
 Then add this line at (or near) the top of your code: ::
@@ -78,7 +83,7 @@ Installing Automatically
 
 .. versionadded:: 2.3
 
-Extract ``diceroll_2.3.2b.zip`` and start a CMD window at the folder location of the ``setup.py`` file. At the
+Extract ``diceroll_2.4.0b.zip`` and start a CMD window at the folder location of the ``setup.py`` file. At the
 CMD prompt you can type: ::
 
     setup.py install
@@ -94,7 +99,7 @@ depending on if your computer knows how to open .py files or not.
 
     During the installation process,
     a ``Python25\Lib\site-packages\game_utils`` folder will be created. It will contain ``__init__.py`` and ``diceroll.py`` if your Python
-    doesn't have ``setuptools`` installed. Otherwise, an .egg file called ``diceroll-2.3.2b-py2.5.egg`` will be
+    doesn't have ``setuptools`` installed. Otherwise, an .egg file called ``diceroll-2.4.0b-py2.5.egg`` will be
     created and copied into the ``Python25\Lib\site-packages`` folder.
     
 No matter the automated installation that your Python performed, importing will be the same: ::
@@ -104,7 +109,7 @@ No matter the automated installation that your Python performed, importing will 
 Some ways to see if the ``diceroll`` module was installed correctly is by typing:
 
 >>> print roll('info')
-('2.3', 'roll(), release version 2.3.2b for Python 2.5.4')
+('2.4', 'roll(), release version 2.4.0b for Python 2.5.4')
 >>> print roll.__doc__
     The dice types to roll are:
         'D2', 'D3', 'D4', 'D6', 'D8', 'D9', 'D10', 'D12', 'D20', 'D30',

@@ -65,3 +65,9 @@ Some examples are:
 .. deprecated:: 1.9
 
 D00 has been replaced with D100.
+
+.. versionadded:: 2.4
+
+diceroll can now be used directly at a CMD prompt:
+
+.. literalinclude:: databox2.dat

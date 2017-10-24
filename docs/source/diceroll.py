@@ -18,9 +18,14 @@ Usage:
 from random import randint
 import os
 import logging
+import sys
+from colorama import init
+from colorama import Fore, Back, Style
 
-__version__ = '2.3'
-__release__ = '2.3.2b'
+init() # initialize colorama
+
+__version__ = '2.4'
+__release__ = '2.4.0b'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
 diceroll_log = logging.getLogger('diceroll')
@@ -278,8 +283,8 @@ def roll(dice):
     diceroll_log.error('!!!!!!!!!!!!!!!!!!!!! DICE ERROR! ' + dice + ' is unknown !!!!!!!!!!!!!!!!!!!!!!!!!')
     
     print
-    print "** DICE ERROR! '%s' is unknown **" % dice
-    print
+    print Fore.RED + Style.BRIGHT + "** DICE ERROR! '%s' is unknown **" % dice
+    print Fore.RESET + Back.RESET + Style.RESET_ALL
     print "Valid dice rolls are:"
     print "roll('D6') or roll('1D6') -- roll one 6-sided die"
     print "roll('2D6') -- roll two 6-sided dice"
@@ -297,3 +302,38 @@ def roll(dice):
     print "roll('info') -- release version of program"
     print
     return 0
+
+if __name__ == '__main__':
+    diceroll_log.info('diceroll was run without roll() called.  Help will be sent if needed.')
+    print
+    if len(sys.argv) < 2:
+        print "     Type 'diceroll -h' for help"
+    elif sys.argv[1] in ['-h', '/h', '--help', '-?', '/?']:
+        print '     diceroll is a module (containing a roll function)'
+        print '     that needs to be imported into Python.'
+        print
+        print '     For example:'
+        print '     >>> import diceroll'
+        print "     >>> print diceroll.roll('2d6')"
+        print
+        print '     Or:'
+        print '     >>> from diceroll import roll'
+        print "     >>> print roll('2d6')"
+        print
+        print
+        print '     But, as a last resort:'
+        print "     C:\>diceroll.py roll('2d6')"
+        print
+        print '     Or just:'
+        print '     C:\>diceroll.py 2d6'
+    else:
+        dice = sys.argv[1]
+        if "roll('" in dice:
+            num = dice.find("')")
+            if num <> -1:
+                dice = dice[6:num]            
+                num = roll(dice)
+                print 'Your %s roll is %d.' % (dice, num)
+        else:
+            num = roll(dice)
+            print 'Your %s roll is %d.' % (dice, num)

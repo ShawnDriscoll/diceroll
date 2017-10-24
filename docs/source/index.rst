@@ -1,13 +1,13 @@
-**diceroll 2.3 Operations Manual**
+**diceroll 2.4 Operations Manual**
 ==================================
 
 .. figure:: diceroll_manual_cover_art.png
 
-**diceroll 2.3** is easy-to-use, open source die rolling software. Written
-in Python 2.5 and using a variety of IDEs, **diceroll 2.3** supports
+**diceroll 2.4** is easy-to-use, open source die rolling software. Written
+in Python 2.5 and using a variety of IDEs, **diceroll 2.4** supports
 many gaming and RPG die rolling conventions.
 
-**diceroll 2.3** also supports logging, error reporting, and debugging
+**diceroll 2.4** also supports logging, error reporting, and debugging
 of rolls made.
 
 The free-to-use source is available at its `GitHub

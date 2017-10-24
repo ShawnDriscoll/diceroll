@@ -62,6 +62,18 @@ Sample Task Resolution: ::
         if dice_roll - 8 < -6:
             print 'Your character died from injuries!'
 
+For Repairing Game Code
+-----------------------
+
+Often times, game code will be downloaded or found that contains
+incorrect ``randint()`` calls for rolling two 6-sided dice. A line such as: ::
+
+    world_size = randint(2, 12) - 2
+
+Easily becomes: ::
+    
+    world_size = roll('2d6') - 2
+
 Encountering Errors
 -------------------
 Entering an invalid string for ``roll()`` will return an error message, as well as a value of 0 from the function: ::

@@ -150,6 +150,16 @@
         <span class="k">print</span> <span class="s">&#39;Your character died from injuries!&#39;</span>
 </pre></div>
 </td></tr></table></div>
+<div class="section" id="for-repairing-game-code">
+<h2>For Repairing Game Code<a class="headerlink" href="#for-repairing-game-code" title="Permalink to this headline">¶</a></h2>
+<p>Often times, game code will be downloaded or found that contains
+incorrect <tt class="docutils literal"><span class="pre">randint()</span></tt> calls for rolling two 6-sided dice. A line such as:</p>
+<div class="highlight"><pre><span class="n">world_size</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span>
+</pre></div>
+<p>Easily becomes:</p>
+<div class="highlight"><pre><span class="n">world_size</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;2d6&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span>
+</pre></div>
+</div>
 <div class="section" id="encountering-errors">
 <h2>Encountering Errors<a class="headerlink" href="#encountering-errors" title="Permalink to this headline">¶</a></h2>
 <p>Entering an invalid string for <tt class="docutils literal"><span class="pre">roll()</span></tt> will return an error message, as well as a value of 0 from the function:</p>
@@ -176,6 +186,7 @@
 <li><a class="reference external" href=""><strong>Using roll() in Your Own Code</strong></a><ul>
 <li><a class="reference external" href="#for-simple-die-rolls">For Simple Die Rolls</a></li>
 <li><a class="reference external" href="#for-probabilites">For Probabilites</a></li>
+<li><a class="reference external" href="#for-repairing-game-code">For Repairing Game Code</a></li>
 <li><a class="reference external" href="#encountering-errors">Encountering Errors</a></li>
 </ul>
 </li>
@@ -215,7 +226,7 @@
     </div>
     <div class="footer">
       &copy; Copyright 2017, Shawn Driscoll.
-      Last updated on Oct 22, 2017.
+      Last updated on Oct 23, 2017.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
     </div>
   </body>
