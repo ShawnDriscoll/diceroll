@@ -116,15 +116,15 @@ def roll(dice):
 
     # check if FLUX dice are being rolled
     if dice == 'FLUX':
-        flux1 = randint(1, 6)
-        flux2 = randint(1, 6)
+        flux1 = _dierolls(6, 1)
+        flux2 = _dierolls(6, 1)
         rolled = flux1 - flux2
         diceroll_log.info('%s = %d - %d = %d' % (dice, flux1, flux2, rolled))
         return rolled
 
     elif dice == 'GOODFLUX':
-        flux1 = randint(1, 6)
-        flux2 = randint(1, 6)
+        flux1 = _dierolls(6, 1)
+        flux2 = _dierolls(6, 1)
         if flux1 < flux2:
             rolled = flux2 - flux1
             diceroll_log.info('%s = %d - %d = %d' % (dice, flux2, flux1, rolled))
@@ -134,8 +134,8 @@ def roll(dice):
         return rolled
 
     elif dice == 'BADFLUX':
-        flux1 = randint(1, 6)
-        flux2 = randint(1, 6)
+        flux1 = _dierolls(6, 1)
+        flux2 = _dierolls(6, 1)
         if flux1 > flux2:
             rolled = flux2 - flux1
             diceroll_log.info('%s = %d - %d = %d' % (dice, flux2, flux1, rolled))
@@ -147,9 +147,9 @@ def roll(dice):
     # check if a BOON roll is being performed
     elif dice == 'BOON':
         die = [0, 0, 0]
-        die[0] = randint(1, 6)
-        die[1] = randint(1, 6)
-        die[2] = randint(1, 6)
+        die[0] = _dierolls(6, 1)
+        die[1] = _dierolls(6, 1)
+        die[2] = _dierolls(6, 1)
         diceroll_log.info('Start Boon roll: %d %d %d' % (die[0], die[1], die[2]))
         die_swap = True
         while die_swap == True:
@@ -167,9 +167,9 @@ def roll(dice):
     # check if a BANE roll is being performed
     elif dice == 'BANE':
         die = [0, 0, 0]
-        die[0] = randint(1, 6)
-        die[1] = randint(1, 6)
-        die[2] = randint(1, 6)
+        die[0] = _dierolls(6, 1)
+        die[1] = _dierolls(6, 1)
+        die[2] = _dierolls(6, 1)
         diceroll_log.info('Start Bane roll: %d %d %d' % (die[0], die[1], die[2]))
         die_swap = True
         while die_swap == True:
@@ -227,14 +227,14 @@ def roll(dice):
                 diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
                 return rolled
             elif dice_type == 'D66' and num_dice == 1 and dice_mod == 0:
-                roll_1 = randint(1, 6)
-                roll_2 = randint(1, 6)
+                roll_1 = _dierolls(6, 1)
+                roll_2 = _dierolls(6, 1)
                 rolled = roll_1 * 10 + roll_2
                 diceroll_log.info('%s = %d%s+%d = %d and %d = %d' % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, rolled))
                 return rolled
             elif dice_type == 'D100' and num_dice == 1:
-                roll_1 = (randint(1, 10) - 1) * 10
-                roll_2 = randint(1, 10)
+                roll_1 = (_dierolls(10, 1) - 1) * 10
+                roll_2 = _dierolls(10, 1)
                 rolled = roll_1 + roll_2 + dice_mod
                 diceroll_log.info('%s = %d%s+%d = %d and %d + %d = %d' % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, dice_mod, rolled))
                 return rolled
