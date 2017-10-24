@@ -334,6 +334,9 @@ if __name__ == '__main__':
                 dice = dice[6:num]            
                 num = roll(dice)
                 print 'Your %s roll is %d.' % (dice, num)
+                diceroll_log.info('The direct call to diceroll with %s resulted in %d.' % (dice, num))
         else:
             num = roll(dice)
             print 'Your %s roll is %d.' % (dice, num)
+            diceroll_log.info('The direct call to diceroll with %s resulted in %d.' % (dice, num))
+
