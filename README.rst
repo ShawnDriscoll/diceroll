@@ -14,3 +14,12 @@ Read the **diceroll Operations Manual** at http://diceroll.readthedocs.io
 Download the PDF from https://readthedocs.org/projects/diceroll/downloads/pdf/latest
 
 or the EPUB from https://readthedocs.org/projects/diceroll/downloads/epub/latest
+
+Warning
+-------
+
+**diceroll** will not work with **Python 2.6+**.
+
+Contact
+-------
+Questions? Please contact shawndriscoll@hotmail.com
