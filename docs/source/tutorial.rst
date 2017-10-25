@@ -45,7 +45,7 @@ The dice types to roll are:
 Three additional dice types are now available:
 
    BOON, BANE, and D2
-   
+
 .. note::
 
    You may recognize some of these dice types from various tabletop role-playing games. Not all dice types are
