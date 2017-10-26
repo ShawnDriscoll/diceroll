@@ -2,10 +2,11 @@
     :target: http://diceroll.readthedocs.io/en/latest/?badge=latest
     :alt: Doc Status
 
-**diceroll 2.4 for Python 2.5**
-===============================
 
 .. figure:: docs/source/diceroll_manual_cover_pdf_art.png
+
+**diceroll 2.4 for Python 2.5**
+===============================
 
 **diceroll 2.4** is a Python 2.5 module that your game code calls to make dice rolls.
 
