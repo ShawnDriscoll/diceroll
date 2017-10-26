@@ -23,7 +23,7 @@ This documentation explains how to install and use the **diceroll module** for y
 .. toctree::
    :maxdepth: 2
    
-   overview
+   introduction
    tutorial
    samples
    debugging
