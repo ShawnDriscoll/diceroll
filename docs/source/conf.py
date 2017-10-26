@@ -37,7 +37,8 @@ master_doc = 'index'
 
 # General substitutions.
 project = u'diceroll'
-copyright = u'2017, Shawn Driscoll'
+copyright = u'2017, SHONNER'
+author = u'SHONNER'
 
 # The default replacements for |version| and |release|, also used in various
 # other places throughout the built documents.
@@ -87,7 +88,7 @@ pygments_style = 'sphinx'
 html_style = 'default.css'
 
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
-if on_rtd:
+if not on_rtd:
     html_theme = 'default'
 else:
     html_theme = 'nature'
