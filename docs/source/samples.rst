@@ -41,7 +41,8 @@ Sample Task Resolution: ::
     if skilled == 'n':
         die_mod = -3
     else:
-        die_mod = int(raw_input("Enter your character's skill level (0 to 4)? "))
+        print "Enter your character's skill level"
+        die_mod = int(raw_input('(0 to 4)? '))
     print 'Enter the difficulty of the task'
     difficulty = int(raw_input('(Impossible: -6 to Easy: +6)? '))
 
