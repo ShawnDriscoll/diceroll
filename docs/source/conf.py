@@ -85,13 +85,18 @@ pygments_style = 'sphinx'
 # The style sheet to use for HTML and HTML Help pages. A file of that name
 # must exist either in Sphinx' static/ path, or in one of the custom paths
 # given in html_static_path.
-html_style = 'default.css'
 
-on_rtd = os.environ.get('READTHEDOCS') == 'True'
-if on_rtd:
-    html_theme = 'default'
-else:
-    html_theme = 'nature'
+# html_style = 'default.css'
+# on_rtd = os.environ.get('READTHEDOCS') == 'True'
+# if on_rtd:
+    # html_theme = 'default'
+# else:
+    # html_theme = 'nature'
+
+html_theme = 'agogo'
+html_theme_options = {
+    'index_logo': 'diceroll_manual_cover_pdf_art.png',
+}
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
