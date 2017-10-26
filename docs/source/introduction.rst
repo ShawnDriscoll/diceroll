@@ -56,6 +56,7 @@ Requirements
 .. Warning::
    **diceroll 2.4** will not work with **Python 2.6+**.
 
+
 Installing Locally to your Folder
 ---------------------------------
 
