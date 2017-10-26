@@ -1,9 +1,6 @@
 **Using roll() in Your Own Code**
 =================================
 
-.. highlight:: python
-   :linenothreshold: 5
-
 For Simple Die Rolls
 --------------------
 

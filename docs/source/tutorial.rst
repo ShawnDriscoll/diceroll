@@ -53,14 +53,9 @@ Three additional dice types are now available:
 
 **diceroll** uses a simple standard when it comes to rolling various dice types.
 
-.. highlight:: python
-   :linenothreshold: 5
-
 Some examples are:
 
 .. literalinclude:: databox1.dat
-   :language: python
-   :linenos:
 
 .. deprecated:: 1.9
 
