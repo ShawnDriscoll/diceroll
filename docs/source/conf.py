@@ -85,13 +85,13 @@ pygments_style = 'sphinx'
 # The style sheet to use for HTML and HTML Help pages. A file of that name
 # must exist either in Sphinx' static/ path, or in one of the custom paths
 # given in html_static_path.
-html_style = 'default.css'
+#html_style = 'default.css'
 
-on_rtd = os.environ.get('READTHEDOCS') == 'True'
-if not on_rtd:
-    html_theme = 'default'
-else:
-    html_theme = 'nature'
+# on_rtd = os.environ.get('READTHEDOCS') == 'True'
+# if on_rtd:
+    # html_theme = 'default'
+# else:
+    # html_theme = 'nature'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -167,7 +167,7 @@ latex_font_size = '12pt'
 # (source start file, target name, title, author, document class [howto/manual]).
 latex_documents = [
   ('index', 'diceroll.tex', u'diceroll Operations Manual',
-   u'Shawn Driscoll', 'manual'),
+   u'SHONNER', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
