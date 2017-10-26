@@ -29,12 +29,14 @@ Those of you that have used dice rolling programs before will notice that someth
 >>> die1 = roll('1D6')
 >>> die2 = roll('1d6')
 >>> dice = '3D4+1'
->>> print die1, die2, roll(dice)
-3, 2, 9
+>>> print die1, die2+4, roll(dice)
+3, 6, 9
+
+The return values from ``roll()`` are always integer.
 
 *New in version 2.2*
 
-Notice that the inputted string values can be upper or lower case. And note that the return values are integer.
+Notice that the inputted string values can be upper or lower case.
 
 The dice types to roll are:
 

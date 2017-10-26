@@ -80,11 +80,12 @@ be used. But first, we must give this function a value to work from.</p>
 <div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">die1</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;1D6&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">die2</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;1d6&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">dice</span> <span class="o">=</span> <span class="s">&#39;3D4+1&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">die1</span><span class="p">,</span> <span class="n">die2</span><span class="p">,</span> <span class="n">roll</span><span class="p">(</span><span class="n">dice</span><span class="p">)</span>
-<span class="go">3, 2, 9</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">die1</span><span class="p">,</span> <span class="n">die2</span><span class="o">+</span><span class="mi">4</span><span class="p">,</span> <span class="n">roll</span><span class="p">(</span><span class="n">dice</span><span class="p">)</span>
+<span class="go">3, 6, 9</span>
 </pre></div>
+<p>The return values from <tt class="docutils literal"><span class="pre">roll()</span></tt> are always integer.</p>
 <p><em>New in version 2.2</em></p>
-<p>Notice that the inputted string values can be upper or lower case. And note that the return values are integer.</p>
+<p>Notice that the inputted string values can be upper or lower case.</p>
 <p>The dice types to roll are:</p>
 <blockquote>
 D3, D4, D6, D8, D9, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, and BADFLUX</blockquote>
