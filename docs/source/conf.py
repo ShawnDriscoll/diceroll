@@ -102,7 +102,7 @@ html_title = 'diceroll 2.4 Operations Manual'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = 'diceroll_sidebar.png'
+html_logo = 'shonner_dark_white.png'
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -123,7 +123,7 @@ html_last_updated_fmt = '%b %d, %Y'
 html_use_smartypants = False
 
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+html_sidebars = {}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
