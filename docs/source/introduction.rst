@@ -22,6 +22,8 @@ from their ``.__doc__`` strings, I knew I just had to spend a couple days learni
 So basically, my Python dice rolling module has its own operations manual now. And some rabbit holes are
 worth their going into.
 
+-Shawn
+
 
 Requirements
 ------------
