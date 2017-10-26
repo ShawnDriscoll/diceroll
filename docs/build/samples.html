@@ -88,7 +88,8 @@
     <span class="n">die_mod</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="n">die_mod</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&quot;Enter your character&#39;s skill level (0 to 4)? &quot;</span><span class="p">))</span>
-<span class="n">difficulty</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;Enter the difficulty of the task</span><span class="se">\n</span><span class="s">(Impossible: -6 to Easy: +6)? &#39;</span><span class="p">))</span>
+<span class="k">print</span> <span class="s">&#39;Enter the difficulty of the task&#39;</span>
+<span class="n">difficulty</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">raw_input</span><span class="p">(</span><span class="s">&#39;(Impossible: -6 to Easy: +6)? &#39;</span><span class="p">))</span>
 
 <span class="c"># The player must roll an 8 or higher for their character to succeed</span>
 <span class="n">dice_roll</span> <span class="o">=</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;2D6&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">die_mod</span> <span class="o">+</span> <span class="n">difficulty</span>

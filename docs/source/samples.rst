@@ -42,7 +42,8 @@ Sample Task Resolution: ::
         die_mod = -3
     else:
         die_mod = int(raw_input("Enter your character's skill level (0 to 4)? "))
-    difficulty = int(raw_input('Enter the difficulty of the task\n(Impossible: -6 to Easy: +6)? '))
+    print 'Enter the difficulty of the task'
+    difficulty = int(raw_input('(Impossible: -6 to Easy: +6)? '))
 
     # The player must roll an 8 or higher for their character to succeed
     dice_roll = roll('2D6') + die_mod + difficulty
