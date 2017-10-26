@@ -94,9 +94,7 @@ pygments_style = 'sphinx'
     # html_theme = 'nature'
 
 html_theme = 'agogo'
-html_theme_options = {
-    'index_logo': 'diceroll_manual_cover_pdf_art.png',
-}
+
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
