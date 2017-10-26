@@ -37,8 +37,8 @@ master_doc = 'index'
 
 # General substitutions.
 project = u'diceroll'
-copyright = u'2017, SHONNER'
-author = u'SHONNER'
+copyright = u'2017, SHONNER CORP'
+author = u'SHONNER CORP'
 
 # The default replacements for |version| and |release|, also used in various
 # other places throughout the built documents.
@@ -167,7 +167,7 @@ latex_font_size = '12pt'
 # (source start file, target name, title, author, document class [howto/manual]).
 latex_documents = [
   ('index', 'diceroll.tex', u'diceroll Operations Manual',
-   u'SHONNER', 'manual'),
+   u'Shawn Driscoll\nSHONNER PRESS', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of

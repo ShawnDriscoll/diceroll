@@ -6,7 +6,7 @@ MIT License
 
 .. centered:: LICENSE AGREEMENT
 
-Copyright (c) 2017 SHONNER
+Copyright (c) 2017, SHONNER CORPORATION
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
