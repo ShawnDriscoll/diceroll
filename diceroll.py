@@ -45,6 +45,7 @@ diceroll_log.info('Logging started.')
 diceroll_log.info('roll() v' + __version__ + ' started, and running...')
 
 number_of_dice = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
+simple_dice = ['D2', 'D3', 'D4', 'D6', 'D8', 'D9', 'D10', 'D12', 'D20', 'D30']
 
 def _dierolls(dtype, dcount):
     '''
@@ -222,9 +223,9 @@ def roll(dice):
                 dice_type = dice_type.rstrip()
             else:
                 dice_type = dice[ichar1: len(dice)]
-    
-            if dice_type == 'D6':
-                rolled = _dierolls(6, num_dice) + dice_mod
+            
+            if dice_type in simple_dice:
+                rolled = _dierolls(int(dice_type[1:len(dice_type)]), num_dice) + dice_mod
                 diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
                 return rolled
             elif dice_type == 'D66' and num_dice == 1 and dice_mod == 0:
@@ -238,42 +239,6 @@ def roll(dice):
                 roll_2 = _dierolls(10, 1)
                 rolled = roll_1 + roll_2 + dice_mod
                 diceroll_log.info('%s = %d%s+%d = %d and %d + %d = %d' % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, dice_mod, rolled))
-                return rolled
-            elif dice_type == 'D10':
-                rolled = _dierolls(10, num_dice) + dice_mod
-                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
-                return rolled                               
-            elif dice_type == 'D20':
-                rolled = _dierolls(20, num_dice) + dice_mod
-                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
-                return rolled
-            elif dice_type == 'D30':
-                rolled = _dierolls(30, num_dice) + dice_mod
-                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
-                return rolled
-            elif dice_type == 'D12':
-                rolled = _dierolls(12, num_dice) + dice_mod
-                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
-                return rolled
-            elif dice_type == 'D8':
-                rolled = _dierolls(8, num_dice) + dice_mod
-                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
-                return rolled
-            elif dice_type == 'D4':
-                rolled = _dierolls(4, num_dice) + dice_mod
-                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
-                return rolled
-            elif dice_type == 'D9':
-                rolled = _dierolls(9, num_dice) + dice_mod
-                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
-                return rolled
-            elif dice_type == 'D3':
-                rolled = _dierolls(3, num_dice) + dice_mod
-                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
-                return rolled
-            elif dice_type == 'D2':
-                rolled = _dierolls(2, num_dice) + dice_mod
-                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
                 return rolled
             elif dice_type == 'DD':
                 rolled = (_dierolls(6, num_dice) + dice_mod) * 10
