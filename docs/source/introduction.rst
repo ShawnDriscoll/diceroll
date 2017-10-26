@@ -81,7 +81,7 @@ into your ``game_utils`` folder and add this line near the top of your code: ::
 Installing Automatically
 ------------------------
 
-.. versionadded:: 2.3
+*New in version 2.3*
 
 Extract ``diceroll_2.4.0b.zip`` and start a CMD window at the folder location of the ``setup.py`` file. At the
 CMD prompt you can type: ::

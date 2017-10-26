@@ -32,7 +32,7 @@ Those of you that have used dice rolling programs before will notice that someth
 >>> print die1, die2, roll(dice)
 3, 2, 9
 
-.. versionadded:: 2.2
+*New in version 2.2*
 
 Notice that the inputted string values can be upper or lower case. And note that the return values are integer.
 
@@ -40,7 +40,7 @@ The dice types to roll are:
 
    D3, D4, D6, D8, D9, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, and BADFLUX
 
-.. versionadded:: 2.3
+*New in version 2.3*
 
 Three additional dice types are now available:
 
@@ -57,11 +57,11 @@ Some examples are:
 
 .. literalinclude:: databox1.dat
 
-.. deprecated:: 1.9
+*Deprecated in version 1.9.*
 
 D00 has been replaced with D100.
 
-.. versionadded:: 2.4
+*New in version 2.4*
 
 **diceroll** can now be used directly at a CMD prompt:
 
