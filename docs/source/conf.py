@@ -93,7 +93,7 @@ pygments_style = 'sphinx'
 # else:
     # html_theme = 'nature'
 
-html_theme = 'sphinxdoc'
+html_theme = 'traditional'
 
 
 # The name for this set of Sphinx documents.  If None, it defaults to
