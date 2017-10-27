@@ -1,6 +1,8 @@
 **diceroll Tutorial**
 =====================
 
+.. figure:: dice_tut.png
+
 Rolling the Dice
 ----------------
 Once ``diceroll.py`` is installed and your code is able to import the module, its ``roll()`` function can be

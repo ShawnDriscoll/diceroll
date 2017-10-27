@@ -28,6 +28,8 @@ worth their going into.
 Requirements
 ------------
 
+.. figure:: requirements.png
+
 * **Microsoft Windows**
    
    **diceroll** has been tested on Windows versions: XP, 7, 8, and 10.
@@ -62,6 +64,8 @@ Requirements
 Installing Locally to your Folder
 ---------------------------------
 
+.. figure:: python_file.png
+
 Installing **diceroll 2.4** is as easy as always. Just copy ``diceroll.py`` into the same folder
 your code happens to be in.
 
@@ -71,6 +75,8 @@ Then add this line at (or near) the top of your code: ::
 
 Installing as a Package
 -----------------------
+
+.. figure:: python_package.png
 
 If your code setup is different, in that you like to keep your function modules in a folder separate
 from your main code, you could copy ``diceroll.py`` into that folder.
@@ -82,6 +88,8 @@ into your ``game_utils`` folder and add this line near the top of your code: ::
 
 Installing Automatically
 ------------------------
+
+.. figure:: egg.png
 
 *New in version 2.3*
 

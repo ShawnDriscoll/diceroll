@@ -1,5 +1,8 @@
 **Debugging diceroll**
 =======================
+
+.. figure:: fake_die.png
+
 **diceroll 2.4** keeps a log file of any dice rolls made during its last run. You will find ``diceroll.log`` in the ``Logs``
 folder it creates if one isn't there already. In the file you will see mentions of dice being rolled. **diceroll** uses
 a default logging mode of ``INFO`` which isn't that verbose. ::

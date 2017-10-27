@@ -1,6 +1,8 @@
 **Using roll() in Your Own Code**
 =================================
 
+.. figure:: python_screen.png
+
 For Simple Die Rolls
 --------------------
 
@@ -63,6 +65,8 @@ Sample Task Resolution: ::
 
 For Repairing Game Code
 -----------------------
+
+.. figure:: broken_die.png
 
 Often times, game code will be downloaded or found that contains
 incorrect ``randint()`` calls for rolling two 6-sided dice. A line such as: ::
