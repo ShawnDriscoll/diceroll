@@ -1,3 +1,6 @@
+.. image:: docs/source/python_tag.png
+    :target: https://www.python.org/download/releases/2.5.4/
+
 .. image:: https://readthedocs.org/projects/diceroll/badge/?version=latest
     :target: http://diceroll.readthedocs.io/en/latest/?badge=latest
     :alt: Doc Status
