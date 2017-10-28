@@ -15,6 +15,9 @@ The free-to-use source is available at its `GitHub
 
 This documentation explains how to install and use the **diceroll module** for your gaming projects.
 
+.. image:: python_tag.png
+    :target: https://www.python.org/download/releases/2.5.4/
+
 .. image:: https://readthedocs.org/projects/diceroll/badge/?version=latest
     :target: http://diceroll.readthedocs.io/en/latest/?badge=latest
     :alt: Doc Status
