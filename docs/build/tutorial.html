@@ -120,11 +120,32 @@ covered by <strong>diceroll</strong>. However, more are planned for in future re
 <p><strong>diceroll</strong> can now be used directly at a CMD prompt:</p>
 <pre>C:\&gt;diceroll.py roll('2d6-2')
 
-Your 2d6-2 roll is 10.
+Your 2D6-2 roll is 10.
 
 C:\&gt;diceroll.py 2d6-2
 
-Your 2d6-2 roll is 7.</pre>
+Your 2D6-2 roll is 7.</pre>
+<p><em>New in version 2.4.1</em></p>
+<p>A TEST roll that calculates percentages for 2D6 has been added:</p>
+<div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">roll</span><span class="p">(</span><span class="s">&#39;test&#39;</span><span class="p">)</span>
+<span class="go">      6x6 Roll Chart Test</span>
+<span class="go">     1    2    3    4    5    6</span>
+<span class="go">1  262  296  250  292  292  241</span>
+<span class="go">2  270  315  299  236  279  261</span>
+<span class="go">3  295  274  288  274  291  295</span>
+<span class="go">4  273  284  279  276  249  273</span>
+<span class="go">5  293  280  291  276  280  283</span>
+<span class="go">6  270  276  282  272  273  280</span>
+<span class="go">            6x6 Roll Chart Percentage</span>
+<span class="go">        1       2       3       4       5       6</span>
+<span class="go">1   2.62%   5.66%   8.60%  11.38%  13.93%  16.23%</span>
+<span class="go">2   5.66%   8.60%  11.38%  13.93%  16.23%  13.95%</span>
+<span class="go">3   8.60%  11.38%  13.93%  16.23%  13.95%  11.02%</span>
+<span class="go">4  11.38%  13.93%  16.23%  13.95%  11.02%   8.25%</span>
+<span class="go">5  13.93%  16.23%  13.95%  11.02%   8.25%   5.56%</span>
+<span class="go">6  16.23%  13.95%  11.02%   8.25%   5.56%   2.80%</span>
+</pre></div>
+<p>The roll will return a list of percentages for 2-12 rolled.</p>
 </div>
 </div>
 

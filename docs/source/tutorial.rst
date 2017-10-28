@@ -70,3 +70,27 @@ D00 has been replaced with D100.
 **diceroll** can now be used directly at a CMD prompt:
 
 .. literalinclude:: databox2.dat
+
+*New in version 2.4.1*
+
+A TEST roll that calculates percentages for 2D6 has been added:
+
+>>> roll('test')
+      6x6 Roll Chart Test
+     1    2    3    4    5    6
+1  262  296  250  292  292  241
+2  270  315  299  236  279  261
+3  295  274  288  274  291  295
+4  273  284  279  276  249  273
+5  293  280  291  276  280  283
+6  270  276  282  272  273  280
+            6x6 Roll Chart Percentage
+        1       2       3       4       5       6
+1   2.62%   5.66%   8.60%  11.38%  13.93%  16.23%
+2   5.66%   8.60%  11.38%  13.93%  16.23%  13.95%
+3   8.60%  11.38%  13.93%  16.23%  13.95%  11.02%
+4  11.38%  13.93%  16.23%  13.95%  11.02%   8.25%
+5  13.93%  16.23%  13.95%  11.02%   8.25%   5.56%
+6  16.23%  13.95%  11.02%   8.25%   5.56%   2.80%
+
+The roll will return a list of percentages for 2-12 rolled.

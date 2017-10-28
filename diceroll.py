@@ -25,7 +25,7 @@ from colorama import Fore, Back, Style
 init() # initialize colorama
 
 __version__ = '2.4'
-__release__ = '2.4.0b'
+__release__ = '2.4.1b'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
 diceroll_log = logging.getLogger('diceroll')
@@ -101,14 +101,66 @@ def roll(dice):
 
     log = logging.getLogger('your_code_name_here.diceroll')
 
+    # make inputted string argument upper case, and strip spaces
+    dice = str(dice).upper().strip()
+    
     # was information for this program asked for?
-    if dice == 'info':
+    if dice == 'INFO':
         ver = 'roll(), release version ' + __release__ + ' for Python 2.5.4'
         diceroll_log.info('Reporting: roll() release version: %s' % __release__)
         return __version__, ver
-
-    # make inputted string argument upper case, and strip spaces
-    dice = str(dice).upper().strip()
+    
+    # was a test asked for?
+    if dice == 'TEST':
+        diceroll_log.info('A 6x6 test was started...')
+        roll_chart_6x6 = {}
+        data = []
+        for i in range(13):
+            data.append(0)
+        n = 10000
+        
+        for i in range(6):
+            for j in range(6):
+                roll_chart_6x6[(i+1, j+1)] = 0
+        print
+        print '      6x6 Roll Chart Test'
+        print '     1    2    3    4    5    6'     
+        for i in range(n):
+            die1 = roll('1D6')
+            die2 = roll('1D6')
+            roll_chart_6x6[(die1, die2)] += 1
+            result = die1 + die2
+            data[result] += 1
+                
+        for i in range(6):
+            print i+1,
+            for j in range(6):
+                print '%4d' % roll_chart_6x6[(i+1, j+1)],
+            print
+        
+        for i in range(6):
+            for j in range(6):
+                roll_chart_6x6[(i+1, j+1)] = 0
+        print
+        print '            6x6 Roll Chart Percentage'
+        print '        1       2       3       4       5       6'
+        for x in range(13):
+            if x > 1:
+                for i in range(6):
+                    for j in range(6):
+                        if (i+1)+(j+1) == x and roll_chart_6x6[(i+1, j+1)] == 0:
+                            roll_chart_6x6[(i+1, j+1)] = data[x]
+        
+        for i in range(6):
+            print i+1,
+            for j in range(6):
+                print '%6.2f%%' % (roll_chart_6x6[(i+1, j+1)] * 100. / n),
+            print
+        print
+        diceroll_log.info('6x6 test completed 100%.')
+        for x in range(len(data)):
+            data[x] = data[x] * 100. / n
+        return data[2:13]
 
     log.debug(dice)
     diceroll_log.debug('Asked to roll %s:' % dice)
@@ -297,12 +349,15 @@ if __name__ == '__main__':
         if "roll('" in dice:
             num = dice.find("')")
             if num <> -1:
-                dice = dice[6:num]            
+                dice = dice[6:num]
+                dice = str(dice).upper().strip()            
                 num = roll(dice)
                 print 'Your %s roll is %d.' % (dice, num)
                 diceroll_log.info('The direct call to diceroll with %s resulted in %d.' % (dice, num))
         else:
+            dice = str(dice).upper().strip()
             num = roll(dice)
-            print 'Your %s roll is %d.' % (dice, num)
-            diceroll_log.info('The direct call to diceroll with %s resulted in %d.' % (dice, num))
+            if dice <> 'TEST' and dice <> 'INFO':
+                print 'Your %s roll is %d.' % (dice, num)
+                diceroll_log.info('The direct call to diceroll with %s resulted in %d.' % (dice, num))
 
