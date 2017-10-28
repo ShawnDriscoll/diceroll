@@ -1,4 +1,6 @@
 #
+#   diceroll.py
+#
 #   Written for Python 2.5.4
 #
 #   To use this module: from diceroll import roll
@@ -8,6 +10,8 @@
 ##########################################################
 
 '''
+diecroll module containing roll()
+
 Usage:
     from diceroll import roll
     print roll('2D6')
