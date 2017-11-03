@@ -22,6 +22,10 @@ Download the PDF from https://readthedocs.org/projects/diceroll/downloads/pdf/la
 
 or the EPUB from https://readthedocs.org/projects/diceroll/downloads/epub/latest
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/nw14QDFYs0w" frameborder="0" allowfullscreen></iframe>
+
 Warning
 -------
 
