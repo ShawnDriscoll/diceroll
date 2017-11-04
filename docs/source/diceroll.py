@@ -300,6 +300,14 @@ def roll(dice):
                 rolled = (_dierolls(6, num_dice) + dice_mod) * 10
                 diceroll_log.info('%s = (%d%s+%d) * 10 = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
                 return rolled
+            elif dice_type == 'D00' and num_dice == 1:
+                log.warning('D00 was deprecated in 1.9. Use D100 instead.')
+                diceroll_log.warning('D00 was deprecated in 1.9. Use D100 instead.')
+                roll_1 = (_dierolls(10, 1) - 1) * 10
+                roll_2 = _dierolls(10, 1)
+                rolled = roll_1 + roll_2 + dice_mod
+                diceroll_log.info('%s = %d%s+%d = %d and %d + %d = %d' % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, dice_mod, rolled))
+                return rolled
                                                     
     log.error('Wrong dice type entered! [ERROR]')
     diceroll_log.error('!!!!!!!!!!!!!!!!!!!!! DICE ERROR! ' + dice + ' is unknown !!!!!!!!!!!!!!!!!!!!!!!!!')
