@@ -23,7 +23,7 @@ Download the PDF from https://readthedocs.org/projects/diceroll/downloads/pdf/la
 or the EPUB from https://readthedocs.org/projects/diceroll/downloads/epub/latest
 
 .. image:: docs/source/video.png
-    :target: https://www.youtube.com/embed/nw14QDFYs0w
+    :target: https://www.youtube.com/watch?v=nw14QDFYs0w
 
 Warning
 -------
