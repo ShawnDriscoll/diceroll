@@ -44,6 +44,7 @@ Download the `PDF
    diceroll
    glossary
    license
+   about_the_author
    
 Indices and tables
 ------------------
