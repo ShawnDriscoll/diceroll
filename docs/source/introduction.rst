@@ -15,7 +15,7 @@ generation. And since I had just learned about Pandas and CSV, I was in a data r
 In a nutshell,
 Sphinx is an EXE (generated during its install from an egg of .py files, which is still magic to me, and which took a
 great deal of time for me tracking down all the proper versions of requirements for it to even compile/run
-in Python 2.5.4) that generates documents. Nothing too fancy. Just simple documents that could be read easily/quickly
+in Classic Python 2.5.4) that generates documents. Nothing too fancy. Just simple documents that could be read easily/quickly
 through any device using any viewer. And when I learned that Sphinx could read Python modules and produce documents
 from their ``.__doc__`` strings, I knew I just had to spend a couple days learning how all that stuff happens. 
 
@@ -35,9 +35,9 @@ Requirements
    **diceroll** has been tested on Windows versions: XP, 7, 8, and 10.
    It has not been tested on MacOS or Linux.
    
-* **Python 2.5**
+* **Classic Python 2.5**
    
-   **diceroll** was written using the C implementation of Python
+   **diceroll** was written using the C implementation of Classic Python
    version 2.5.4. Also known as CPython. With some doing, this
    module could of course be re-written for Jython, PyPy, or
    IronPython.
@@ -119,7 +119,7 @@ No matter the automated installation that your Python performed, importing will 
 Some ways to see if the ``diceroll`` module was installed correctly is by typing:
 
 >>> print roll('info')
-('2.4', 'roll(), release version 2.4.1b for Python 2.5.4')
+('2.4', 'roll(), release version 2.4.1b for Classic Python 2.5.4')
 >>> print roll.__doc__
     The dice types to roll are:
         'D2', 'D3', 'D4', 'D6', 'D8', 'D9', 'D10',

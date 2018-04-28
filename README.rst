@@ -11,10 +11,10 @@
 
 .. figure:: docs/source/diceroll_manual_cover_pdf_art.png
 
-**diceroll 2.4 for Python 2.5**
-===============================
+**diceroll 2.4 for Classic Python 2.5**
+=======================================
 
-**diceroll 2.4** is a Python 2.5 module that your game code calls to make dice rolls.
+**diceroll 2.4** is a Classic Python 2.5 module that your game code calls to make dice rolls.
 
 Read the **diceroll Operations Manual** at http://diceroll.readthedocs.io
 

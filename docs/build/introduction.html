@@ -61,7 +61,7 @@ generation. And since I had just learned about Pandas and CSV, I was in a data r
 <p>In a nutshell,
 Sphinx is an EXE (generated during its install from an egg of .py files, which is still magic to me, and which took a
 great deal of time for me tracking down all the proper versions of requirements for it to even compile/run
-in Python 2.5.4) that generates documents. Nothing too fancy. Just simple documents that could be read easily/quickly
+in Classic Python 2.5.4) that generates documents. Nothing too fancy. Just simple documents that could be read easily/quickly
 through any device using any viewer. And when I learned that Sphinx could read Python modules and produce documents
 from their <tt class="docutils literal"><span class="pre">.__doc__</span></tt> strings, I knew I just had to spend a couple days learning how all that stuff happens.</p>
 <p>So basically, my Python dice rolling module has its own operations manual now. And some rabbit holes are
@@ -80,9 +80,9 @@ worth their going into.</p>
 It has not been tested on MacOS or Linux.</p>
 </blockquote>
 </li>
-<li><p class="first"><strong>Python 2.5</strong></p>
+<li><p class="first"><strong>Classic Python 2.5</strong></p>
 <blockquote>
-<p><strong>diceroll</strong> was written using the C implementation of Python
+<p><strong>diceroll</strong> was written using the C implementation of Classic Python
 version 2.5.4. Also known as CPython. With some doing, this
 module could of course be re-written for Jython, PyPy, or
 IronPython.</p>
@@ -156,7 +156,7 @@ created and copied into the <tt class="docutils literal"><span class="pre">Pytho
 </pre></div>
 <p>Some ways to see if the <tt class="docutils literal"><span class="pre">diceroll</span></tt> module was installed correctly is by typing:</p>
 <div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;info&#39;</span><span class="p">)</span>
-<span class="go">(&#39;2.4&#39;, &#39;roll(), release version 2.4.1b for Python 2.5.4&#39;)</span>
+<span class="go">(&#39;2.4&#39;, &#39;roll(), release version 2.4.1b for Classic Python 2.5.4&#39;)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">roll</span><span class="o">.</span><span class="n">__doc__</span>
 <span class="go">    The dice types to roll are:</span>
 <span class="go">        &#39;D2&#39;, &#39;D3&#39;, &#39;D4&#39;, &#39;D6&#39;, &#39;D8&#39;, &#39;D9&#39;, &#39;D10&#39;,</span>
@@ -232,7 +232,7 @@ created and copied into the <tt class="docutils literal"><span class="pre">Pytho
     </div>
     <div class="footer">
       &copy; Copyright 2017, SHONNER CORP.
-      Last updated on Oct 27, 2017.
+      Last updated on Apr 27, 2018.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
     </div>
   </body>

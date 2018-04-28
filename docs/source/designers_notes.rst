@@ -95,7 +95,7 @@ with a slew of other pre-Python 2.6 era modules, are the Channel 1 stations in t
 It really comes down to a philosophy. I waited on learning Python until a version was released where I could say,
 *"This is Python."* Or say, *"This is what Python should be."* Something like that.
 
-And for me, it was Python 2.5.4 when I said such things. Python 2.6 books were showing up in stores. And
+And for me, it was Classic Python 2.5.4 when I said such things. Python 2.6 books were showing up in stores. And
 there were already differences being found between it and the Python that I was using. Python had become this
 huge thing. And non-programmers were being attracted to it for their own reasons. And that was all fine.
 Python 2.7, 3.0, etc., were seeing lots of new talent joining their mix. They were taking Python to places it
