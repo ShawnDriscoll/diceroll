@@ -1,7 +1,7 @@
 #
 #   diceroll.py
 #
-#   Written for Python 2.5.4
+#   Written for Classic Python 2.5.4
 #
 #   To use this module: from diceroll import roll
 #
@@ -16,7 +16,7 @@ Usage:
     from diceroll import roll
     print roll('2D6')
 
-    Will roll two 6-sided dice
+    Will roll two 6-sided dice, returning an integer
 '''
 
 from random import randint
@@ -110,7 +110,7 @@ def roll(dice):
     
     # was information for this program asked for?
     if dice == 'INFO':
-        ver = 'roll(), release version ' + __release__ + ' for Python 2.5.4'
+        ver = 'roll(), release version ' + __release__ + ' for Classic Python 2.5.4'
         diceroll_log.info('Reporting: roll() release version: %s' % __release__)
         return __version__, ver
     
@@ -337,7 +337,7 @@ if __name__ == '__main__':
     diceroll_log.info('diceroll was run without roll() called.  Help will be sent if needed.')
     print
     if len(sys.argv) < 2:
-        print "     Type 'diceroll -h' for help"
+        print "     Type 'diceroll.py -h' for help"
     elif sys.argv[1] in ['-h', '/h', '--help', '-?', '/?']:
         print '     diceroll is a module (containing a roll function)'
         print '     that needs to be imported into Python.'
