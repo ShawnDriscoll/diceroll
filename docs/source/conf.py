@@ -37,7 +37,7 @@ master_doc = 'index'
 
 # General substitutions.
 project = u'diceroll'
-copyright = u'2017, SHONNER CORP'
+copyright = u'2018, SHONNER CORP'
 author = u'SHONNER CORP'
 
 # The default replacements for |version| and |release|, also used in various

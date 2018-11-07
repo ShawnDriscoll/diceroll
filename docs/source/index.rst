@@ -31,7 +31,7 @@ Download the `PDF
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/nw14QDFYs0w" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/xuyfLJbdDso" frameborder="0" allowfullscreen></iframe>
 
 .. toctree::
    :maxdepth: 2
