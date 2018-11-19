@@ -94,3 +94,7 @@ A TEST roll that calculates percentages for 2D6 has been added:
 6  16.23%  13.95%  11.02%   8.25%   5.56%   2.80%
 
 The roll will return a list of percentages for 2-12 rolled.
+
+*Fixed in version 2.4.2*
+
+D10 rolls are now in the range of 0 - 9 instead of 1 - 10.
