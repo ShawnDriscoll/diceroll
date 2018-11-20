@@ -32,7 +32,7 @@ __version__ = '2.4'
 __release__ = '2.4.2b'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
-diceroll_log = logging.getLogger('diceroll')
+diceroll_log = logging.getLogger('your_code_name_here.diceroll')
 diceroll_log.setLevel(logging.INFO)
 
 if not os.path.exists('Logs'):
