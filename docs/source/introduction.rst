@@ -61,7 +61,7 @@ Requirements
    **diceroll 2.4** will not work with **Python 2.6+**.
 
 
-Installing Locally to your Folder
+Installing Locally to Your Folder
 ---------------------------------
 
 .. figure:: python_file.png
