@@ -93,7 +93,7 @@ Installing Automatically
 
 *New in version 2.3*
 
-Extract ``diceroll_2.4.2b.zip`` and start a CMD window at the folder location of the ``setup.py`` file. At the
+Extract ``diceroll_2.4.3b.zip`` and start a CMD window at the folder location of the ``setup.py`` file. At the
 CMD prompt you can type: ::
 
     setup.py install
@@ -109,7 +109,7 @@ depending on if your computer knows how to open .py files or not.
 
     During the installation process,
     a ``Python25\Lib\site-packages\game_utils`` folder will be created. It will contain ``__init__.py`` and ``diceroll.py`` if your Python
-    doesn't have ``setuptools`` installed. Otherwise, an .egg file called ``diceroll-2.4.2b-py2.5.egg`` will be
+    doesn't have ``setuptools`` installed. Otherwise, an .egg file called ``diceroll-2.4.3b-py2.5.egg`` will be
     created and copied into the ``Python25\Lib\site-packages`` folder.
     
 No matter the automated installation that your Python performed, importing will be the same: ::
@@ -119,7 +119,7 @@ No matter the automated installation that your Python performed, importing will 
 Some ways to see if the ``diceroll`` module was installed correctly is by typing:
 
 >>> print roll('info')
-('2.4', 'roll(), release version 2.4.2b for Classic Python 2.5.4')
+('2.4', 'roll(), release version 2.4.3b for Classic Python 2.5.4')
 >>> print roll.__doc__
     The dice types to roll are:
         'D2', 'D3', 'D4', 'D6', 'D8', 'D9', 'D10',
@@ -129,6 +129,7 @@ Some ways to see if the ``diceroll`` module was installed correctly is by typing
     roll('D6') or roll('1D6') -- roll one 6-sided die
     roll('2D6') -- roll two 6-sided dice
     roll('D10') -- roll a 10-sided die (0 - 9)
+    roll('D99') -- roll a 100-sided die (0 - 99)
     roll('D100') -- roll a 100-sided die (1 - 100)
     roll('D66') -- roll for a D66 chart
     roll('FLUX') -- a FLUX roll (-5 to 5)

@@ -1,7 +1,7 @@
 .. image:: docs/source/python_classic_2_5_tag.png
     :target: https://www.python.org/download/releases/2.5.4/
     
-.. image:: docs/source/release_v2_4_2b_tag.png
+.. image:: docs/source/release_v2_4_3b_tag.png
     :target: https://readthedocs.org/projects/diceroll/downloads/pdf/latest
     
 .. image:: https://readthedocs.org/projects/diceroll/badge/?version=latest
