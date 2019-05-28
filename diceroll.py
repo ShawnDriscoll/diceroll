@@ -29,10 +29,10 @@ from colorama import Fore, Back, Style
 init() # initialize colorama
 
 __version__ = '2.4'
-__release__ = '2.4.2b'
+__release__ = '2.4.3b'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
-diceroll_log = logging.getLogger('your_code_name_here.diceroll')
+diceroll_log = logging.getLogger('diceroll')
 diceroll_log.setLevel(logging.INFO)
 
 if not os.path.exists('Logs'):
@@ -87,13 +87,14 @@ def roll(dice):
     '''
     The dice types to roll are:
         'D2', 'D3', 'D4', 'D6', 'D8', 'D9', 'D10',
-        'D12', 'D20', 'D30', 'D100', 'D66', 'DD',
+        'D12', 'D20', 'D30', 'D99', 'D100', 'D66', 'DD',
         'FLUX', 'GOODFLUX', 'BADFLUX', 'BOON', 'BANE'
 
     Some examples are:
     roll('D6') or roll('1D6') -- roll one 6-sided die
     roll('2D6') -- roll two 6-sided dice
     roll('D10') -- roll a 10-sided die (0 - 9)
+    roll('D99') -- roll a 100-sided die (0 - 99)
     roll('D100') -- roll a 100-sided die (1 - 100)
     roll('D66') -- roll for a D66 chart
     roll('FLUX') -- a FLUX roll (-5 to 5)
@@ -293,6 +294,12 @@ def roll(dice):
                 rolled = roll_1 * 10 + roll_2
                 diceroll_log.info('%s = %d%s+%d = %d and %d = %d' % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, rolled))
                 return rolled
+            elif dice_type == 'D99' and num_dice == 1:
+                roll_1 = _dierolls(10, 1) * 10
+                roll_2 = _dierolls(10, 1)
+                rolled = roll_1 + roll_2 + dice_mod
+                diceroll_log.info('%s = %d%s+%d = %d and %d + %d = %d' % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, dice_mod, rolled))
+                return rolled
             elif dice_type == 'D100' and num_dice == 1:
                 roll_1 = _dierolls(10, 1) * 10
                 roll_2 = _dierolls(10, 1)
@@ -328,6 +335,7 @@ def roll(dice):
     print "roll('D6') or roll('1D6') -- roll one 6-sided die"
     print "roll('2D6') -- roll two 6-sided dice"
     print "roll('D10') -- roll a 10-sided die (0 - 9)"
+    print "roll('D99') -- roll a 100-sided die (0 - 99)"
     print "roll('D100') -- roll a 100-sided die (1 - 100)"
     print "roll('D66') -- roll for a D66 chart"
     print "roll('FLUX') -- a FLUX roll (-5 to 5)"
