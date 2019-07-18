@@ -56,6 +56,8 @@ Requirements
    to it.
    
    Otherwise, no dice.
+   
+   (Update: as of version 2.4, **diceroll** can be used at the CMD prompt.)
 
 .. Warning::
    **diceroll 2.4** will not work with **Python 2.6+**.
