@@ -88,9 +88,10 @@ code. And the simple addition or subtraction of DMs to such a roll was making th
 
 The Channel 1
 -------------
-**diceroll** was written years ago. It gets looked at by GitHub visitors who Google by now and again. But not
-many will use this module because of the simple fact that Python is now version 3.6+ something. So **diceroll**, along
-with a slew of other pre-Python 2.6 era modules, are the Channel 1 stations in the room that no TV can possibly watch.
+**diceroll** was written years ago. The code is used by both my TravCalc and TravGen apps, and gets looked at
+by GitHub visitors who google-by now and again. But not many programmers will use the code because of the simple fact
+that Python is now version 3.6+ something. So **diceroll**, along with a slew of other pre-Python 2.6 era modules,
+are the Channel 1 stations in the room that no TV can possibly watch.
 
 It really comes down to a philosophy. I waited on learning Python until a version was released where I could say,
 *"This is Python."* Or say, *"This is what Python should be."* Something like that.
