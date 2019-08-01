@@ -354,7 +354,9 @@ if __name__ == '__main__':
     diceroll_log.info('diceroll was run without roll() called.  Help will be sent if needed.')
     print
     if len(sys.argv) < 2:
-        print "     Type 'diceroll.py -h' for help"
+        print '     Type:'
+        print "     'diceroll.py -h' for help"
+        print "     'diceroll.py -v' for version"
     elif sys.argv[1] in ['-h', '/h', '--help', '-?', '/?']:
         print '     diceroll is a module (containing a roll function)'
         print '     that needs to be imported into Python.'
@@ -373,6 +375,8 @@ if __name__ == '__main__':
         print
         print '     Or just:'
         print '     C:\>diceroll.py 2d6'
+    elif sys.argv[1] in ['-v', '/v', '--version']:
+        print '     roll(), release version ' + __release__ + ' for Classic Python 2.5.4'
     else:
         dice = sys.argv[1]
         if "roll('" in dice:

@@ -71,6 +71,10 @@ D00 has been replaced with D100.
 
 .. literalinclude:: databox2.dat
 
+.. note::
+
+    Typing ``diceroll.py -h`` will provide some help.
+
 *New in version 2.4.1*
 
 A TEST roll that calculates percentages for 2D6 has been added:
