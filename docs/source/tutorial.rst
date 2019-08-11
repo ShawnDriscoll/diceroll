@@ -101,7 +101,7 @@ The roll will return a list of percentages for 2-12 rolled.
 
 *Fixed in version 2.4.2*
 
-D10 rolls are now in the range of 0 - 9 instead of 1 - 10.
+D9 rolls are now in the range of 0 - 9 instead of 1 - 9.
 
 *New in version 2.4.3*
 

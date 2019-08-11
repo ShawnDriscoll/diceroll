@@ -72,7 +72,7 @@ def _dierolls(dtype, dcount):
             diceroll_log.debug('Using %d %d-sided dice...' % (dcount, dtype))
         
     for i in range(dcount):
-        if dtype == 10:
+        if dtype == 9:
             rolled = randint(1, 10) - 1
         else:
             rolled = randint(1, dtype)
@@ -93,7 +93,8 @@ def roll(dice):
     Some examples are:
     roll('D6') or roll('1D6') -- roll one 6-sided die
     roll('2D6') -- roll two 6-sided dice
-    roll('D10') -- roll a 10-sided die (0 - 9)
+    roll('D9') -- roll a 10-sided die (0 - 9)
+    roll('D10') -- roll a 10-sided die (1 - 10)
     roll('D99') -- roll a 100-sided die (0 - 99)
     roll('D100') -- roll a 100-sided die (1 - 100)
     roll('D66') -- roll for a D66 chart
@@ -295,14 +296,14 @@ def roll(dice):
                 diceroll_log.info('%s = %d%s+%d = %d and %d = %d' % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, rolled))
                 return rolled
             elif dice_type == 'D99' and num_dice == 1:
-                roll_1 = _dierolls(10, 1) * 10
-                roll_2 = _dierolls(10, 1)
+                roll_1 = _dierolls(9, 1) * 10
+                roll_2 = _dierolls(9, 1)
                 rolled = roll_1 + roll_2 + dice_mod
                 diceroll_log.info('%s = %d%s+%d = %d and %d + %d = %d' % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, dice_mod, rolled))
                 return rolled
             elif dice_type == 'D100' and num_dice == 1:
-                roll_1 = _dierolls(10, 1) * 10
-                roll_2 = _dierolls(10, 1)
+                roll_1 = _dierolls(9, 1) * 10
+                roll_2 = _dierolls(9, 1)
                 if roll_1 == 0 and roll_2 == 0:
                     rolled = 100 + dice_mod
                 else:
@@ -316,8 +317,8 @@ def roll(dice):
             elif dice_type == 'D00' and num_dice == 1:
                 log.warning('D00 was deprecated in 1.9. Use D100 instead.')
                 diceroll_log.warning('D00 was deprecated in 1.9. Use D100 instead.')
-                roll_1 = _dierolls(10, 1) * 10
-                roll_2 = _dierolls(10, 1)
+                roll_1 = _dierolls(9, 1) * 10
+                roll_2 = _dierolls(9, 1)
                 if roll_1 == 0 and roll_2 == 0:
                     rolled = 100 + dice_mod
                 else:
@@ -334,7 +335,8 @@ def roll(dice):
     print "Valid dice rolls are:"
     print "roll('D6') or roll('1D6') -- roll one 6-sided die"
     print "roll('2D6') -- roll two 6-sided dice"
-    print "roll('D10') -- roll a 10-sided die (0 - 9)"
+    print "roll('D9') -- roll a 10-sided die (0 - 9)"
+    print "roll('D10') -- roll a 10-sided die (1 - 10)"
     print "roll('D99') -- roll a 100-sided die (0 - 99)"
     print "roll('D100') -- roll a 100-sided die (1 - 100)"
     print "roll('D66') -- roll for a D66 chart"
