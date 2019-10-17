@@ -91,7 +91,7 @@ be used. But first, we must give this function a value to work from.</p>
 <p>Notice that the inputted string values can be upper or lower case.</p>
 <p>The dice types to roll are:</p>
 <blockquote>
-D3, D4, D6, D8, D9, D10, D12, D20, D30, D99, D100, D66, DD, FLUX, GOODFLUX, and BADFLUX</blockquote>
+D3, D4, D6, D8, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, and BADFLUX</blockquote>
 <p><em>New in version 2.3</em></p>
 <p>Three additional dice types are now available:</p>
 <blockquote>
@@ -105,9 +105,9 @@ covered by <strong>diceroll</strong>. However, more are planned for in future re
 <p>Some examples are:</p>
 <div class="highlight"><pre><span class="n">roll</span><span class="p">(</span><span class="s">&#39;D6&#39;</span><span class="p">)</span> <span class="ow">or</span> <span class="n">roll</span><span class="p">(</span><span class="s">&#39;1D6&#39;</span><span class="p">)</span> <span class="c"># roll one 6-sided die</span>
 <span class="n">roll</span><span class="p">(</span><span class="s">&#39;2D6&#39;</span><span class="p">)</span> <span class="c"># roll two 6-sided dice</span>
-<span class="n">roll</span><span class="p">(</span><span class="s">&#39;D9&#39;</span><span class="p">)</span> <span class="c"># roll a 10-sided die (0 - 9)</span>
+<span class="n">roll</span><span class="p">(</span><span class="s">&#39;D09&#39;</span><span class="p">)</span> <span class="c"># roll a 10-sided die (0 - 9)</span>
 <span class="n">roll</span><span class="p">(</span><span class="s">&#39;D10&#39;</span><span class="p">)</span> <span class="c"># roll a 10-sided die (1 - 10)</span>
-<span class="n">roll</span><span class="p">(</span><span class="s">&#39;D99&#39;</span><span class="p">)</span> <span class="c"># roll a 100-sided die (0 - 99)</span>
+<span class="n">roll</span><span class="p">(</span><span class="s">&#39;D099&#39;</span><span class="p">)</span> <span class="c"># roll a 100-sided die (0 - 99)</span>
 <span class="n">roll</span><span class="p">(</span><span class="s">&#39;D100&#39;</span><span class="p">)</span> <span class="c"># roll a 100-sided die (1 - 100)</span>
 <span class="n">roll</span><span class="p">(</span><span class="s">&#39;D66&#39;</span><span class="p">)</span> <span class="c"># roll for a D66 chart</span>
 <span class="n">roll</span><span class="p">(</span><span class="s">&#39;FLUX&#39;</span><span class="p">)</span> <span class="c"># a FLUX roll (-5 to 5)</span>
@@ -152,8 +152,8 @@ Your 2D6-2 roll is 7.</pre>
 <span class="go">6  16.23%  13.95%  11.02%   8.25%   5.56%   2.80%</span>
 </pre></div>
 <p>The roll will return a list of percentages for 2-12 rolled.</p>
-<p><em>Fixed in version 2.4.2</em></p>
-<p>D9 rolls are now in the range of 0 - 9 instead of 1 - 9.</p>
+<p><em>New in version 2.4.2</em></p>
+<p>D09 rolls will generate a range of 0 - 9.</p>
 <p><em>New in version 2.4.3</em></p>
 <p>D99 rolls will generate a range of 0 - 99.</p>
 </div>
@@ -208,7 +208,7 @@ Your 2D6-2 roll is 7.</pre>
     </div>
     <div class="footer">
       &copy; Copyright 2019, SHONNER CORP.
-      Last updated on Aug 11, 2019.
+      Last updated on Oct 16, 2019.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
     </div>
   </body>

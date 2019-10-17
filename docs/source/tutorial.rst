@@ -42,7 +42,7 @@ Notice that the inputted string values can be upper or lower case.
 
 The dice types to roll are:
 
-   D3, D4, D6, D8, D9, D10, D12, D20, D30, D99, D100, D66, DD, FLUX, GOODFLUX, and BADFLUX
+   D3, D4, D6, D8, D10, D12, D20, D30, D100, D66, DD, FLUX, GOODFLUX, and BADFLUX
 
 *New in version 2.3*
 
@@ -99,9 +99,9 @@ A TEST roll that calculates percentages for 2D6 has been added:
 
 The roll will return a list of percentages for 2-12 rolled.
 
-*Fixed in version 2.4.2*
+*New in version 2.4.2*
 
-D9 rolls are now in the range of 0 - 9 instead of 1 - 9.
+D09 rolls will generate a range of 0 - 9.
 
 *New in version 2.4.3*
 

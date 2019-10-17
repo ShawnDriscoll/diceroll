@@ -49,7 +49,7 @@ diceroll_log.info('Logging started.')
 diceroll_log.info('roll() v' + __version__ + ' started, and running...')
 
 number_of_dice = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
-simple_dice = ['D2', 'D3', 'D4', 'D6', 'D8', 'D9', 'D10', 'D12', 'D20', 'D30']
+simple_dice = ['D2', 'D3', 'D4', 'D6', 'D8', 'D10', 'D12', 'D20', 'D30']
 
 def _dierolls(dtype, dcount):
     '''
@@ -72,10 +72,7 @@ def _dierolls(dtype, dcount):
             diceroll_log.debug('Using %d %d-sided dice...' % (dcount, dtype))
         
     for i in range(dcount):
-        if dtype == 9:
-            rolled = randint(1, 10) - 1
-        else:
-            rolled = randint(1, dtype)
+        rolled = randint(1, dtype)
         if rolled == 8 or rolled == 11 or rolled == 18 or rolled >= 80 and rolled <= 89:
             diceroll_log.debug('Rolled an %s' % rolled)
         else:
@@ -86,16 +83,16 @@ def _dierolls(dtype, dcount):
 def roll(dice):
     '''
     The dice types to roll are:
-        'D2', 'D3', 'D4', 'D6', 'D8', 'D9', 'D10',
-        'D12', 'D20', 'D30', 'D99', 'D100', 'D66', 'DD',
+        'D2', 'D3', 'D4', 'D6', 'D8', 'D09', 'D10',
+        'D12', 'D20', 'D30', 'D099', 'D100', 'D66', 'DD',
         'FLUX', 'GOODFLUX', 'BADFLUX', 'BOON', 'BANE'
 
     Some examples are:
     roll('D6') or roll('1D6') -- roll one 6-sided die
     roll('2D6') -- roll two 6-sided dice
-    roll('D9') -- roll a 10-sided die (0 - 9)
+    roll('D09') -- roll a 10-sided die (0 - 9)
     roll('D10') -- roll a 10-sided die (1 - 10)
-    roll('D99') -- roll a 100-sided die (0 - 99)
+    roll('D099') -- roll a 100-sided die (0 - 99)
     roll('D100') -- roll a 100-sided die (1 - 100)
     roll('D66') -- roll for a D66 chart
     roll('FLUX') -- a FLUX roll (-5 to 5)
@@ -295,19 +292,20 @@ def roll(dice):
                 rolled = roll_1 * 10 + roll_2
                 diceroll_log.info('%s = %d%s+%d = %d and %d = %d' % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, rolled))
                 return rolled
-            elif dice_type == 'D99' and num_dice == 1:
-                roll_1 = _dierolls(9, 1) * 10
-                roll_2 = _dierolls(9, 1)
+            elif dice_type == 'D09' and num_dice == 1:
+                rolled = (_dierolls(10, 1) - 1) + dice_mod
+                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
+                return rolled
+            elif dice_type == 'D099' and num_dice == 1:
+                roll_1 = (_dierolls(10, 1) - 1) * 10
+                roll_2 = (_dierolls(10, 1) - 1)
                 rolled = roll_1 + roll_2 + dice_mod
                 diceroll_log.info('%s = %d%s+%d = %d and %d + %d = %d' % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, dice_mod, rolled))
                 return rolled
             elif dice_type == 'D100' and num_dice == 1:
-                roll_1 = _dierolls(9, 1) * 10
-                roll_2 = _dierolls(9, 1)
-                if roll_1 == 0 and roll_2 == 0:
-                    rolled = 100 + dice_mod
-                else:
-                    rolled = roll_1 + roll_2 + dice_mod
+                roll_1 = (_dierolls(10, 1) - 1) * 10
+                roll_2 = _dierolls(10, 1)
+                rolled = roll_1 + roll_2 + dice_mod
                 diceroll_log.info('%s = %d%s+%d = %d and %d + %d = %d' % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, dice_mod, rolled))
                 return rolled
             elif dice_type == 'DD':
@@ -317,12 +315,9 @@ def roll(dice):
             elif dice_type == 'D00' and num_dice == 1:
                 log.warning('D00 was deprecated in 1.9. Use D100 instead.')
                 diceroll_log.warning('D00 was deprecated in 1.9. Use D100 instead.')
-                roll_1 = _dierolls(9, 1) * 10
-                roll_2 = _dierolls(9, 1)
-                if roll_1 == 0 and roll_2 == 0:
-                    rolled = 100 + dice_mod
-                else:
-                    rolled = roll_1 + roll_2 + dice_mod
+                roll_1 = (_dierolls(10, 1) - 1) * 10
+                roll_2 = _dierolls(10, 1)
+                rolled = roll_1 + roll_2 + dice_mod
                 diceroll_log.info('%s = %d%s+%d = %d and %d + %d = %d' % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, dice_mod, rolled))
                 return rolled
                                                     
@@ -335,9 +330,9 @@ def roll(dice):
     print "Valid dice rolls are:"
     print "roll('D6') or roll('1D6') -- roll one 6-sided die"
     print "roll('2D6') -- roll two 6-sided dice"
-    print "roll('D9') -- roll a 10-sided die (0 - 9)"
+    print "roll('D09') -- roll a 10-sided die (0 - 9)"
     print "roll('D10') -- roll a 10-sided die (1 - 10)"
-    print "roll('D99') -- roll a 100-sided die (0 - 99)"
+    print "roll('D099') -- roll a 100-sided die (0 - 99)"
     print "roll('D100') -- roll a 100-sided die (1 - 100)"
     print "roll('D66') -- roll for a D66 chart"
     print "roll('FLUX') -- a FLUX roll (-5 to 5)"

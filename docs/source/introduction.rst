@@ -124,15 +124,15 @@ Some ways to see if the ``diceroll`` module was installed correctly is by typing
 ('2.4', 'roll(), release version 2.4.3b for Classic Python 2.5.4')
 >>> print roll.__doc__
     The dice types to roll are:
-        'D2', 'D3', 'D4', 'D6', 'D8', 'D9', 'D10',
-        'D12', 'D20', 'D30', 'D100', 'D66', 'DD',
+        'D2', 'D3', 'D4', 'D6', 'D8', 'D09', 'D10',
+        'D12', 'D20', 'D30', 'D099', 'D100', 'D66', 'DD',
         'FLUX', 'GOODFLUX', 'BADFLUX', 'BOON', 'BANE'
     Some examples are:
     roll('D6') or roll('1D6') -- roll one 6-sided die
     roll('2D6') -- roll two 6-sided dice
-    roll('D9') -- roll a 10-sided die (0 - 9)
+    roll('D09') -- roll a 10-sided die (0 - 9)
     roll('D10') -- roll a 10-sided die (1 - 10)
-    roll('D99') -- roll a 100-sided die (0 - 99)
+    roll('D099') -- roll a 100-sided die (0 - 99)
     roll('D100') -- roll a 100-sided die (1 - 100)
     roll('D66') -- roll for a D66 chart
     roll('FLUX') -- a FLUX roll (-5 to 5)
