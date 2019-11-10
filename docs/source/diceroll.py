@@ -29,7 +29,7 @@ from colorama import Fore, Back, Style
 init() # initialize colorama
 
 __version__ = '2.4'
-__release__ = '2.4.3b'
+__release__ = '2.4.7b'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
 diceroll_log = logging.getLogger('diceroll')
@@ -107,8 +107,8 @@ def roll(dice):
 
     log = logging.getLogger('your_code_name_here.diceroll')
 
-    # make inputted string argument upper case, and strip spaces
-    dice = str(dice).upper().strip()
+    # make inputted string argument upper case, and remove spaces
+    dice = str(dice).upper().replace(' ','')
     
     # was information for this program asked for?
     if dice == 'INFO':
@@ -261,7 +261,8 @@ def roll(dice):
             # how many dice are being rolled?
             num_dice = int(dice[0:ichar1])
             if num_dice < 1:
-                log.error('Negative dice count! [ERROR]')
+                if num_dice < 0:
+                    log.error('Negative dice count! [ERROR]')
                 diceroll_log.error('Number of dice = ' + str(num_dice) + ' [ERROR]')
     
         if num_dice >= 1:
@@ -278,7 +279,6 @@ def roll(dice):
             # what kind of dice are being rolled? D6? D66? etc.
             if ichar2 <> -1:
                 dice_type = dice[ichar1: ichar2]
-                dice_type = dice_type.rstrip()
             else:
                 dice_type = dice[ichar1: len(dice)]
             
@@ -315,6 +315,7 @@ def roll(dice):
             elif dice_type == 'D00' and num_dice == 1:
                 log.warning('D00 was deprecated in 1.9. Use D100 instead.')
                 diceroll_log.warning('D00 was deprecated in 1.9. Use D100 instead.')
+                dice_type = 'D100'
                 roll_1 = (_dierolls(10, 1) - 1) * 10
                 roll_2 = _dierolls(10, 1)
                 rolled = roll_1 + roll_2 + dice_mod

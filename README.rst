@@ -1,7 +1,7 @@
-.. image:: docs/source/python_classic_2_5_tag.png
+.. image:: images/python_classic_2_5_tag.png
     :target: https://www.python.org/download/releases/2.5.4/
     
-.. image:: docs/source/release_v2_4_3b_tag.png
+.. image:: images/release_v2_4_7b_tag.png
     :target: https://readthedocs.org/projects/diceroll/downloads/pdf/latest
     
 .. image:: https://readthedocs.org/projects/diceroll/badge/?version=latest
@@ -9,7 +9,7 @@
     :alt: Doc Status
 
 
-.. figure:: docs/source/diceroll_manual_cover_pdf_art.png
+.. figure:: images/diceroll_manual_cover_pdf_art.png
 
 **diceroll 2.4 for Classic Python 2.5**
 =======================================
@@ -22,7 +22,7 @@ Download the PDF from https://readthedocs.org/projects/diceroll/downloads/pdf/la
 
 or the EPUB from https://readthedocs.org/projects/diceroll/downloads/epub/latest
 
-.. image:: docs/source/video.png
+.. image:: images/video.png
     :target: https://www.youtube.com/watch?v=xuyfLJbdDso
 
 Warning

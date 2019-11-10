@@ -75,7 +75,7 @@ D00 has been replaced with D100.
 
     Typing ``diceroll.py -h`` will provide some help.
 
-*New in version 2.4.1*
+*New in release 2.4.1*
 
 A TEST roll that calculates percentages for 2D6 has been added:
 
@@ -99,10 +99,14 @@ A TEST roll that calculates percentages for 2D6 has been added:
 
 The roll will return a list of percentages for 2-12 rolled.
 
-*New in version 2.4.2*
+*New in release 2.4.2*
 
 D09 rolls will generate a range of 0 - 9.
 
-*New in version 2.4.3*
+*New in release 2.4.3*
 
 D99 rolls will generate a range of 0 - 99.
+
+*Fixed in release 2.4.7*
+
+Minor fixes with spacing and negative numbers.

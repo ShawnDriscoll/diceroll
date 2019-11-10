@@ -84,7 +84,7 @@
    no dice
      Used to refuse a request or indicate no chance of success.
      
-   Python 3.6+
+   Python 3.8+
      A newfangled version of Python that's different from what Classic Python 2.5
      programmers are used to.
      
