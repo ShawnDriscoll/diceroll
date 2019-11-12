@@ -28,8 +28,8 @@ from colorama import Fore, Back, Style
 
 init() # initialize colorama
 
-__version__ = '2.4'
-__release__ = '2.4.7b'
+__version__ = '3.0'
+__release__ = '3.0.0b'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
 diceroll_log = logging.getLogger('diceroll')
@@ -49,7 +49,7 @@ diceroll_log.info('Logging started.')
 diceroll_log.info('roll() v' + __version__ + ' started, and running...')
 
 number_of_dice = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
-simple_dice = ['D2', 'D3', 'D4', 'D6', 'D8', 'D10', 'D12', 'D20', 'D30']
+simple_dice = ['D3', 'D4', 'D6', 'D8', 'D10', 'D12', 'D20', 'D30']
 
 def _dierolls(dtype, dcount):
     '''
@@ -83,7 +83,7 @@ def _dierolls(dtype, dcount):
 def roll(dice):
     '''
     The dice types to roll are:
-        'D2', 'D3', 'D4', 'D6', 'D8', 'D09', 'D10',
+        '4dF', 'D2', 'D3', 'D4', 'D6', 'D8', 'D09', 'D10',
         'D12', 'D20', 'D30', 'D099', 'D100', 'D66', 'DD',
         'FLUX', 'GOODFLUX', 'BADFLUX', 'BOON', 'BANE'
 
@@ -100,12 +100,13 @@ def roll(dice):
     roll('4D4-4') -- add -4 DM to roll
     roll('2DD+3') -- roll (2D6+3) x 10
     roll('BOON') -- roll 3D6 and keep the higher two dice
+    roll('4dF') -- make a FATE roll
     roll('info') -- release version of program
     
     An invalid roll will return a 0.
     '''
 
-    log = logging.getLogger('your_code_name_here.diceroll')
+    log = logging.getLogger('test_dice.diceroll')
 
     # make inputted string argument upper case, and remove spaces
     dice = str(dice).upper().replace(' ','')
@@ -132,8 +133,8 @@ def roll(dice):
         print '      6x6 Roll Chart Test'
         print '     1    2    3    4    5    6'     
         for i in range(n):
-            die1 = roll('1D6')
-            die2 = roll('1D6')
+            die1 = _dierolls(6, 1)
+            die2 = _dierolls(6, 1)
             roll_chart_6x6[(die1, die2)] += 1
             result = die1 + die2
             data[result] += 1
@@ -174,8 +175,18 @@ def roll(dice):
     # set dice modifier to zero.
     dice_mod = 0
 
+    # check if a FATE dice roll
+    if dice == '4DF':
+        fate1 = _dierolls(3, 1) - 2
+        fate2 = _dierolls(3, 1) - 2
+        fate3 = _dierolls(3, 1) - 2
+        fate4 = _dierolls(3, 1) - 2
+        rolled = fate1 + fate2 + fate3 + fate4
+        diceroll_log.info('%s = %d, %d, %d, %d = %d' % (dice, fate1, fate2, fate3, fate4, rolled))
+        return rolled
+    
     # check if FLUX dice are being rolled
-    if dice == 'FLUX':
+    elif dice == 'FLUX':
         flux1 = _dierolls(6, 1)
         flux2 = _dierolls(6, 1)
         rolled = flux1 - flux2
@@ -286,6 +297,10 @@ def roll(dice):
                 rolled = _dierolls(int(dice_type[1:len(dice_type)]), num_dice) + dice_mod
                 diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
                 return rolled
+            elif dice_type == 'D2' and num_dice == 1 and dice_mod == 0:
+                rolled = _dierolls(2, 1) - 1
+                diceroll_log.info('%s = %d%s+%d = %d' % (dice, num_dice, dice_type, dice_mod, rolled))
+                return rolled
             elif dice_type == 'D66' and num_dice == 1 and dice_mod == 0:
                 roll_1 = _dierolls(6, 1)
                 roll_2 = _dierolls(6, 1)
@@ -339,6 +354,7 @@ def roll(dice):
     print "roll('FLUX') -- a FLUX roll (-5 to 5)"
     print "roll('2DD+3') -- roll (2D6+3) x 10"
     print "roll('BOON') -- roll 3D6 and keep the higher two dice"
+    print "roll('4dF') -- make a FATE roll"
     print
     print "-/+ DMs can be added to rolls:"
     print "roll('3D6+6') -- add +6 DM to roll"

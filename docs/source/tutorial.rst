@@ -109,4 +109,9 @@ D99 rolls will generate a range of 0 - 99.
 
 *Fixed in release 2.4.7*
 
-Minor fixes with spacing and negative numbers.
+Minor fixes with input spacing, and logging any negative dice rolled.
+
+*New in version 3.0*
+
+D2 rolls now generate a range of 0 - 1.
+The 4dF roll type for FATE has been added.

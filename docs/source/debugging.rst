@@ -3,7 +3,7 @@
 
 .. figure:: fake_die.png
 
-**diceroll 2.4** keeps a log file of any dice rolls made during its last run. You will find ``diceroll.log`` in the ``Logs``
+**diceroll 3.0** keeps a log file of any dice rolls made during its last run. You will find ``diceroll.log`` in the ``Logs``
 folder it creates if one isn't there already. In the file you will see mentions of dice being rolled. **diceroll** uses
 a default logging mode of ``INFO`` which isn't that verbose. ::
 
@@ -12,7 +12,7 @@ a default logging mode of ``INFO`` which isn't that verbose. ::
 Your INFO logging will output as:
 
    | ...INFO diceroll - Logging started.
-   | ...INFO diceroll - roll() v2.4 started, and running...
+   | ...INFO diceroll - roll() v3.0 started, and running...
    | ...INFO diceroll - 3D4 = 3D4+0 = 10
 
 Changing **diceroll's** logging mode to ``DEBUG`` will record debugging messages in the ``Logs\diceroll.log`` file. ::
@@ -22,7 +22,7 @@ Changing **diceroll's** logging mode to ``DEBUG`` will record debugging messages
 Your DEBUG logging will output as:
 
    | ...INFO diceroll - Logging started.
-   | ...INFO diceroll - roll() v2.4 started, and running...
+   | ...INFO diceroll - roll() v3.0 started, and running...
    | ...DEBUG diceroll - Asked to roll 3D4:
    | ...DEBUG diceroll - Using three 4-sided dice...
    | ...DEBUG diceroll - Rolled a 4

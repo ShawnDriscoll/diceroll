@@ -60,7 +60,7 @@ Requirements
    (Update: As of version 2.4, **diceroll** can be used at the CMD prompt.)
 
 .. Warning::
-   **diceroll 2.4** will not work with **Python 2.6+**.
+   **diceroll 3.0** will not work with **Python 2.6+**.
 
 
 Installing Locally to Your Folder
@@ -68,7 +68,7 @@ Installing Locally to Your Folder
 
 .. figure:: python_file.png
 
-Installing **diceroll 2.4** is as easy as always. Just copy ``diceroll.py`` into the same folder
+Installing **diceroll 3.0** is as easy as always. Just copy ``diceroll.py`` into the same folder
 your code happens to be in.
 
 Then add this line at (or near) the top of your code: ::
@@ -95,7 +95,7 @@ Installing Automatically
 
 *New in version 2.3*
 
-Extract ``diceroll_2.4.7b.zip`` and start a CMD window at the folder location of the ``setup.py`` file. At the
+Extract ``diceroll_3.0.0b.zip`` and start a CMD window at the folder location of the ``setup.py`` file. At the
 CMD prompt you can type: ::
 
     setup.py install
@@ -111,7 +111,7 @@ depending on if your computer knows how to open .py files or not.
 
     During the installation process,
     a ``Python25\Lib\site-packages\game_utils`` folder will be created. It will contain ``__init__.py`` and ``diceroll.py`` if your Python
-    doesn't have ``setuptools`` installed. Otherwise, an .egg file called ``diceroll-2.4.7b-py2.5.egg`` will be
+    doesn't have ``setuptools`` installed. Otherwise, an .egg file called ``diceroll-3.0.0b-py2.5.egg`` will be
     created and copied into the ``Python25\Lib\site-packages`` folder.
     
 No matter the automated installation that your Python performed, importing will be the same: ::
@@ -121,10 +121,10 @@ No matter the automated installation that your Python performed, importing will 
 Some ways to see if the ``diceroll`` module was installed correctly is by typing:
 
 >>> print roll('info')
-('2.4', 'roll(), release version 2.4.7b for Classic Python 2.5.4')
+('3.0', 'roll(), release version 3.0.0b for Classic Python 2.5.4')
 >>> print roll.__doc__
     The dice types to roll are:
-        'D2', 'D3', 'D4', 'D6', 'D8', 'D09', 'D10',
+        '4dF', 'D2', 'D3', 'D4', 'D6', 'D8', 'D09', 'D10',
         'D12', 'D20', 'D30', 'D099', 'D100', 'D66', 'DD',
         'FLUX', 'GOODFLUX', 'BADFLUX', 'BOON', 'BANE'
     Some examples are:
@@ -140,5 +140,6 @@ Some ways to see if the ``diceroll`` module was installed correctly is by typing
     roll('4D4-4') -- add -4 DM to roll
     roll('2DD+3') -- roll (2D6+3) x 10
     roll('BOON') -- roll 3D6 and keep the higher two dice
+    roll('4dF') -- make a FATE roll
     roll('info') -- release version of program
     An invalid roll will return a 0.

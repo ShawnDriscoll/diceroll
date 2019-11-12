@@ -1,7 +1,7 @@
 .. image:: docs/source/python_classic_2_5_tag.png
     :target: https://www.python.org/download/releases/2.5.4/
     
-.. image:: docs/source/release_v2_4_7b_tag.png
+.. image:: docs/source/release_v3_0_0b_tag.png
     :target: https://readthedocs.org/projects/diceroll/downloads/pdf/latest
     
 .. image:: https://readthedocs.org/projects/diceroll/badge/?version=latest
@@ -11,10 +11,10 @@
 
 .. figure:: docs/source/diceroll_manual_cover_pdf_art.png
 
-**diceroll 2.4 for Classic Python 2.5**
+**diceroll 3.0 for Classic Python 2.5**
 =======================================
 
-**diceroll 2.4** is a Classic Python 2.5 module that your game code calls to make dice rolls.
+**diceroll 3.0** is a Classic Python 2.5 module that your game code calls to make dice rolls.
 
 Read the **diceroll Operations Manual** at http://diceroll.readthedocs.io
 

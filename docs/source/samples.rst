@@ -12,9 +12,9 @@ Sample Outputting of Die Rolls: ::
     from diceroll import roll
 
     # enter the roll type to be made
-    number_of_dice = str(raw_input('Number of dice to roll? '))
+    number_of_dice = raw_input('Number of dice to roll? ')
     dice_type = raw_input('Dice type? ')
-    dice_roll_modifier = str(raw_input('DM? '))
+    dice_roll_modifier = raw_input('DM? ')
 
     # make sure that there is a plus or minus sign in the DM string
     if dice_roll_modifier[0] <> '-' and dice_roll_modifier[0] <> '+':

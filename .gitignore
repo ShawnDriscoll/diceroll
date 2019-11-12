@@ -51,16 +51,6 @@ sdist/
 develop-eggs/
 .installed.cfg
 
-############
-## TI-GCC
-############
-*.tpr
-*.89z
-*.9xz
-*.v2z
-*.o
-*.s
-
 ###########
 ## gcc
 ###########

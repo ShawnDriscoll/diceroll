@@ -8,7 +8,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
           URL_ROOT:    '',
-          VERSION:     '2.4.7b',
+          VERSION:     '3.0.0b',
           COLLAPSE_MODINDEX: false,
           FILE_SUFFIX: '.html'
       };
@@ -115,6 +115,7 @@ covered by <strong>diceroll</strong>. However, more are planned for in future re
 <span class="n">roll</span><span class="p">(</span><span class="s">&#39;4D4-4&#39;</span><span class="p">)</span> <span class="c"># add -4 DM to roll</span>
 <span class="n">roll</span><span class="p">(</span><span class="s">&#39;2DD+3&#39;</span><span class="p">)</span> <span class="c"># roll (2D6+3) x 10</span>
 <span class="n">roll</span><span class="p">(</span><span class="s">&#39;BOON&#39;</span><span class="p">)</span> <span class="c"># roll 3D6 and keep the higher two dice</span>
+<span class="n">roll</span><span class="p">(</span><span class="s">&#39;4dF&#39;</span><span class="p">)</span> <span class="c"># make a FATE roll</span>
 </pre></div>
 <p><em>Deprecated in version 1.9.</em></p>
 <p>D00 has been replaced with D100.</p>
@@ -157,7 +158,10 @@ Your 2D6-2 roll is 7.</pre>
 <p><em>New in release 2.4.3</em></p>
 <p>D99 rolls will generate a range of 0 - 99.</p>
 <p><em>Fixed in release 2.4.7</em></p>
-<p>Minor fixes with spacing and negative numbers.</p>
+<p>Minor fixes with input spacing, and logging any negative dice rolled.</p>
+<p><em>New in version 3.0</em></p>
+<p>D2 rolls now generate a range of 0 - 1.
+The 4dF roll type for FATE has been added.</p>
 </div>
 </div>
 
@@ -210,7 +214,7 @@ Your 2D6-2 roll is 7.</pre>
     </div>
     <div class="footer">
       &copy; Copyright 2019, SHONNER CORP.
-      Last updated on Nov 10, 2019.
+      Last updated on Nov 11, 2019.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
     </div>
   </body>
