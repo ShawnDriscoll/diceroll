@@ -95,7 +95,7 @@ Installing Automatically
 
 *New in version 2.3*
 
-Extract ``diceroll_3.0.0b.zip`` and start a CMD window at the folder location of the ``setup.py`` file. At the
+Extract ``diceroll_3.0.1b.zip`` and start a CMD window at the folder location of the ``setup.py`` file. At the
 CMD prompt you can type: ::
 
     setup.py install
@@ -111,7 +111,7 @@ depending on if your computer knows how to open .py files or not.
 
     During the installation process,
     a ``Python25\Lib\site-packages\game_utils`` folder will be created. It will contain ``__init__.py`` and ``diceroll.py`` if your Python
-    doesn't have ``setuptools`` installed. Otherwise, an .egg file called ``diceroll-3.0.0b-py2.5.egg`` will be
+    doesn't have ``setuptools`` installed. Otherwise, an .egg file called ``diceroll-3.0.1b-py2.5.egg`` will be
     created and copied into the ``Python25\Lib\site-packages`` folder.
     
 No matter the automated installation that your Python performed, importing will be the same: ::
@@ -121,7 +121,7 @@ No matter the automated installation that your Python performed, importing will 
 Some ways to see if the ``diceroll`` module was installed correctly is by typing:
 
 >>> print roll('info')
-('3.0', 'roll(), release version 3.0.0b for Classic Python 2.5.4')
+('3.0', 'roll(), release version 3.0.1b for Classic Python 2.5.4')
 >>> print roll.__doc__
     The dice types to roll are:
         '4dF', 'D2', 'D3', 'D4', 'D6', 'D8', 'D09', 'D10',

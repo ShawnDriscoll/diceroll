@@ -37,7 +37,7 @@ master_doc = 'index'
 
 # General substitutions.
 project = u'diceroll'
-copyright = u'2019, SHONNER CORP'
+copyright = u'2020, SHONNER CORP'
 author = u'SHONNER CORP'
 
 # The default replacements for |version| and |release|, also used in various
@@ -46,7 +46,7 @@ author = u'SHONNER CORP'
 # The short X.Y version.
 version = '3.0'
 # The full version, including alpha/beta/rc tags.
-release = '3.0.0b'
+release = '3.0.1b'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:

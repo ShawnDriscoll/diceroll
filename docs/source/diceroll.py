@@ -29,7 +29,7 @@ from colorama import Fore, Back, Style
 init() # initialize colorama
 
 __version__ = '3.0'
-__release__ = '3.0.0b'
+__release__ = '3.0.1b'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
 diceroll_log = logging.getLogger('diceroll')
@@ -106,7 +106,7 @@ def roll(dice):
     An invalid roll will return a 0.
     '''
 
-    log = logging.getLogger('test_dice.diceroll')
+    log = logging.getLogger('your_code_name_here.diceroll')
 
     # make inputted string argument upper case, and remove spaces
     dice = str(dice).upper().replace(' ','')
@@ -313,7 +313,7 @@ def roll(dice):
                 return rolled
             elif dice_type == 'D099' and num_dice == 1:
                 roll_1 = (_dierolls(10, 1) - 1) * 10
-                roll_2 = (_dierolls(10, 1) - 1)
+                roll_2 = _dierolls(10, 1) - 1
                 rolled = roll_1 + roll_2 + dice_mod
                 diceroll_log.info('%s = %d%s+%d = %d and %d + %d = %d' % (dice, num_dice, dice_type, dice_mod, roll_1, roll_2, dice_mod, rolled))
                 return rolled
