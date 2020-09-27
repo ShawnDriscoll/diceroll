@@ -23,7 +23,8 @@ be used. But first, we must give this function a value to work from.
    | *dice_roll_modifier* must include a '+' or '-' with its value.
    |
    | Note that both *number_of_dice* and *dice_roll_modifier* are optional, and may
-   | not even be used by some *dice_type* rolls.
+   | not even be used by some *dice_type* rolls. Traveller5 rolls will not work with *dice_roll_modifier*
+   | at this time.
 
 Those of you that have used dice rolling programs before will notice that something is different. And that is,
 ``roll()`` uses a string for its input:
@@ -115,3 +116,7 @@ Minor fixes with input spacing, and logging any negative dice rolled.
 
 D2 rolls now generate a range of 0 - 1.
 The 4dF roll type for FATE has been added.
+
+*New in version 3.1*
+
+1D thru 9D rolls for Traveller5 have been added.
