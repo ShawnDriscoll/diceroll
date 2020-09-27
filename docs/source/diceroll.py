@@ -28,8 +28,8 @@ from colorama import Fore, Back, Style
 
 init() # initialize colorama
 
-__version__ = '3.0'
-__release__ = '3.0.1b'
+__version__ = '3.1'
+__release__ = '3.1.0b'
 __author__ = 'Shawn Driscoll <shawndriscoll@hotmail.com>\nshawndriscoll.blogspot.com'
 
 diceroll_log = logging.getLogger('diceroll')
@@ -50,6 +50,7 @@ diceroll_log.info('roll() v' + __version__ + ' started, and running...')
 
 number_of_dice = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
 simple_dice = ['D3', 'D4', 'D6', 'D8', 'D10', 'D12', 'D20', 'D30']
+t5_dice = ['1D', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D']
 
 def _dierolls(dtype, dcount):
     '''
@@ -85,7 +86,8 @@ def roll(dice):
     The dice types to roll are:
         '4dF', 'D2', 'D3', 'D4', 'D6', 'D8', 'D09', 'D10',
         'D12', 'D20', 'D30', 'D099', 'D100', 'D66', 'DD',
-        'FLUX', 'GOODFLUX', 'BADFLUX', 'BOON', 'BANE'
+        'FLUX', 'GOODFLUX', 'BADFLUX', 'BOON', 'BANE',
+        and also Traveller5's 1D thru 9D rolls
 
     Some examples are:
     roll('D6') or roll('1D6') -- roll one 6-sided die
@@ -101,6 +103,7 @@ def roll(dice):
     roll('2DD+3') -- roll (2D6+3) x 10
     roll('BOON') -- roll 3D6 and keep the higher two dice
     roll('4dF') -- make a FATE roll
+    roll('4D') -- make a Traveller5 4D roll
     roll('info') -- release version of program
     
     An invalid roll will return a 0.
@@ -254,6 +257,13 @@ def roll(dice):
         rolled = die[0] + die[1]
         diceroll_log.info('Sorted Bane roll: %d %d %d = %d' % (die[0], die[1], die[2], rolled))
         return rolled
+    
+    # check if T5 dice are being rolled
+    elif dice in t5_dice:
+        num_dice = int(dice[0])
+        rolled = _dierolls(6, num_dice)
+        diceroll_log.info('%s = %d%s = %d' % (dice, num_dice, 'D6', rolled))
+        return rolled
 
     # look for DD in the string (for destructive dice rolls)
     ichar1 = dice.find('DD')
@@ -354,6 +364,7 @@ def roll(dice):
     print "roll('FLUX') -- a FLUX roll (-5 to 5)"
     print "roll('2DD+3') -- roll (2D6+3) x 10"
     print "roll('BOON') -- roll 3D6 and keep the higher two dice"
+    print "roll('4D') -- make a Traveller5 4D roll"
     print "roll('4dF') -- make a FATE roll"
     print
     print "-/+ DMs can be added to rolls:"

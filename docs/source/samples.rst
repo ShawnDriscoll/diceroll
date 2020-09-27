@@ -81,10 +81,10 @@ Encountering Errors
 -------------------
 Entering an invalid string for ``roll()`` will return an error message, as well as a value of 0 from the function: ::
 
-   print roll('3d')
+   print roll('3d1')
 
 .. error::
 
-   ** DICE ERROR! '3D' is unknown **
+   ** DICE ERROR! '3D1' is unknown **
    
    | 0
