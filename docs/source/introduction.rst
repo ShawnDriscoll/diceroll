@@ -127,7 +127,7 @@ Some ways to see if the ``diceroll`` module was installed correctly is by typing
         '4dF', 'D2', 'D3', 'D4', 'D6', 'D8', 'D09', 'D10',
         'D12', 'D20', 'D30', 'D099', 'D100', 'D66', 'DD',
         'FLUX', 'GOODFLUX', 'BADFLUX', 'BOON', 'BANE',
-        and also Traveller5's 1D thru 9D rolls
+        and also Traveller5's 1D thru 10D rolls
     Some examples are:
     roll('D6') or roll('1D6') -- roll one 6-sided die
     roll('2D6') -- roll two 6-sided dice

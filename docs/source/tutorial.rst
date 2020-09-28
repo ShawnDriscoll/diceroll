@@ -119,4 +119,4 @@ The 4dF roll type for FATE has been added.
 
 *New in version 3.1*
 
-1D thru 9D rolls for Traveller5 have been added.
+1D thru 10D rolls for Traveller5 have been added.

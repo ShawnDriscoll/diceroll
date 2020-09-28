@@ -50,7 +50,7 @@ diceroll_log.info('roll() v' + __version__ + ' started, and running...')
 
 number_of_dice = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
 simple_dice = ['D3', 'D4', 'D6', 'D8', 'D10', 'D12', 'D20', 'D30']
-t5_dice = ['1D', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D']
+t5_dice = ['1D', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', '10D']
 
 def _dierolls(dtype, dcount):
     '''
@@ -87,7 +87,7 @@ def roll(dice):
         '4dF', 'D2', 'D3', 'D4', 'D6', 'D8', 'D09', 'D10',
         'D12', 'D20', 'D30', 'D099', 'D100', 'D66', 'DD',
         'FLUX', 'GOODFLUX', 'BADFLUX', 'BOON', 'BANE',
-        and also Traveller5's 1D thru 9D rolls
+        and also Traveller5's 1D thru 10D rolls
 
     Some examples are:
     roll('D6') or roll('1D6') -- roll one 6-sided die
@@ -260,7 +260,7 @@ def roll(dice):
     
     # check if T5 dice are being rolled
     elif dice in t5_dice:
-        num_dice = int(dice[0])
+        num_dice = int(dice[0:len(dice) - 1])
         rolled = _dierolls(6, num_dice)
         diceroll_log.info('%s = %d%s = %d' % (dice, num_dice, 'D6', rolled))
         return rolled
