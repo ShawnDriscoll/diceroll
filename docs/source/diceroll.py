@@ -50,7 +50,7 @@ diceroll_log.info('roll() v' + __version__ + ' started, and running...')
 
 number_of_dice = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten']
 simple_dice = ['D3', 'D4', 'D6', 'D8', 'D10', 'D12', 'D20', 'D30']
-t5_dice = ['1D', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', '10D']
+traveller5_dice = ['1D', '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', '10D']
 
 def _dierolls(dtype, dcount):
     '''
@@ -258,12 +258,24 @@ def roll(dice):
         diceroll_log.info('Sorted Bane roll: %d %d %d = %d' % (die[0], die[1], die[2], rolled))
         return rolled
     
-    # check if T5 dice are being rolled
-    elif dice in t5_dice:
-        num_dice = int(dice[0:len(dice) - 1])
-        rolled = _dierolls(6, num_dice)
-        diceroll_log.info('%s = %d%s = %d' % (dice, num_dice, 'D6', rolled))
-        return rolled
+    else:
+        # check if T5 dice are being rolled
+        t5_dice = dice
+        dice_mod = 0
+        ichar2 = dice.find('+')
+        if ichar2 <> -1:
+            dice_mod = int(dice[ichar2:len(dice)])
+            t5_dice = dice[0:ichar2]
+        else:
+            ichar2 = dice.find('-')
+            if ichar2 <> -1:
+                dice_mod = int(dice[ichar2:len(dice)])
+                t5_dice = dice[0:ichar2]
+        if t5_dice in traveller5_dice:
+            num_dice = int(t5_dice[0:len(t5_dice) - 1])
+            rolled = _dierolls(6, num_dice) + dice_mod
+            diceroll_log.info('Traveller5 %s = %d%s+%d = %d' % (dice, num_dice, 'D6', dice_mod, rolled))
+            return rolled
 
     # look for DD in the string (for destructive dice rolls)
     ichar1 = dice.find('DD')
@@ -299,9 +311,9 @@ def roll(dice):
     
             # what kind of dice are being rolled? D6? D66? etc.
             if ichar2 <> -1:
-                dice_type = dice[ichar1: ichar2]
+                dice_type = dice[ichar1:ichar2]
             else:
-                dice_type = dice[ichar1: len(dice)]
+                dice_type = dice[ichar1:len(dice)]
             
             if dice_type in simple_dice:
                 rolled = _dierolls(int(dice_type[1:len(dice_type)]), num_dice) + dice_mod
