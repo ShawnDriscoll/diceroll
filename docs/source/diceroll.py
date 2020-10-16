@@ -352,6 +352,9 @@ def roll(dice):
             elif dice_type == 'D00' and num_dice == 1:
                 log.warning('D00 was deprecated in 1.9. Use D100 instead.')
                 diceroll_log.warning('D00 was deprecated in 1.9. Use D100 instead.')
+                print
+                print Fore.YELLOW + Style.BRIGHT + 'WARNING: D00 was deprecated in 1.9. Use D100 instead.'
+                print Fore.RESET + Back.RESET + Style.RESET_ALL
                 dice_type = 'D100'
                 roll_1 = (_dierolls(10, 1) - 1) * 10
                 roll_2 = _dierolls(10, 1)
