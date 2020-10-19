@@ -40,7 +40,7 @@ Future Enterprises.
 
 .. toctree::
    :maxdepth: 2
-   
+
    introduction
    tutorial
    samples
