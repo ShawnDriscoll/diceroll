@@ -22,8 +22,8 @@ be used. But first, we must give this function a value to work from.
    |
    | *dice_roll_modifier* must include a '+' or '-' with its value.
    |
-   | Note that both *number_of_dice* and *dice_roll_modifier* are optional, and may
-   | not even be used by some *dice_type* rolls.
+   | Note that both *number_of_dice* and *dice_roll_modifier* are optional, and may not even be
+   | used by some *dice_type* rolls.
 
 Those of you that have used dice rolling programs before will notice that something is different. And that is,
 ``roll()`` uses a string for its input:

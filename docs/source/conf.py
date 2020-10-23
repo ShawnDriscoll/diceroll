@@ -93,8 +93,9 @@ pygments_style = 'sphinx'
 # else:
     # html_theme = 'nature'
 
-html_theme = 'agogo'
-
+html_theme = 'sphinx_rtd_theme'
+#html_theme = 'agogo'
+#html_theme = 'nature'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
