@@ -45,6 +45,8 @@ Future Enterprises.
    tutorial
    samples
    debugging
+   alternate_distributions
+   software_titles
    designers_notes
    diceroll
    glossary
