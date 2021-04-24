@@ -10,7 +10,7 @@
 ##########################################################
 
 '''
-diecroll module containing roll()
+diceroll module containing roll()
 
 Usage:
     from diceroll import roll
