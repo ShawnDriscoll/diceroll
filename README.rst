@@ -8,6 +8,9 @@
     :target: http://diceroll.readthedocs.io/en/latest/?badge=latest
     :alt: Doc Status
 
+.. image:: https://img.shields.io/github/stars/ShawnDriscoll/diceroll.svg
+	:target: https://github.com/ShawnDriscoll/diceroll/stargazers
+
 
 .. figure:: docs/source/diceroll_manual_cover_pdf_art.png
 
